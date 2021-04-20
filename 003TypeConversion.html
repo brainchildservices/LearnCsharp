@@ -11,13 +11,13 @@
         <link rel="stylesheet" href="dist/reveal.css" />
         <link rel="stylesheet" href="dist/theme/night.css" id="theme" />
 
-     
+        <!-- Theme used for syntax highlighting of code -->
         <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme" />
     </head>
 
     <body>
         <div class="reveal">
-          
+            <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
                 <section>
 					<h1>C#</h1>
@@ -25,27 +25,32 @@
                 </section>
             
                 <section>
-                    <h2>C# DATA TYPES</h2>
-                    <p>A data type specifies the type of data that a variable can store such as integer, floating, character etc.</p>
+                    <h2>C# TYPE CONVERSION</h2>
+                    <p>Type conversion is converting one type of data to another type. It is also known as Type Casting. In C#</p>
                 </section>
                 <section>
-                    <h2>SEVERAL DATA TYPES</h2>
+                    <h3>DIFFERENT TYPES OF CONVERSION</h3>
+                    <p>* Implicit type conversion</p>
+                    <p>* Explicit type conversion</p>
+                </section>
+                <section>
+                    <h3>Implicit type conversion</h3>
+                    <p> These conversions are performed by C# in a type-safe manner. For example, are conversions from smaller to larger integral types and conversions from derived classes to base classes.</p>
+                    <img src="implicit.jpg">
+                </section>
+                <section>
+                    <h3>Explicit type conversion</h3>
+                    <p>These conversions are done explicitly by users using the pre-defined functions. Explicit conversions require a cast operator.</p>
+                    <img src="Explicit.jpg">
+                </section>
+                <section>
+                    <h3>C# Type Conversion Methods</h3>
                     <p>
-                        Int<br>
-                        Float<br>
-                        Char<br>
-                        String<br>
-                        Boolean<br>
+                        ToString : Converts a type to a string.<br>
+                        ToInt32 : Converts a type to a 32-bit integer.
+                        <img src="convertion.jpg">
                     </p>
                 </section>
-                <section>
-                    <img src="Untitled6 (2).jpg">
-                </section>
-                <section>
-                    <img src="C-Data-type.png">
-                </section>
-
-               
             </div>
         </div>
 
@@ -56,13 +61,15 @@
         <script src="plugin/markdown/markdown.js"></script>
         <script src="plugin/highlight/highlight.js"></script>
         <script>
-           
+            // Also available as an ES module, see:
+            // https://revealjs.com/initialization/
             Reveal.initialize({
                 controls: true,
                 progress: true,
                 center: true,
                 hash: true,
 
+                // Learn about plugins: https://revealjs.com/plugins/
                 plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight],
             });
         </script>
