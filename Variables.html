@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>LearnC#</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/night.css" id="theme" />
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h2>C# VARIABLES</h2>
+					<center>
+                    <p>  * Variables are containers for storing data values.
+						<br>  * A variable is a name given to a storage area that is used to store values of various data types.
+					</center>
+                     
+                    </p>
+                </section>
+				<section>
+					<h3>Different types of Variables</h3>
+                    <h5>Integer (int)</h5>
+
+					<p>
+						 stores integers (whole numbers), without                  
+						         decimals, such as 123 or -123 
+                    </p>
+                    <br>
+                                
+                                    
+                                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            using System;
+            
+            public class Program
+            {
+            public static void Main()
+              {
+                int myNum;//Declaration of variable
+                myNum = 15;//Assignment value to the Variable myNum
+                Console.WriteLine(myNum);
+              }
+            }
+			//Output 15
+                                    </code></pre>
+                              
+				</section>
+				
+                <section>
+					<h3>Different types of Variables</h3>
+                    <h5>Double (D)</h5>
+
+					<p>
+                        stores floating point numbers, with  
+                        decimals, such as 19.99 or -19.99 
+                    </p>
+                    
+                                
+                                    
+                                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            using System;
+            
+            public class Program
+            {
+            public static void Main()
+              {
+                double myNum;//Declaration of variable
+                myNum = 15.857D;//Assignment value to the Variable myNum
+                Console.WriteLine(myNum);
+              }
+            }
+			//Output 15.857
+                                    </code></pre>
+                              
+				</section>
+                <section>
+					<h3>Different types of Variables</h3>
+                    <h5>Character (char)</h5>
+
+					<p>
+                        stores single characters, such as 'a' or 
+						         'B'. Char values are surrounded by single   
+						         quotes
+                    </p>
+                    
+                                
+                                    
+                                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            using System;
+            
+            public class Program
+            {
+            public static void Main()
+              {
+                char myGrade;//Declaration of variable
+                myGrade = 'A';//Assignment value to the Variable myGrade
+                Console.WriteLine(myGrade);
+              }
+            }
+			     //Output A
+                                    </code></pre>
+                              
+				</section>
+                <section>
+					<h3>Different types of Variables</h3>
+                    <h5>String (string)</h5>
+
+					<p>
+                        stores text, such as "Hello World". String  
+						         values are surrounded by double quotes
+                    </p>
+                    
+                                
+                                    
+                                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            using System;
+            
+            public class Program
+            {
+            public static void Main()
+              {
+                string myName;//Declaration of variable
+                myName = "JOHN";//Assignment value to the Variable myName
+                Console.WriteLine(myName);
+              }
+            }
+			//Output JOHN
+                                    </code></pre>
+                              
+				</section>
+
+
+				<section>
+					<h3>Declaring (Creating) Variables</h3>
+					<p>
+						Datatype    variableName   =   value;<br>
+
+                          int           age        =    20;<br>
+
+                          string        name       =    “JOHN”;<br>
+
+                          Float         volt       =    5.6;<br>
+
+					</p>
+				</section>
+                <!-- Example of nested vertical slides -->
+                    <section>
+                        <h4>Example Programs to understand Variables</h4>
+                        <br />
+                    </section>
+                    
+                    <section data-auto-animate>
+                        <h2 data-id="code-title">Program 2</h2>
+                        <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                            using System;
+					
+                            public class Program
+                             {
+	                           public static void Main()
+	                            {
+	                            string fruit;//Declaration of variable
+		                            fruit = "APPLE";//Assigining Value to the Variable fruit
+		                            Console.WriteLine(fruit);
+	                            }
+                             }
+                        </code></pre>
+                    </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
