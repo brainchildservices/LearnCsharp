@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+
+        <title>C# Presentation</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="dist/reset.css" />
+        <link rel="stylesheet" href="dist/reveal.css" />
+        <link rel="stylesheet" href="dist/theme/night.css" id="theme" />
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme" />
+    </head>
+
+    <body>
+        <div class="reveal">
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+					<h1>C#</h1>
+                    <p>C# is an object-oriented programming language created by Microsoft that runs on the .NET Framework.</p>
+                </section>
+            
+                <section>
+                    <h2>C# OPERATORS</h2>
+                    <p>C# operators are the symbols which are used for different operations like mathematical expressions, function call</p>
+                </section>
+                <section>
+                    <h3>DIFFERENT KIND OF OPERATORS</h3>
+                    <p>
+                        <ul>
+                            <li>Arithmetic operators</li>
+                            <li>Assignment operators</li>
+                            <li>Conditional operators</li>
+                            <li>Unary operators</li>
+                            <li>Increment & Decrement operators</li>
+                            <li>Relational operators</li>
+                            <li>Logical operators</li>
+                        </ul>
+                    </p>
+                </section>
+                <section>
+                    <h2>Arithmetic Operator</h2>
+                    <p>Arithmetic operator is used for mathematical operations.There are 5 types of arithmetic operators.<br>
+                       <ul>
+                        <li>+</li>
+                            <li>-</li>
+                                <li>*</li>
+                                    <li>/</li>
+                                        <li> %</li>
+                       </ul>
+                    </p>
+                    
+                </section>
+                <section>
+                    <p>
+                        <ul>
+                             <li>  : This (+) operator is called additional operator.<br> 
+                                     It is used for the addition of two pieces of data.</li>
+                                     Eg : z=x+y;
+                              <li> : This (-) operator is called subtraction operator.<br> 
+                                     It is used for the difference of tw pieces of data.</li>
+                                     Eg : z=x-y;
+                              <li> : This (*) operator is called multiplication operator.<br> 
+                                     It is used for product of two data.</li>
+                                     Eg : z=x*y;
+                              <li> : This operator is called division operator.<br> 
+                                     It is used for the division of two data.</li>
+                                     Eg : z=x/y;
+                              <li> : This operator is called modulus operator. <br> 
+                                     It is used for finding the remainder after dividing one data from another.</li>
+                                     Eg : z=x%y;
+                        </ul>
+                    </p>
+                </section>
+                <section>
+                    <h2>Comparison Operator</h2>
+                    <p>Comparison operators are used to compare two values <br>
+                        <ul>
+                            <li>==</li>
+                            <li>!=</li>
+                            <li>></li>
+                            <li><</li>
+                            <li>>=</li>
+                            <li><=</li>
+                        </ul> 
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        <ul>
+                            <li>This (==) operator is called Equal to <br>
+                                Eg : x==y</li>
+                            <li>This (!=) operator is called Not equal <br>
+                                Eg : x!=y</li>
+                            <li>This (>) operator is called Greater than <br>
+                                Eg : x > y</li>
+                            <li>This (<) operator is called Greater than <br>
+                                Eg : x < y </li>
+                            <li>This (>=) operator is called Greater than or equal to <br>
+                                Eg : x >= y </li>
+                            <li>This (<=) operator is calledLess than or equal to <br>
+                                Eg : x <= y </li>
+                        </ul>
+                    </p>
+                </section>
+                <section>
+                    <h2>Logical Operators</h2>
+                    <p>Logical operators are used to determine the logic between variables or values <br>
+                        <ul>
+                            <li>&&</li>
+                            <li>||</li>
+                            <li>!</li>
+                        </ul>
+                    </p>
+                </section>
+                <section>
+                    <p>
+                        <ul>
+                            <li>This (&&) operator is called Logical and <br>
+                                Eg : x < 5 &&  x < 10</li>
+                            <li>This (||) operator is called Logical or <br>
+                                Eg : x < 5 || x < 4</li>
+                            <li>This (||) operator is called Logical not <br>
+                                Eg : !(x < 5 && x < 10)</li>
+                        </ul>
+                    </p>
+                </section>
+                <section>
+                    <h2>Assignment operator</h2>
+                    <p>
+                        “=” is called the assignment operator. <br> “=” assigns the variable in the left of it with the value on the right of it. <br> In other words, it provides the data on its R.H.S. to the variable in its L.H.S.
+
+                    </p>
+                </section>
+            </div>
+        </div>
+
+        <script src="dist/reveal.js"></script>
+        <script src="plugin/zoom/zoom.js"></script>
+        <script src="plugin/notes/notes.js"></script>
+        <script src="plugin/search/search.js"></script>
+        <script src="plugin/markdown/markdown.js"></script>
+        <script src="plugin/highlight/highlight.js"></script>
+        <script>
+            // Also available as an ES module, see:
+            // https://revealjs.com/initialization/
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                center: true,
+                hash: true,
+
+                // Learn about plugins: https://revealjs.com/plugins/
+                plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight],
+            });
+        </script>
+    </body>
+</html>
