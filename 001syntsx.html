@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>LearnC#</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/night.css" id="theme" />
+
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>C# BASIC SYNTAX</h2>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+using System;
+
+namespace HelloWorld
+{
+    class Program
+      {
+          static void Main(string[] args)
+             {
+                 Console.WriteLine("Hello World!");    
+             }
+      }
+} 
+						
+Output : Hello World
+                    </code></pre>
+				
+                </section>
+				<section>
+					<h2>C# BASIC SYNTAX</h2>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        using System;
+                    </code></pre>
+					<p>Line 1: <span style='color:red'> using System </span> means that we can use classes from the System namespace.</p>
+				
+                </section>
+				<section>
+					<h2>C# BASIC SYNTAX</h2>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+using System;
+&nbsp;
+                    </code></pre>
+					
+				    <p>Line 2: A blank line. C# ignores white space. However, multiple lines makes the code more readable.</p>
+                </section>
+				<section>
+					<h2>C# BASIC SYNTAX</h2>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+using System;
+&nbsp;
+namespace HelloWorld
+                    </code></pre>
+					
+				    <p>Line 3: <span style='color:red'> namespace </span> is used to organize your code, and it is a container for classes and other namespaces.</p>
+                </section>
+				<section>
+					<h2>C# BASIC SYNTAX</h2>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+using System;
+&nbsp;
+namespace HelloWorld
+{
+                    </code></pre>
+					
+				    <p>Line 4: The curly braces <span style='color:red'> {} </span> marks the beginning and the end of a block of code.</p>
+                </section>
+				<section>
+					<h2>C# BASIC SYNTAX</h2>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+using System;
+&nbsp;
+namespace HelloWorld
+{
+	class Program
+                    </code></pre>
+					
+				    <p>Line 5: <span style='color:red'> class </span> is a container for data and methods, which brings functionality to your program. Every line of code that runs in C# must be inside a class. In our example, we named the class Program.</p>
+                </section>
+				<section>
+					<h2>C# BASIC SYNTAX</h2>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+using System;
+&nbsp;
+namespace HelloWorld
+{
+	class Program
+	{
+		static void Main(string[] args)
+                    </code></pre>
+					
+				    <p>Line 7: Another thing that always appear in a C# program, is the Main method. Any code inside its curly brackets {} will be executed. You don't have to understand the keywords before and after Main. You will get to know them bit by bit while reading this tutorial.</p>
+                </section>
+				<section>
+					<h2>C# BASIC SYNTAX</h2>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+using System;
+&nbsp;
+namespace HelloWorld
+{
+	class Program
+	{
+		static void Main(string[] args)
+	   {
+		Console.WriteLine("Hello World!");
+	   }
+        }
+} 
+                    </code></pre>
+					
+				    <p>Line 9: <span style='color:red'> Console </span> is a class of the System namespace, which has a WriteLine() method that is used to output/print text. In our example it will output "Hello World!".</p>
+                </section>
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+
+			Reveal.initialize({
+				hash: true,
+
+
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
