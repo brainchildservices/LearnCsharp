@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>C# Basic Syntax</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/night.css" id="theme" />
+
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>C# BASIC SYNTAX</h2>
+					<p> Syntax is the arrangement of elements and attributes to create well-formed documents
+						In HTML and the logical (sense and reference) relationship between elements and the attributes of
+						those elements. 
+					</p>
+				</section>
+				<section>
+					<h2>C# BASIC SYNTAX</h2>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+using System;
+
+namespace HelloWorld
+{
+    class Program
+      {
+          static void Main(string[] args)
+             {
+                 Console.WriteLine("Hello World!");    
+             }
+      }
+} 
+						
+Output : Hello World
+                    </code></pre>
+				
+                </section>
+				<section>
+					<h2>C# BASIC SYNTAX</h2>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        using System;
+                    </code></pre>
+					<p>Line 1: <span style='color:red'> using System </span> means that we can use classes from the System namespace.</p>
+				
+                </section>
+				<section>
+					<h2>C# BASIC SYNTAX</h2>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+using System;
+&nbsp;
+                    </code></pre>
+					
+				    <p>Line 2: A blank line. C# ignores white space. However, multiple lines makes the code more readable.</p>
+                </section>
+				<section>
+					<h2>C# BASIC SYNTAX</h2>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+using System;
+&nbsp;
+namespace HelloWorld
+                    </code></pre>
+					
+				    <p>Line 3: <span style='color:red'> namespace </span> is used to organize your code, and it is a container for classes and other namespaces.</p>
+                </section>
+				<section>
+					<h2>C# BASIC SYNTAX</h2>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+using System;
+&nbsp;
+namespace HelloWorld
+{
+                    </code></pre>
+					
+				    <p>Line 4: The curly braces <span style='color:red'> {} </span> marks the beginning and the end of a block of code.</p>
+                </section>
+				<section>
+					<h2>C# BASIC SYNTAX</h2>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+using System;
+&nbsp;
+namespace HelloWorld
+{
+	class Program
+                    </code></pre>
+					
+				    <p>Line 5: <span style='color:red'> class </span> is a container for data and methods, which brings functionality to your program. Every line of code that runs in C# must be inside a class. In our example, we named the class Program.</p>
+                </section>
+				<section>
+					<h2>C# BASIC SYNTAX</h2>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+using System;
+&nbsp;
+namespace HelloWorld
+{
+	class Program
+	{
+		static void Main(string[] args)
+                    </code></pre>
+					
+				    <p>Line 7: Another thing that always appear in a C# program, is the Main method. Any code inside its curly brackets {} will be executed. You don't have to understand the keywords before and after Main. You will get to know them bit by bit while reading this tutorial.</p>
+                </section>
+				<section>
+					<h2>C# BASIC SYNTAX</h2>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+using System;
+&nbsp;
+namespace HelloWorld
+{
+	class Program
+	{
+		static void Main(string[] args)
+	   {
+		Console.WriteLine("Hello World!");
+	   }
+        }
+} 
+                    </code></pre>
+					
+				    <p>Line 9: <span style='color:red'> Console </span> is a class of the System namespace, which has a WriteLine() method that is used to output/print text. In our example it will output "Hello World!".</p>
+                </section>
+				<section>
+					<h3>COMPLETE THE GIVEN TASK</h3>
+					<p>
+						<ol>
+						1. Write a program to display your name? <br>
+						2. write a program to dispaly your name & address in mulitple lines. <br> 
+						3. write a program to dispaly your name & address in single lines. <br>
+					</ol>
+					</p>
+				</section>
+				<section>
+					<h3>What is Console Application</h3>
+					<p>A Console Application in C# context is an application that takes inputs and displays output at a command-line console with access to three basic streams: </p>
+					<ul>
+						<li>standard input</li>
+						<li>standard output</li>
+						<li>standard error</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Why to Use</h4>
+					<p>
+						<ol>
+							<li>To provide a simple user interface for applications requiring little or no user interaction.</li> 
+						<ul>
+							<li>samples for learning C# language features</li>
+							<li>command-line utility programs</li>
+						</ul>
+							<li>Automated testing, which can reuse automation implementation resources.</li> 
+						<ul>
+							<li>Instead of Graphical Interface console application have Character based interfaces.</li>
+						</ul>
+						</ol>
+					</p>
+				</section>
+				<section>
+					<h2>How  to use console?</h2>
+					<p>
+						Console.Write() <br>
+						<ul>
+							<li>Write the specified value to the console window. Write() method has 17 overloads as shown below</li>
+						</ul>
+					</p>
+					<p> <img src="image/write.jpg"> </p>
+
+				</section>
+
+				<section>
+					<section>
+					<h2>How  to use console?</h2>
+					<p>
+						Console.WriteLine() <br>
+						<ul>
+							<li>This is one of the output methods for console-class in the runtime library.</li>
+							<li>This does the same but adds a newline character at the end of the output using specified format information.</li>
+							<li>WriteLine() method has 18 overloads as shown below.</li>
+						</ul>
+					</p>
+				</section>
+					<section>
+						<h4>Console.WriteLine()</h4>
+						<img src="image/writeline.jpg">
+					</section>
+				</section>
+				<section>
+					<h2>How  to use console?</h2>
+					<p>
+						Console.ReadLine() <br>
+						<ul>
+							<li>This method reads a string text from the console window. </li>
+							<li>This will read input text from the user at the console windows and display the string at console windows when the user presses the enter key.</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<h3>Task to do</h3>
+					<p>
+						<ol>
+							Q1 : Print three name using Console.Write? <br>
+							Q2 : Print your address using Console.Write? <br>
+							Q3 : Print five numbers using Console.Write? <br>
+
+						</ol>
+					</p>
+				</section>
+				<section>
+					<h3>Task to do</h3>
+					<p>
+						<ol>
+							Q1 : Print four names using Console.WriteLine? <br>
+							Q2 : Print your address using Console.WriteLine? <br>
+							Q3 : Print six numbers using Console.WriteLine? <br>
+
+						</ol>
+					</p>
+				</section>
+				<section>
+					<h3>Task to do</h3>
+					<p>
+						<ol>
+							Q1 : Write a car name using WriteLine & ReadLine methods. <br>
+							Q2 : Write your age using WriteLine & ReadLine methods. <br>
+						</ol>
+					</p>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+
+			Reveal.initialize({
+				hash: true,
+
+
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
