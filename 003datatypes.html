@@ -1,0 +1,543 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>C# Datatypes</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/night.css" id="theme" />
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h2>C# DATATYPES</h2>
+                    <p>  * A data type specifies the size and type of variable values. It is important to use the correct data type for the corresponding variable to avoid errors, to save time and memory, but it will also make your code more maintainable and readable.</p>
+                </section>
+                <section>
+                    <h2>Types of Data Types</h2>
+                   <p>
+                    <table style="font-size:50%" class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">sl no</th>
+                            <th scope="col">Data Type</th>
+                            <th scope="col">size</th>
+                            <th scope="col">Description</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>int</td>
+                            <td>4 bytes</td>
+                            <td>Stores whole numbers from -2,147,483,648 to 2,147,483,647</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>long</td>
+                            <td>8 bytes</td>
+                            <td>Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>float</td>
+                            <td>4 bytes</td>
+                            <td>Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>double</td>
+                            <td>8 bytes</td>
+                            <td>Stores fractional numbers. Sufficient for storing 15 decimal digits</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>bool</td>
+                            <td>1 bit</td>
+                            <td>Stores true or false values</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">6</th>
+                            <td>char</td>
+                            <td>2 bytes</td>
+                            <td>Stores a single character/letter, surrounded by single quotes</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">7</th>
+                            <td>string</td>
+                            <td>2 bytes per character</td>
+                            <td>Stores a sequence of characters, surrounded by double quotes</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                        </p>
+                </section>
+                <section>
+                <section>
+					<h3>Different types of Datatypes</h3>
+                    <h5>Integer (int)</h5>
+
+					<p>
+						 stores integers (whole numbers), without                  
+						         decimals, such as 123 or -123 
+                    </p>
+                  </section>
+                  <section>
+                    <h4>Integer (int)</h4>
+                    <h6>Correct Syntax</h6>
+                                        <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+using System;
+            
+public class Program
+  {
+     public static void Main()
+       {
+        int baskets = 16;
+        int applesInBasket = 24;
+        
+        int total = baskets * applesInBasket;
+        
+        Console.WriteLine("There are total of {total} apples");
+        }
+  }
+//Output There are total of 384 apples
+                                    </code></pre>
+                              
+				</section>
+        <section>
+          <h4>Integer (int)</h4>
+
+          <h6>Wrong Syntax</h6>
+                              <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                                  using System;
+  
+                                  public class Program
+                                    {
+                                       public static void Main()
+                                         {
+                                          integer baskets = 16;//Wrong Declaration of integer
+                                          int applesInBasket = 24 //missing ; (shows error)
+                                          
+                                          int total = baskets * applesInBasket;
+                                          
+                                          Console.WriteLine();//missing variable
+                                          }
+                                    }
+                          </code></pre>
+                    
+</section>
+      </section>
+        
+				
+                <section>
+                  <section>
+					<h3>Different types of Datatypes</h3>
+                    <h4>Double (D)</h4>
+
+					<p>
+                        stores floating point numbers, with  
+                        decimals, such as 19.99 or -19.99 
+                    </p>
+                  </section>
+                    <section>
+                      <h4>Double (D)</h4>
+                    <h6>Correct Syntax</h6>  
+                                    
+                                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+ using System;
+            
+ public class Program
+     {
+        public static void Main()
+          {
+            double n1 = 0.1 + 0.1 + 0.1;
+            double n2 = 1 / 3.0;
+            
+            if (n1 == n2)
+            {
+                Console.WriteLine("Numbers are equal");
+            }
+            else
+            {
+                Console.WriteLine("Numbers are not equal");
+            }
+            
+           }
+      }
+//Output Numbers are not equal
+                                    </code></pre>
+        </section>
+        <section>
+          <h4>Double (D)</h4>
+
+          <h6>Wrong Syntax</h6>
+                              <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+using System;
+            
+ public class Program
+     {
+        public static void Main()
+          {
+            d n1 = 0.1 + 0.1 + 0.1;//wrong declaration of double
+            double n2 = 1 / 3.0 //missing ; (shows error)
+            
+            if (n1 == n2)
+            {
+                Console.WriteLine("Numbers are equal");
+            }
+            else
+            {
+                Console.WriteLine("Numbers are not equal");
+            }
+
+           }
+      }
+                          </code></pre>
+                    
+</section>
+				</section>
+        
+                <section>
+                  <section>
+					<h3>Different types of Datatypes</h3>
+                    <h5>Character (char)</h5>
+
+					<p>
+                        stores single characters, such as 'a' or 
+						         'B'. Char values are surrounded by single   
+						         quotes
+                    </p>
+                    
+                    <h6>Correct Syntax</h6>      
+                                    
+                                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+using System;
+            
+ public class Program
+  {
+    public static void Main()
+     {
+        char myGrade;//Declaration of Char
+        myGrade = 'B';//Assignment value to the Char myGrade
+        Console.WriteLine(myGrade);//Accessing Char.
+     }
+   }
+//Output B
+                                    </code></pre>
+                              
+				</section>
+        <section>
+          <h4>Character (char)</h4>
+
+          <h6>Wrong Syntax</h6>
+                              <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+using System;
+            
+public class Program
+   {
+      public static void Main()
+         {
+            character myGrade;//Wrong Declaration of Char
+            myGrade = "Axe"//Wrong Assignment value to the Char myGrade
+            Console.WriteLine(Axe);//Wrong Accessing Char.
+         }
+   }
+                          </code></pre>
+                    
+</section>
+      </section>
+        
+                <section>
+                  <section>
+					<h3>Different types of Datatypes</h3>
+                    <h5>String (string)</h5>
+
+					<p>
+                        stores text, such as "Hello World". String  
+						         values are surrounded by double quotes
+                    </p>
+                    <h6>Correct Syntax</h6> 
+                                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+using System;
+            
+public class Program
+ {
+   public static void Main()
+      {
+         string myName;//Declaration of string
+         myName = "AMAL";//Assignment value to the string myName
+         Console.WriteLine(myName);//Accessing string.
+     }
+  }
+//Output JOHN
+                                    </code></pre>
+                              
+				</section>
+        <section>
+          <h4>String (string)</h4>
+
+          <h6>Wrong Syntax</h6>
+                              <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+using System;
+            
+public class Program
+   {
+      public static void Main()
+         {
+          str myName;//Wrong Declaration of string
+          myName = AMAL;//Wrong Assignment value to the string myName
+          myName = 'AMAL'//Wrong Assignment value to the string myName
+          Console.WriteLine("AMAL");//Wrong Accessing string.
+         }
+   }
+                          </code></pre>
+                    
+</section>
+      </section>
+       
+        <section>
+          <section>
+					<h3>Different types of Datatypes</h3>
+                    <h5>Boolean (bool)</h5>
+
+					<p>
+                        stores values with two states: true or false
+                    </p>
+                    <h6>Correct Syntax</h6> 
+                                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+using System;
+
+namespace MyApplication
+   {
+      class Program
+        {
+            static void Main(string[] args)
+              {
+                    bool isCSharpFun = true;
+                    bool isFishTasty = false;
+                    Console.WriteLine(isCSharpFun);   // Outputs True
+                    Console.WriteLine(isFishTasty);   // Outputs False    
+              }
+        }
+    }
+                                        
+                                    </code></pre>
+                              
+				</section>
+        <section>
+          <h5>Boolean (bool)</h5>
+          <h6>Wrong Syntax</h6>
+                                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+  using System;
+  
+  namespace MyApplication
+      {
+        class Program
+         {
+            static void Main(string[] args)
+              {
+                    bool isCSharpFun = "amal" //Wrong Declaration of bool
+                    bool isFishTasty = 15 //Wrong Declaration of bool
+                    Console.WriteLine(true);   // Wrong Accessing bool
+                    Console.WriteLine(false);   // Wrong Accessing bool   
+              }
+          }
+      }
+                            </code></pre>
+                      
+  </section>
+      </section>
+       
+<section>
+  <section>
+  <h3>Different types of Datatypes</h3>
+  <h5>Long (long)</h5>
+
+<p>
+  Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+  </p>
+</section>
+<section>
+  <h4>Long (long)</h4>
+  <h6>Correct Syntax</h6>
+                      <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+using System;
+
+public class Program
+{
+public static void Main()
+{
+long myNum;//Declaration of long.
+myNum = 154827649;//Assignment value to the long myNum.
+Console.WriteLine(myNum);//Accessing an long.
+}
+}
+//Output 154827649
+                  </code></pre>
+</section>
+<section>
+  <h4>Long (long)</h4>
+
+  <h6>Wrong Syntax</h6>
+                      <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+using System;
+
+public class Program
+{
+public static void Main()
+{
+l myNum;//Wrong Declaration of long
+long a = 59;
+
+bool test = true;
+
+long c = test; // Error. cannot convert type 'long' to 'bool'.
+
+myNum = 1546484 //missing ; (shows error)
+Console.WriteLine(1546484);//wrong Accessing of long.
+}
+}
+                  </code></pre>
+            
+</section>
+</section>
+
+<section>
+  <section>
+  <h3>Different types of Datatypes</h3>
+            <h4>Float (float)</h4>
+
+  <p>
+    Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits
+            </p>
+            
+            <h6>Correct Syntax</h6>  
+                            
+                            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+using System;
+    
+public class Program
+{
+public static void Main()
+  {
+      float myNum;//Declaration of float.
+       myNum = 15.857;//Assignment value to the float myNum.
+       Console.WriteLine(myNum);//Accessing float.
+   }
+}
+//Output 15.857
+                            </code></pre>
+                      
+</section>
+<section>
+  <h4>Float (float)</h4>
+
+  <h6>Wrong Syntax</h6>
+                      <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+using System;
+    
+public class Program
+{
+public static void Main()
+  {
+      f myNum;//Wrong Declaration of float.
+       myNum = 15 //missing ; (shows error)
+       Console.WriteLine(15);//Wrong Accessing float.
+   }
+}
+                  </code></pre>
+            
+</section>
+</section>
+
+<section>
+    <h3>Exercise 1</h3>
+    <p>
+      <ol>
+        Q1 : Create a program with an integer datatype ? <br>
+        Q2 : Write a program to access an integer & assign value to an integer ?
+      </ol>
+    </p>
+  </section>
+  <section>
+  <h3>Exercise 2</h3>
+    <p>
+      <ol>
+        Q1 : Create a program with double datatype ? <br>
+        Q2 : Write a program to access a double & assign value to a double ?
+      </ol>
+    </p>
+  </section>
+  <section>
+    <h3>Exercise 3</h3>
+      <p>
+        <ol>
+          Q1 : Create a program with char datatype ? <br>
+          Q2 : Write a program to access a char & assign value to a char ?
+        </ol>
+      </p>
+    </section>
+    <section>
+      <h3>Exercise 4</h3>
+        <p>
+          <ol>
+            Q1 : Create a program with string datatype ? <br>
+            Q2 : Write a program to access a string & assign value to a string ?
+          </ol>
+        </p>
+      </section>
+    </section>
+    <section>
+      <h3>Exercise 5</h3>
+        <p>
+          <ol>
+            Q1 : Create a program with bool datatype ? <br>
+            Q2 : Write a program to access a bool & assign value to a bool ?
+          </ol>
+        </p>
+      </section>
+      <section>
+        <h3>Exercise 6</h3>
+          <p>
+            <ol>
+              Q1 : Create a program with float datatype ? <br>
+              Q2 : Write a program to access a float & assign value to a float ?
+            </ol>
+          </p>
+        </section>
+        <section>
+            <h3>Exercise 7</h3>
+              <p>
+                <ol>
+                  Q1 : Create a program with long datatype ? <br>
+                  Q2 : Write a program to access a long & assign value to a long ?
+                </ol>
+              </p>
+            </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
