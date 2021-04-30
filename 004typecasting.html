@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+
+        <title>C# Presentation</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="dist/reset.css" />
+        <link rel="stylesheet" href="dist/reveal.css" />
+        <link rel="stylesheet" href="dist/theme/night.css" id="theme" />
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme" />
+    </head>
+
+    <body>
+        <div class="reveal">
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+					<h1>C#</h1>
+                    <p>C# is an object-oriented programming language created by Microsoft that runs on the .NET Framework.</p>
+                </section>
+            
+                <section>
+                    <h2>C# TYPE CONVERSION</h2>
+                    <p>Type conversion is converting one type of data to another type. It is also known as Type Casting. In C#</p>
+                </section>
+                <section>
+                    <h3>DIFFERENT TYPES OF CONVERSION</h3>
+                    <p>* Implicit type conversion</p>
+                    <p>* Explicit type conversion</p>
+                </section>
+                <section>
+                    <h3>Implicit type conversion</h3>
+                    <p> These conversions are performed by C# in a type-safe manner. For example, are conversions from smaller to larger integral types and conversions from derived classes to base classes.</p>
+                </section>
+                <section data-auto-animate>
+                    <h4 data-id="code-title">Example of Implicit type conversion</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        int myInt = 9;
+                        double myDouble = myInt;//Automatic casting int to double
+
+                        Console.WriteLine(myInt);//Output 9
+                        Console.WriteLine(myDouble);//Output 9
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Explicit type conversion</h3>
+                    <p>These conversions are done explicitly by users using the pre-defined functions. Explicit conversions require a cast operator.</p>
+                </section>
+                <section data-auto-animate>
+                    <h4 data-id="code-title">Example of Explicit type conversion</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        double myDouble = 9.78;
+                        int myInt = (int) myDoubl;//Manual casting double to int
+
+                        Console.WriteLine(myDouble);//Output 9.78
+                        Console.WriteLine(myInt);//Output 9
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>C# Type Conversion Methods</h3>
+                    <p>
+                        ToString : Converts a type to a string.<br>
+                        ToInt32 : Converts a type to a 32-bit integer.
+                    </p>
+                </section>
+                <section data-auto-animate>
+                    <h4 data-id="code-title">Example of Type conversion method</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        int myInt = 10;
+                        double myDouble = 5.25;
+                        bool myBool = true;
+
+                        Console.WriteLine(Convert.ToString(myInt));    // convert int to string
+                        Console.WriteLine(Convert.ToDouble(myInt));    // convert int to double
+                        Console.WriteLine(Convert.ToInt32(myDouble));  // convert double to int
+                        Console.WriteLine(Convert.ToString(myBool));   // convert bool to string
+                    </code></pre>
+                </section>
+            </div>
+        </div>
+
+        <script src="dist/reveal.js"></script>
+        <script src="plugin/zoom/zoom.js"></script>
+        <script src="plugin/notes/notes.js"></script>
+        <script src="plugin/search/search.js"></script>
+        <script src="plugin/markdown/markdown.js"></script>
+        <script src="plugin/highlight/highlight.js"></script>
+        <script>
+            // Also available as an ES module, see:
+            // https://revealjs.com/initialization/
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                center: true,
+                hash: true,
+
+                // Learn about plugins: https://revealjs.com/plugins/
+                plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight],
+            });
+        </script>
+    </body>
+</html>
