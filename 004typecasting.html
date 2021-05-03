@@ -150,6 +150,131 @@
                 </section>
             </section>
             <section>
+                <section data-auto-animate>
+                    <h3>Int32.Parse</h3>
+                    <h6>Correct Syntax</h6> 
+                    <h4 data-id="code-title">Conversion Using Different Helper Classes</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        using System;
+
+                        public class Example
+                        {
+                            public static void Main()
+                            {
+                                string str = "100";
+                        
+                                int x = Int32.Parse(str);// or, use `int.Parse()`
+                                Console.WriteLine(x);
+                            }
+                        }
+
+                     //Output 100   
+                    </code></pre>
+                </section>
+                <section data-auto-animate>
+                    <h6>Wrong Syntax</h6> 
+                    <h4 data-id="code-title">Conversion Using Different Helper Classes</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        using System;
+
+                        public class Example
+                        {
+                            public static void Main()
+                            {
+                                string str = 100;//wrong declaration, missing "" 
+                        
+                                int x = int32.Parse(str);// int32 is wrong Int32 is correct
+                                Console.WriteLine(x);
+                            }
+                        }
+                    </code></pre>
+                </section>
+            </section>
+            <section>
+                <section data-auto-animate>
+                    <h3>float.Parse</h3>
+                    <h6>Correct Syntax</h6> 
+                    <h4 data-id="code-title">Conversion Using Different Helper Classes</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        using System;
+                        class Program
+                        {
+                            static void Main(string[] args)
+                            {
+                                string str1 = "5.682";
+                                string str2 = "4.137";
+                                float flt1 = float.Parse(str1);
+                                float flt2 = float.Parse(str2);
+                                Console.WriteLine(flt1 + flt2);
+                                Console.ReadLine();
+                    
+                            }
+                        }
+                     //Output 9.819  
+                    </code></pre>
+                </section>
+                <section>
+                    <section data-auto-animate>
+                        <h6>Wrong Syntax</h6> 
+                        <h4 data-id="code-title">Conversion Using Different Helper Classes</h4>
+                        <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                            using System;
+                            class Program
+                            {
+                                static void Main(string[] args)
+                                {
+                                    string str1 = 5.682;// missing ""
+                                    string str2 = 4.137;// missing ""
+                                    float flt1 = float.parse(str1);// float.Parse not float.parse
+                                    float flt2 = float.parse(str2);// float.Parse not float.Parse
+                                    Console.WriteLine(flt1 + flt2);
+                                    Console.ReadLine();
+                        
+                                }
+                            }
+                        </code></pre>
+                    </section>
+                </section>
+            </section>
+            <section>
+                <section data-auto-animate>
+                    <h3>double.Parse</h3>
+                    <h6>Correct Syntax</h6> 
+                    <h4 data-id="code-title">Conversion Using Different Helper Classes</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        using System;
+                        class Program
+                        {
+                            static void Main(string[] args)
+                            {
+                                string a= "10.56";
+	
+                                Console.WriteLine(Double.Parse(a));
+                            }
+                        }
+                     //Output 10.56  
+                    </code></pre>
+                </section>
+                <section data-auto-animate>
+                    <h6>Wrong Syntax</h6> 
+                    <h4 data-id="code-title">Conversion Using Different Helper Classes</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        using System;
+                        class Program
+                        {
+                            static void Main(string[] args)
+                            {
+                                string a= 10.56; // missing ""
+	
+                                Console.WriteLine(Double.parse(a)); // Double.Parse not Double.parse
+                            }
+                        }
+                     //Output 10.56  
+                    </code></pre>
+                </section>
+
+            </section>
+            <section>
                 <h3>Exercise 1</h3>
                 <p>
                   <ol>
