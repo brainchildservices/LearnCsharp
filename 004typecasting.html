@@ -104,6 +104,11 @@
                         Console.WriteLine(Convert.ToDouble(myInt));    // convert int to double
                         Console.WriteLine(Convert.ToInt32(myDouble));  // convert double to int
                         Console.WriteLine(Convert.ToString(myBool));   // convert bool to string
+
+                        //Output "10"
+                        //Output 10
+                        //Output 5
+                        //Output "true"
                     </code></pre>
                 </section>
                 <section data-auto-animate>
@@ -119,6 +124,29 @@
                         Console.WriteLine(ConvertToInt32(myDouble));  // wrong declaration to convert double to int, missing . in between Convert and ToInt32
                         Console.WriteLine(Convert.ToString(myBoo));   // wrong declaration to convert bool to string, unassign variable 
                     </code></pre>
+                </section>
+            </section>
+            <section>
+                <section>
+                <h4>Conversion Using Different Helper Classes</h4>
+                <p>
+                    To convert between different non-compatible types such as converting a string to a number or a byte array into an integer or even hexadecimal strings into other numeric types, we need different helper class as a direct conversion is not possible.
+                </p>
+                <p>
+                    A data type can be converted into another data type by using methods present in the convert class or by using a TryParse method that is available for the various numeral types. TryParse is more useful if we are converting a string into the numeral. It’s pretty straightforward and efficient.
+                </p>
+                </section>
+                <section>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        int number = Int32.Parse(“123”);
+                    </code></pre>
+                    <p>
+                        Here we converted a string into an integer by using parse. <br>
+                        Let’s look at another conversion method which is the Convert method. <br>
+                    </p>
+                    <p>
+                        Static methods present inside the Convert class are quite useful for converting to the base data type or vice versa. Some of the supported data types are Char, Boolean, Int32, int64, Double, Decimal, String, Int16, etc. Convert class also supports methods for other conversions.
+                    </p>
                 </section>
             </section>
             <section>
