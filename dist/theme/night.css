@@ -99,6 +99,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * OTHER
  *********************************************/
 .reveal p {
+  font-size: 30px;
   margin: 20px 0;
   line-height: 1.3; }
 
