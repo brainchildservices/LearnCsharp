@@ -87,9 +87,14 @@
                 </section>
                 <section>
                     <section>
+                        
                         <h3>Examples of Typecasting</h3>
                         <h5>Explicit Example 1</h5>
                         <p>
+                            <div class="psize1">
+                            * Write a program to do explicit casting by placing the type in parentheses in front of the value <br>
+                            - Declare an double variable, assign a value to it and then save it to a int variable. Print the data type of the int variable and the value of the int variable.
+                        </div>
                             <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
                                 using System;
 
@@ -108,10 +113,15 @@
                                                                         
                             </code></pre>
                         </p>
+                    
                     </section>
                     <section>
                         <h5>Explicit Example 2</h5>
                         <p>
+                            <div class="psize1">
+                                * Write a program to do explicit casting by using built in Convert methods <br>
+                                - Declare an double variable, assign a value to it and then save it to a int variable. Print the data type of the int variable and the value of the int variable.
+                            </div>
                             <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
                                 using System;
 
@@ -134,6 +144,10 @@
                     <section>
                         <h5>Explicit Example 3</h5>
                         <p>
+                            <div class="psize1">
+                                *  Write a program to do string conversion using Parse method <br>
+                                - Declare an string variable, assign a value to it and then save it to a int variable. Print the data type of the int variable and the value of the int variable.
+                            </div>
                             <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
                                 using System;
 
@@ -156,6 +170,10 @@
                     <section>
                         <h5>Explicit Example 4</h5>
                         <p>
+                            <div class="psize1">
+                                *   Write a program to do string conversion using Parse method <br>
+                                - Declare an string variable, assign a value to it and then save it to a double variable. Print the data type of the double variable and the value of the double variable.
+                            </div>
                             <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
                                 using System;
 
@@ -179,6 +197,10 @@
                     <section>
                         <h5>Explicit Example 5</h5>
                         <p>
+                            <div class="psize1">
+                                *   Write a program to do string conversion using TryParse method <br>
+                                - Declare an string variable, assign a value to it and then save it to a int variable. Print the data type of the int variable and the value of the int variable.
+                            </div>
                             <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
                                 using System;
 
@@ -205,6 +227,10 @@
                     <section>
                         <h5>Explicit Example 6</h5>
                         <p>
+                            <div class="psize1">
+                                *   Write a program to do string conversion using TryParse method<br>
+                                - Declare an string variable, assign a value to it and then save it to a double variable. Print the data type of the double variable and the value of the double variable.
+                            </div>
                             <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
                                 using System;
 
@@ -228,6 +254,60 @@
                             </code></pre>
                         </p>
                     </section>
+                    <section>
+                        <h5>Explicit Example 7</h5>
+                        <p>
+                            <div class="psize1">
+                                *   Write a program to do conversion using ToString method<br>
+                                - Declare an int variable, assign a value to it and then save it to a string variable. Print the data type of the string variable and the value of the string variable.
+                            </div>
+                            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                                using System;
+
+                                public class Program
+                                {
+                                    public static void Main()
+                                    {
+                                        int myNum = 2;
+                                        string myNumString = myNum.ToString();
+                                        
+                                        Console.WriteLine(myNumString);
+                                        Console.WriteLine(myNumString.GetType());
+                                    }
+                                }
+                                //Output 2
+                                //       System.String
+                            </code></pre>
+                        </p>
+                    </section>
+                    <section>
+                        <h5>Explicit Example 8</h5>
+                        <p>
+                            <div class="psize1">
+                                *   Write a program to do conversion using ToString method<br>
+                                - Declare an double variable, assign a value to it and then save it to a string variable. Print the data type of the string variable and the value of the string variable.
+                            </div>
+                            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                                using System;
+					
+                                public class Program
+                                {
+                                    public static void Main()
+                                    {
+                                        
+                                        double myNum = 2.555555555555555;
+                                        string myNumString = myNum.ToString();
+                                        
+                                        Console.WriteLine(myNumString);
+                                        Console.WriteLine(myNumString.GetType());
+                                    }
+                                }
+                                //Output 2.55555555555555
+                                //       System.String
+                            </code></pre>
+                        </p>
+                    </section>
+
 
                 </section>
                 <section>
@@ -480,7 +560,6 @@
                                 Console.WriteLine(Double.parse(a)); // Double.Parse not Double.parse
                             }
                         }
-                     //Output 10.56  
                     </code></pre>
                 </section>
 

@@ -113,6 +113,9 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .psize {
   font-size: 30px;
 }
+.psize1 {
+  font-size: 20px;
+}
 
 /* Remove trailing margins after titles */
 .reveal h1:last-child,
