@@ -22,6 +22,213 @@
                 <section>
                     <h2>C# TYPE CONVERSION</h2>
                     <p>Type conversion is converting one type of data to another type. It is also known as Type Casting in c#</p>
+                    <img src ="image/typecasting.jpg">
+                </section>
+                <section>
+                    <section>
+                    <h3>Examples of Typecasting</h3>
+                    <h5>Implicit Example 1</h5>
+                    <p>
+                        <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                            using System;
+
+                            public class Program
+                            {
+                                public static void Main()
+                                {
+                                    char a = '8';
+                                    int b = a;
+                                    Console.WriteLine(b);
+                                }
+                            }
+                            //Output 56
+                                                                    
+                        </code></pre>
+                    </p>
+                </section>
+                <section>
+                    <h5>Implicit Example 2</h5>
+                    <p>
+                        <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                            using System;
+
+                            public class Program
+                            {
+                                public static void Main()
+                                {
+                                    int a = 82642684;
+                                    long b = a;
+                                    Console.WriteLine(b);
+                                }
+                            }
+                            //Output 82642684
+                        </code></pre>
+                    </p>
+                </section>
+                <section>
+                    <h5>Implicit Example 3</h5>
+                    <p>
+                        <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                            using System;
+
+                            public class Program
+                            {
+                                public static void Main()
+                                {
+                                    long a = 64468464;
+                                    float b = a;
+                                    Console.WriteLine(b);
+                                }
+                            }
+                            //Output 6.446846E+07
+                        </code></pre>
+                    </p>
+                </section>
+                </section>
+                <section>
+                    <section>
+                        <h3>Examples of Typecasting</h3>
+                        <h5>Explicit Example 1</h5>
+                        <p>
+                            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                                using System;
+
+                                public class Program
+                                {
+                                    public static void Main()
+                                    {
+                                        double myNum = 2.5555;
+                                        int myNumDouble = (int) myNum;
+                                        Console.WriteLine(myNumDouble.GetType());
+                                        Console.WriteLine(myNumDouble);
+                                    }
+                                }
+                                //Output System.Int32
+                                //       2
+                                                                        
+                            </code></pre>
+                        </p>
+                    </section>
+                    <section>
+                        <h5>Explicit Example 2</h5>
+                        <p>
+                            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                                using System;
+
+                                public class Program
+                                {
+                                    public static void Main()
+                                    {
+                                        double myNum = 2.666694446181641;
+                                        int  myNumDouble = Convert.ToInt32(myNum);
+                                        
+                                        Console.WriteLine(myNumDouble.GetType());
+                                        Console.WriteLine(myNumDouble);
+                                    }
+                                }
+                                //Output System.Int32
+                                //       3
+                            </code></pre>
+                        </p>
+                    </section>
+                    <section>
+                        <h5>Explicit Example 3</h5>
+                        <p>
+                            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                                using System;
+
+                                public class Program
+                                {
+                                    public static void Main()
+                                    {
+                                        string myNum = "2";
+                                        int myNumint = Int32.Parse(myNum);
+                                        
+                                        Console.WriteLine(myNumint.GetType());
+                                        Console.WriteLine(myNumint);
+                                    }
+                                }
+                                //Output System.Int32
+                                //       2
+                            </code></pre>
+                        </p>
+                    </section>
+                    <section>
+                        <h5>Explicit Example 4</h5>
+                        <p>
+                            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                                using System;
+
+                                public class Program
+                                {
+                                    public static void Main()
+                                    {
+                                        string myNum = "2";
+                                        double myNumDouble = Double.Parse(myNum);
+                                        
+                                        
+                                        Console.WriteLine(myNumDouble.GetType());
+                                        Console.WriteLine(myNumDouble);
+                                    }
+                                }
+                                //Output System.Double
+                                //       2
+                            </code></pre>
+                        </p>
+                    </section>
+                    <section>
+                        <h5>Explicit Example 5</h5>
+                        <p>
+                            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                                using System;
+
+                                public class Program
+                                {
+                                    public static void Main()
+                                    {
+                                        string myNum = "2";
+                                        int myNumint;
+                                        bool result = Int32.TryParse(myNum, out myNumint); 
+                                        
+                                        Console.WriteLine(myNumint.GetType());
+                                        Console.WriteLine(result);
+                                        Console.WriteLine(myNumint);
+                                            
+                                    }
+                                }
+                                //Output System.Int32
+                                //       True
+                                //       2
+                            </code></pre>
+                        </p>
+                    </section>
+                    <section>
+                        <h5>Explicit Example 6</h5>
+                        <p>
+                            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                                using System;
+
+                                public class Program
+                                {
+                                    public static void Main()
+                                    {
+                                        string myNum = "ytdytdyt";
+                                        double myNumdouble;
+                                        bool result = double.TryParse(myNum, out myNumdouble); 
+                                        
+                                        Console.WriteLine(myNumdouble.GetType());
+                                        Console.WriteLine(result);
+                                        Console.WriteLine(myNumdouble);
+                                            
+                                    }
+                                }
+                                //Output System.Double
+                                //       False
+                                //       0
+                            </code></pre>
+                        </p>
+                    </section>
+
                 </section>
                 <section>
                     <h3>DIFFERENT TYPES OF CONVERSION</h3>
@@ -127,7 +334,9 @@
                 </section>
             </section>
             <section>
+                
                 <section>
+                    <div class="psize">
                 <h3>Conversion Using Different Helper Classes</h3>
                 <p>
                     To convert between different non-compatible types such as converting a string to a number or a byte array into an integer or even hexadecimal strings into other numeric types, we need different helper class as a direct conversion is not possible.
@@ -135,7 +344,9 @@
                 <p>
                     A data type can be converted into another data type by using methods present in the convert class or by using a TryParse method that is available for the various numeral types. TryParse is more useful if we are converting a string into the numeral. It’s pretty straightforward and efficient.
                 </p>
+            </div>
                 </section>
+               
                 <section>
                     <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
                         int number = Int32.Parse(“123”);
