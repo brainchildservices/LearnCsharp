@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+
+        <title>C# Typecasting</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="dist/reset.css" />
+        <link rel="stylesheet" href="dist/reveal.css" />
+        <link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme" />
+    </head>
+
+    <body>
+        <div class="reveal">
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h2>C# TYPE CONVERSION</h2>
+                    <p>Type conversion is converting one type of data to another type. It is also known as Type Casting in c#</p>
+                    <img src ="image/typecasting.jpg">
+                </section>
+                <section>
+                    <section>
+                    <h3>Examples of Typecasting</h3>
+                    <h5>Implicit Example 1</h5>
+                    <p>
+                        <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                            using System;
+
+                            public class Program
+                            {
+                                public static void Main()
+                                {
+                                    char a = '8';
+                                    int b = a;
+                                    Console.WriteLine(b);
+                                }
+                            }
+                            //Output 56
+                                                                    
+                        </code></pre>
+                    </p>
+                </section>
+                <section>
+                    <h5>Implicit Example 2</h5>
+                    <p>
+                        <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                            using System;
+
+                            public class Program
+                            {
+                                public static void Main()
+                                {
+                                    int a = 82642684;
+                                    long b = a;
+                                    Console.WriteLine(b);
+                                }
+                            }
+                            //Output 82642684
+                        </code></pre>
+                    </p>
+                </section>
+                <section>
+                    <h5>Implicit Example 3</h5>
+                    <p>
+                        <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                            using System;
+
+                            public class Program
+                            {
+                                public static void Main()
+                                {
+                                    long a = 64468464;
+                                    float b = a;
+                                    Console.WriteLine(b);
+                                }
+                            }
+                            //Output 6.446846E+07
+                        </code></pre>
+                    </p>
+                </section>
+                </section>
+                <section>
+                    <section>
+                        
+                        <h3>Examples of Typecasting</h3>
+                        <h5>Explicit Example 1</h5>
+                        <p>
+                            <div class="psize1">
+                            * Write a program to do explicit casting by placing the type in parentheses in front of the value <br>
+                            - Declare an double variable, assign a value to it and then save it to a int variable. Print the data type of the int variable and the value of the int variable.
+                        </div>
+                            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                                using System;
+
+                                public class Program
+                                {
+                                    public static void Main()
+                                    {
+                                        double myNum = 2.5555;
+                                        int myNumDouble = (int) myNum;
+                                        Console.WriteLine(myNumDouble.GetType());
+                                        Console.WriteLine(myNumDouble);
+                                    }
+                                }
+                                //Output System.Int32
+                                //       2
+                                                                        
+                            </code></pre>
+                        </p>
+                    
+                    </section>
+                    <section>
+                        <h5>Explicit Example 2</h5>
+                        <p>
+                            <div class="psize1">
+                                * Write a program to do explicit casting by using built in Convert methods <br>
+                                - Declare an double variable, assign a value to it and then save it to a int variable. Print the data type of the int variable and the value of the int variable.
+                            </div>
+                            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                                using System;
+
+                                public class Program
+                                {
+                                    public static void Main()
+                                    {
+                                        double myNum = 2.666694446181641;
+                                        int  myNumDouble = Convert.ToInt32(myNum);
+                                        
+                                        Console.WriteLine(myNumDouble.GetType());
+                                        Console.WriteLine(myNumDouble);
+                                    }
+                                }
+                                //Output System.Int32
+                                //       3
+                            </code></pre>
+                        </p>
+                    </section>
+                    <section>
+                        <h5>Explicit Example 3</h5>
+                        <p>
+                            <div class="psize1">
+                                *  Write a program to do string conversion using Parse method <br>
+                                - Declare an string variable, assign a value to it and then save it to a int variable. Print the data type of the int variable and the value of the int variable.
+                            </div>
+                            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                                using System;
+
+                                public class Program
+                                {
+                                    public static void Main()
+                                    {
+                                        string myNum = "2";
+                                        int myNumint = Int32.Parse(myNum);
+                                        
+                                        Console.WriteLine(myNumint.GetType());
+                                        Console.WriteLine(myNumint);
+                                    }
+                                }
+                                //Output System.Int32
+                                //       2
+                            </code></pre>
+                        </p>
+                    </section>
+                    <section>
+                        <h5>Explicit Example 4</h5>
+                        <p>
+                            <div class="psize1">
+                                *   Write a program to do string conversion using Parse method <br>
+                                - Declare an string variable, assign a value to it and then save it to a double variable. Print the data type of the double variable and the value of the double variable.
+                            </div>
+                            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                                using System;
+
+                                public class Program
+                                {
+                                    public static void Main()
+                                    {
+                                        string myNum = "2";
+                                        double myNumDouble = Double.Parse(myNum);
+                                        
+                                        
+                                        Console.WriteLine(myNumDouble.GetType());
+                                        Console.WriteLine(myNumDouble);
+                                    }
+                                }
+                                //Output System.Double
+                                //       2
+                            </code></pre>
+                        </p>
+                    </section>
+                    <section>
+                        <h5>Explicit Example 5</h5>
+                        <p>
+                            <div class="psize1">
+                                *   Write a program to do string conversion using TryParse method <br>
+                                - Declare an string variable, assign a value to it and then save it to a int variable. Print the data type of the int variable and the value of the int variable.
+                            </div>
+                            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                                using System;
+
+                                public class Program
+                                {
+                                    public static void Main()
+                                    {
+                                        string myNum = "2";
+                                        int myNumint;
+                                        bool result = Int32.TryParse(myNum, out myNumint); 
+                                        
+                                        Console.WriteLine(myNumint.GetType());
+                                        Console.WriteLine(result);
+                                        Console.WriteLine(myNumint);
+                                            
+                                    }
+                                }
+                                //Output System.Int32
+                                //       True
+                                //       2
+                            </code></pre>
+                        </p>
+                    </section>
+                    <section>
+                        <h5>Explicit Example 6</h5>
+                        <p>
+                            <div class="psize1">
+                                *   Write a program to do string conversion using TryParse method<br>
+                                - Declare an string variable, assign a value to it and then save it to a double variable. Print the data type of the double variable and the value of the double variable.
+                            </div>
+                            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                                using System;
+
+                                public class Program
+                                {
+                                    public static void Main()
+                                    {
+                                        string myNum = "ytdytdyt";
+                                        double myNumdouble;
+                                        bool result = double.TryParse(myNum, out myNumdouble); 
+                                        
+                                        Console.WriteLine(myNumdouble.GetType());
+                                        Console.WriteLine(result);
+                                        Console.WriteLine(myNumdouble);
+                                            
+                                    }
+                                }
+                                //Output System.Double
+                                //       False
+                                //       0
+                            </code></pre>
+                        </p>
+                    </section>
+                    <section>
+                        <h5>Explicit Example 7</h5>
+                        <p>
+                            <div class="psize1">
+                                *   Write a program to do conversion using ToString method<br>
+                                - Declare an int variable, assign a value to it and then save it to a string variable. Print the data type of the string variable and the value of the string variable.
+                            </div>
+                            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                                using System;
+
+                                public class Program
+                                {
+                                    public static void Main()
+                                    {
+                                        int myNum = 2;
+                                        string myNumString = myNum.ToString();
+                                        
+                                        Console.WriteLine(myNumString);
+                                        Console.WriteLine(myNumString.GetType());
+                                    }
+                                }
+                                //Output 2
+                                //       System.String
+                            </code></pre>
+                        </p>
+                    </section>
+                    <section>
+                        <h5>Explicit Example 8</h5>
+                        <p>
+                            <div class="psize1">
+                                *   Write a program to do conversion using ToString method<br>
+                                - Declare an double variable, assign a value to it and then save it to a string variable. Print the data type of the string variable and the value of the string variable.
+                            </div>
+                            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                                using System;
+					
+                                public class Program
+                                {
+                                    public static void Main()
+                                    {
+                                        
+                                        double myNum = 2.555555555555555;
+                                        string myNumString = myNum.ToString();
+                                        
+                                        Console.WriteLine(myNumString);
+                                        Console.WriteLine(myNumString.GetType());
+                                    }
+                                }
+                                //Output 2.55555555555555
+                                //       System.String
+                            </code></pre>
+                        </p>
+                    </section>
+
+
+                </section>
+                <section>
+                    <h3>DIFFERENT TYPES OF CONVERSION</h3>
+                    <p>* Implicit type conversion</p>
+                    <p>* Explicit type conversion</p>
+                </section>
+                <section>
+                    <h3>Implicit type conversion</h3>
+                    <p> These conversions are performed by C# in a type-safe manner. For example, are conversions from smaller to larger integral types</p>
+                </section>
+                <section>
+                <section data-auto-animate>
+                    <h6>Correct Syntax</h6> 
+                    <h4 data-id="code-title">Example of Implicit type conversion</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        int myInt = 9;
+                        double myDouble = myInt;//Automatic casting int to double
+
+                        Console.WriteLine(myInt);//Output 9
+                        Console.WriteLine(myDouble);//Output 9
+                    </code></pre>
+                </section>
+                <section data-auto-animate>
+                    <h6>Wrong Syntax</h6> 
+                    <h4 data-id="code-title">Example of Implicit type conversion</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        int myInt = 9;
+                        double myDouble = (double) myInt;//wrong declaration of Automatic casting int to double, it is manual casting
+
+                        Console.WriteLine(myInt);//Output 9
+                        Console.WriteLine(myDouble);//Output 9
+                    </code></pre>
+                </section>
+            </section>
+                <section>
+                    <h3>Explicit type conversion</h3>
+                    <p>These conversions are done explicitly by users using the pre-defined functions. Explicit conversions require a cast operator.</p>
+                </section>
+                <section>
+                <section data-auto-animate>
+                    <h6>Correct Syntax</h6> 
+                    <h4 data-id="code-title">Example of Explicit type conversion</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        double myDouble = 9.78;
+                        int myInt = (int) myDoubl;//Manual casting double to int
+
+                        Console.WriteLine(myDouble);//Output 9.78
+                        Console.WriteLine(myInt);//Output 9
+                    </code></pre>
+                </section>
+                <section data-auto-animate>
+                    <h6>Wrong Syntax</h6>
+                    <h4 data-id="code-title">Example of Explicit type conversion</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        double myDouble = 9.78;
+                        int myInt = myDoubl;//wrong declaration of Manual casting double to int, it is automatic casting
+
+                        Console.WriteLine(myDouble);//Output 9.78
+                        Console.WriteLine(myInt);//Output 9
+                    </code></pre>
+                </section>
+            </section>
+                <section>
+                    <h3>C# Type Conversion Methods</h3>
+                    <p>
+                        ToString : Converts a type to a string.<br>
+                        ToInt32 : Converts a type to a 32-bit integer.
+                    </p>
+                </section>
+                <section>
+                <section data-auto-animate>
+                    <h6>Correct Syntax</h6>
+                    <h4 data-id="code-title">Example of Type conversion method</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        int myInt = 10;
+                        double myDouble = 5.25;
+                        bool myBool = true;
+
+                        Console.WriteLine(Convert.ToString(myInt));    // convert int to string
+                        Console.WriteLine(Convert.ToDouble(myInt));    // convert int to double
+                        Console.WriteLine(Convert.ToInt32(myDouble));  // convert double to int
+                        Console.WriteLine(Convert.ToString(myBool));   // convert bool to string
+
+                        //Output "10"
+                        //Output 10
+                        //Output 5
+                        //Output "true"
+                    </code></pre>
+                </section>
+                <section data-auto-animate>
+                    <h6>Wrong Syntax</h6>
+                    <h4 data-id="code-title">Example of Type conversion method</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        int myInt = 10;
+                        double myDouble = 5.25;
+                        bool myBool = true;
+
+                        Console.WriteLine(Convert.ToString(myInt))    // wrong declaration to convert int to string, missing ;
+                        Console.WriteLine(Convert.ToDouble(my));    // wrong declaration to convert int to double, unassign variable
+                        Console.WriteLine(ConvertToInt32(myDouble));  // wrong declaration to convert double to int, missing . in between Convert and ToInt32
+                        Console.WriteLine(Convert.ToString(myBoo));   // wrong declaration to convert bool to string, unassign variable 
+                    </code></pre>
+                </section>
+            </section>
+            <section>
+                
+                <section>
+                    <div class="psize">
+                <h3>Conversion Using Different Helper Classes</h3>
+                <p>
+                    To convert between different non-compatible types such as converting a string to a number or a byte array into an integer or even hexadecimal strings into other numeric types, we need different helper class as a direct conversion is not possible.
+                </p>
+                <p>
+                    A data type can be converted into another data type by using methods present in the convert class or by using a TryParse method that is available for the various numeral types. TryParse is more useful if we are converting a string into the numeral. It’s pretty straightforward and efficient.
+                </p>
+            </div>
+                </section>
+               
+                <section>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        int number = Int32.Parse(“123”);
+                    </code></pre>
+                    <p>
+                        Here we converted a string into an integer by using parse. <br>
+                        Let’s look at another conversion method which is the Convert method. <br>
+                    </p>
+                    <p>
+                        Static methods present inside the Convert class are quite useful for converting to the base data type or vice versa. Some of the supported data types are Char, Boolean, Int32, int64, Double, Decimal, String, Int16, etc. Convert class also supports methods for other conversions.
+                    </p>
+                </section>
+            </section>
+            <section>
+                <section data-auto-animate>
+                    <h3>Int32.Parse</h3>
+                    <h6>Correct Syntax</h6> 
+                    <h4 data-id="code-title">Conversion Using Different Helper Classes</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        using System;
+
+                        public class Example
+                        {
+                            public static void Main()
+                            {
+                                string str = "100";
+                        
+                                int x = Int32.Parse(str);// or, use `int.Parse()`
+                                Console.WriteLine(x);
+                            }
+                        }
+
+                     //Output 100   
+                    </code></pre>
+                </section>
+                <section data-auto-animate>
+                    <h6>Wrong Syntax</h6> 
+                    <h4 data-id="code-title">Conversion Using Different Helper Classes</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        using System;
+
+                        public class Example
+                        {
+                            public static void Main()
+                            {
+                                string str = 100;//wrong declaration, missing "" 
+                        
+                                int x = int32.Parse(str);// int32 is wrong Int32 is correct
+                                Console.WriteLine(x);
+                            }
+                        }
+                    </code></pre>
+                </section>
+            </section>
+            <section>
+                <section data-auto-animate>
+                    <h3>float.Parse</h3>
+                    <h6>Correct Syntax</h6> 
+                    <h4 data-id="code-title">Conversion Using Different Helper Classes</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        using System;
+                        class Program
+                        {
+                            static void Main(string[] args)
+                            {
+                                string str1 = "5.682";
+                                string str2 = "4.137";
+                                float flt1 = float.Parse(str1);
+                                float flt2 = float.Parse(str2);
+                                Console.WriteLine(flt1 + flt2);
+                                Console.ReadLine();
+                    
+                            }
+                        }
+                     //Output 9.819  
+                    </code></pre>
+                </section>
+                <section>
+                    <section data-auto-animate>
+                        <h6>Wrong Syntax</h6> 
+                        <h4 data-id="code-title">Conversion Using Different Helper Classes</h4>
+                        <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                            using System;
+                            class Program
+                            {
+                                static void Main(string[] args)
+                                {
+                                    string str1 = 5.682;// missing ""
+                                    string str2 = 4.137;// missing ""
+                                    float flt1 = float.parse(str1);// float.Parse not float.parse
+                                    float flt2 = float.parse(str2);// float.Parse not float.Parse
+                                    Console.WriteLine(flt1 + flt2);
+                                    Console.ReadLine();
+                        
+                                }
+                            }
+                        </code></pre>
+                    </section>
+                </section>
+            </section>
+            <section>
+                <section data-auto-animate>
+                    <h3>double.Parse</h3>
+                    <h6>Correct Syntax</h6> 
+                    <h4 data-id="code-title">Conversion Using Different Helper Classes</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        using System;
+                        class Program
+                        {
+                            static void Main(string[] args)
+                            {
+                                string a= "10.56";
+	
+                                Console.WriteLine(Double.Parse(a));
+                            }
+                        }
+                     //Output 10.56  
+                    </code></pre>
+                </section>
+                <section data-auto-animate>
+                    <h6>Wrong Syntax</h6> 
+                    <h4 data-id="code-title">Conversion Using Different Helper Classes</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        using System;
+                        class Program
+                        {
+                            static void Main(string[] args)
+                            {
+                                string a= 10.56; // missing ""
+	
+                                Console.WriteLine(Double.parse(a)); // Double.Parse not Double.parse
+                            }
+                        }
+                    </code></pre>
+                </section>
+
+            </section>
+            <section>
+                <h3>Exercise 1</h3>
+                <p>
+                  <ol>
+                    Q1 : Write a program to add int a = 20 & string b = "jain" ?
+                  </ol>
+                </p>
+              </section>
+              <section>
+                <h3>Exercise 2</h3>
+                <p>
+                  <ol>
+                    Q1 : Write a program, double a=100.25 and store to int b 
+                  </ol>
+                </p>
+              </section>
+              <section>
+                <h3>Exercise 3</h3>
+                <p>
+                  <ol>
+                    Q1 : Write a C# program to check two integers taken as user input and return true if one is negative and one is positive.
+                  </ol>
+                </p>
+              </section>
+            </div>
+        </div>
+
+        <script src="dist/reveal.js"></script>
+        <script src="plugin/zoom/zoom.js"></script>
+        <script src="plugin/notes/notes.js"></script>
+        <script src="plugin/search/search.js"></script>
+        <script src="plugin/markdown/markdown.js"></script>
+        <script src="plugin/highlight/highlight.js"></script>
+        <script>
+            // Also available as an ES module, see:
+            // https://revealjs.com/initialization/
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                center: true,
+                hash: true,
+
+                // Learn about plugins: https://revealjs.com/plugins/
+                plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight],
+            });
+        </script>
+    </body>
+</html>
