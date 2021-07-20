@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>How the "Hello World!" program in C# works?</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+
+	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h3>CSharp Expressions</h3>
+				<p>Expressions are constructed from operands and operators.</p>
+				<p>The operators of an expression indicate which operations to apply to the operands.</p>
+				<p>Examples of operators include +, -, *, /, and new.</p>
+				<p>Examples of operands include literals, fields, local variables, and expressions.</p>
+			</section>
+
+			<section>
+				<h4>An expression containing multiple operators </h4>
+				<p>The precedence of the operators controls the order in which the individual operators are evaluated</p>
+				<p>For example, the expression x + y * z is evaluated as x + (y * z) because the * operator has higher precedence than the + operator.</p>
+				<p>C# provides a number of operators to perform arithmetic, logical, bitwise and shift operations and equality and order comparisons.</p>
+
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+
+		Reveal.initialize({
+			hash: true,
+
+
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>

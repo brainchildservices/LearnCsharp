@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>How the "Hello World!" program in C# works?</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+
+	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>CSharp Variables</h2>
+				<P>
+					<ul>
+						<li>Variables are containers for storing data values.</li>
+						<li>A variable is a name given to a storage area that is used to store values of various data types.</li>
+						<li>A variable is nothing but a name given to a storage area that our programs can manipulate.</li>
+						<li>Each variable in C# has a specific type, which determines:</li>
+						<ul>
+							<li>the size and layout of the variable's memory</li>
+							<li>the range of values that can be stored within that memory</li>
+							<li>the set of operations that can be applied to the variable.</li>
+						</ul>
+						<li>C# also allows defining other value types of variable such as enum and reference types of variables such as class, which we will cover in subsequent chapters.</li>
+					</ul>
+				</P>
+			</section>
+
+			<section>
+				<ul>
+					<li>Declaring (Creating) Variables</li>
+					<ul>
+						<li>To create a variable, you must specify the type and assign it a value:</li>
+						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+							type variableName = value;
+							</code></pre>
+							<li>Where type is a C# type (such as int or string), and variableName is the name of the variable (such as x or name). The equal sign is used to assign values to the variable.</li>
+					</ul>
+					<li>To create a variable that should store text, look at the following example:</li>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						string name = "John";
+						Console.WriteLine(name);
+						</code></pre>
+				</ul>
+			</section>
+			<section>
+				<ul>
+					<li>To create a variable that should store a number, look at the following example:</li>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						int myNum = 15;
+						Console.WriteLine(myNum);
+						</code></pre>
+						<li>You can also declare a variable without assigning the value, and assign the value later:</li>
+						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+							int myNum;
+							myNum = 15;
+							Console.WriteLine(myNum);
+							</code></pre>
+				</ul>
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+
+		Reveal.initialize({
+			hash: true,
+
+
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>

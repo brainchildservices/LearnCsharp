@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>How the "Hello World!" program in C# works?</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+
+	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+			<section>
+			<h3>CS Statements</h3>
+			<p>The actions of a program are expressed using statements. C# supports several different kinds of statements, a number of which are defined in terms of embedded statements.</p>
+			<p>A block: permits multiple statements to be written in contexts where a single statement is allowed. A block consists of a list of statements written between the delimiters { and }.</p>
+			<p>Declaration statements: are used to declare local variables and constants.</p>
+			<p>Expression statements: are used to evaluate expressions. Expressions that can be used as statements include method invocations, object allocations using the new operator, assignments using = and the compound assignment operators, increment and decrement operations using the ++ and -- operators and await expressions.</p>
+		</section>
+			<section>
+			<p>Selection statements: are used to select one of a number of possible statements for execution based on the value of some expression. This group contains the if and switch statements.</p>
+			<p>Iteration statements: are used to execute repeatedly an embedded statement. This group contains the while, do, for, and foreach statements.</p>
+				</code></pre>
+			</section>
+			<section>
+				<p>Jump statements: are used to transfer control. This group contains the break, continue, goto, throw, return, and yield statements.</p>
+				<p>The try...catch statement: is used to catch exceptions that occur during execution of a block, and the try...finally statement is used to specify finalization code that is always executed, whether an exception occurred or not.</p>
+				<p>The checked and unchecked statements: are used to control the overflow-checking context for integral-type arithmetic operations and conversions.</p>
+				<p>The lock statement: is used to obtain the mutual-exclusion lock for a given object, execute a statement, and then release the lock.</p>
+				<p>The using statement: is used to obtain a resource, execute a statement, and then dispose of that resource.</p>
+			</section>
+		</section>
+		<section>
+			<h4>The following lists the kinds of statements that can be used:</h4>
+						<ul>
+							<li>Local variable declaration.</li>
+							<li>Local constant declaration.</li>
+							<li>Expression statement.</li>
+							<li>if statement.</li>
+							<li>switch statement.</li>
+							<li>while statement.</li>
+							<li>do statement.</li>
+							<li>for statement.</li>
+							<li>foreach statement.</li>
+						</ul>
+		</section>
+
+		<section>
+			<h4>The following lists the kinds of statements that can be used:</h4>
+						<ul>
+							<li>break statement.</li>
+							<li>continue statement.</li>
+							<li>goto statement.</li>
+							<li>return statement.</li>
+							<li>yield statement.</li>
+							<li>throw statements and try statements.</li>
+							<li>checked and unchecked statements.</li>
+							<li>lock statement.</li>
+							<li>using statement.</li>
+						</ul>
+		</section>
+
+		
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+
+		Reveal.initialize({
+			hash: true,
+
+
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>

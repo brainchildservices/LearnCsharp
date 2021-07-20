@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>How the "Hello World!" program in C# works?</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+
+	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h3>Get to Know a compiler</h3>
+				<p>A compiler is a program that transforms source code written in one programming language into another programming language.</p>
+				<p>The C# code that you write must be converted into something that your computer's processor can understand. The processor is, of course, the brain of the computer - the part that performs all its calculations.</p>
+				<p>The processor doesn't know C#; it only understands machine codes.</p>
+				<p><b>When you run the C# compiler, it takes your code as an input, does some processing, and then outputs your program in intermediate language (IL) code which is saved in .exe or .dll files.</b></p>
+			</section>
+			<section>
+				<h4>Task-1</h4>
+				<p>Figure out the error and solve problem to get the number as a text output.</p>
+				<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					using System;
+						public class Program
+					{
+						public static void Main()
+						{
+							string numtext = 30
+							Console.WriteLine(numtext);
+						}
+					}
+
+					//Output: 30
+					</code></pre>
+			</section>
+
+			<section>
+				<h4>Task-2</h4>
+				<p>solve the error and get the number as number type output.</p>
+				<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					using System;
+   		
+                     public class Program
+                     {
+                     	public static void Main()
+                     	{
+                     		int num = 12.34;
+                     		Console.WriteLine(int num);
+                     	}
+                     }
+
+                   output=12.34
+
+					</code></pre>
+			</section>
+			<section>
+				<h4>Task-3</h4>
+				<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					using System;
+
+					public class program
+					{
+						public static void Main()
+						{
+							int num = 53;
+							console.writeLine(num);
+						}
+					}
+                     
+                       output:53
+					</code></pre>
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+
+		Reveal.initialize({
+			hash: true,
+
+
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
