@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>How the "Hello World!" program in C# works?</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+
+	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				In an expression with multiple operators, the operators with higher precedence are evaluated before the operators with lower precedence. What change the order of evaluation imposed by operator precedence in below C# expression ?
+			
+			<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+				var a = 2 + 2 * 2;
+				//output should be 8.
+				</code></pre>
+			</section>
+			<section>
+				<p>Write a C# expression to add 3 different texts?</p>
+				<p>Create C# expression to get a line of string statement where adding two texts and one already defined integer getting added?</p>
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+
+		Reveal.initialize({
+			hash: true,
+
+
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>

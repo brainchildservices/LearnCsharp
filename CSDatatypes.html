@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>C# Datatypes</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+
+	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Csharp Datatypes</h2>
+
+				<p>A data type specifies the size and type of variable values. It is important to use the correct data
+					type for the corresponding variable to avoid errors, to save time and memory, but it will also make
+					your code more maintainable and readable.</p>
+
+				<p>As explained in the variables chapter, a variable in C# must be a specified data type</p>
+
+			</section>
+			<section>
+				<h3>Value types</h3>
+
+				<ul>
+					<li>A data type is a value type if it holds a data value within its own memory space.</li>
+					<li>It means the variables of these data types directly contain values.</li>
+					<li>The following data types are all of value type:</li><br>
+					<ul>
+						<table>
+						<tr>
+							<th>bool</th>
+							<th>byte</th>
+							<th>char</th>
+							<th>decimal</th>
+						</tr>
+						<tr>
+							<th>double</th>
+							<th>enum</th>
+							<th>float</th>
+							<th>int</th>
+						</tr>
+						<tr>
+							<th>long</th>
+							<th>sbyte</th>
+							<th>short</th>
+							<th>struct</th>
+						</tr>
+						<tr>
+							<th>unit</th>
+							<th>ushort</th>
+							<th>ulong</th>
+						</tr>
+					</table>
+				</ul>
+			</section>
+			<section>
+				<h3>Passing Value Type Variables</h3>
+				<ul>
+					<li>When you pass a value-type variable from one method to another, the system creates a separate copy of a variable in another method.</li>
+					<li>If value got changed in the one method, it wouldn't affect the variable in another method.</li>
+				</ul>
+			</section>
+			<section>
+			<h3>Reference Types</h3>
+			<p>Unlike value types, a reference type doesn't store its value directly. Instead, it stores the address where the value is being stored. In other words, a reference type contains a pointer to another memory location that holds the data.</p>
+			<p>The followings are reference type data types:</p>
+			<ul>
+				<li>String</li>
+				<li>Arrays (even if their elements are value types)</li>
+				<li>Class</li>
+				<li>Delegate</li>
+			</ul>
+			</section>
+
+			<section>
+				<h3>Passing Reference Type Variables</h3>
+				<p>When you pass a reference type variable from one method to another, it doesn't create a new copy; instead, it passes the variable's address.</p>
+				<p>So, If we change the value of a variable in a method, it will also be reflected in the calling method.</p>
+			</section>
+
+			<section>
+				<h3>C# Null</h3>
+				<p>The default value of a reference type variable is null when they are not initialized. Null means not refering to any object.</p>
+				<p>A value type variable cannot be null because it holds value, not a memory address.</p>
+				<p>C# 2.0 introduced nullable types, using which you can assign null to a value type variable or declare a value type variable without assigning a value to it.</p>
+			</section>
+
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+
+		Reveal.initialize({
+			hash: true,
+
+
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>

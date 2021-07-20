@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>How the "Hello World!" program in C# works?</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>Let's break down the program line by line.</h3>
+
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						// Hello World! Program
+						</code></pre>
+					<p>// indicates the beginning of a comment in C#. Comments are not executed by the C# compiler.</p>
+					<p>They are intended for the developers to better understand a piece of code. Learn more about comments.</p>
+				</section>
+
+				<section>
+					<p>The namespace keyword is used to define our own namespace. Here we are creating a namespace called HelloWorld.</p>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						namespace HelloWorld{...}
+						</code></pre>
+					<p>Just think of namespace as a container which consists of classes, methods and other namespaces.</p>
+				</section>
+
+				<section>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						class Hello{...}
+						</code></pre>
+					<p>The above statement creates a class named - Helloin C#. Since, C# is an object-oriented programming language, creating a class is mandatory for the program’s execution.</p>
+				</section>
+
+				<section>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						static void Main(string[] args){...}
+						</code></pre>
+					<p><b>Main()</b> is a method of class Hello. The execution of every C# program starts from the <b>Main()</b> method. So it is mandatory for a C# program to have a <b>Main()</b> method.</p>
+
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						static void Main(string[] args)
+						{
+							...
+						}
+						</code></pre>
+						<p>We’ll learn more about methods in the later chapters.</p>
+				</section>
+
+				<section>
+					<h3>Alternative Hello World! implementation</h3>
+					<p id="smallText">Here’s an alternative way to write the “Hello World!” program.</p>
+					<p id="smallText">// Hello World! program using System;</p>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						namespace HelloWorld
+						{
+							class Hello {         
+								static void Main(string[] args)
+								{
+									Console.WriteLine("Hello World!");
+								}
+							}
+						}
+						</code></pre>
+						<p id="smallText">We’ll learn more about methods in the later chapters.</p>
+				</section>
+
+				<section>
+					<p>Notice in this case, we’ve written <b>using System;</b> at the start of the program. By using this, we can now replace</p>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						System.Console.WriteLine("Hello World!");
+						</code></pre>
+						<p>with</p>
+						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+							Console.WriteLine("Hello World!");
+							</code></pre>
+						<p>This is a convenience we’ll be using in our later chapters as well.</p>
+				</section>
+				<section>
+					<h3>Things to remember from this article</h3>
+					<ul>
+						<li>Every C# program must have a class definition.</li>
+						<li>The execution of program begins from the <b>Main()</b> method.</li>
+						<li><b>Main()</b> method must be inside a class definition.</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+
+			Reveal.initialize({
+				hash: true,
+
+
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
