@@ -190,6 +190,7 @@ section.has-dark-background h6 {
 
 .reveal ol {
     list-style-type: decimal;
+    font-size: 25px !important;
 }
 
 .reveal ul {

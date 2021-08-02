@@ -1,53 +1,65 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>LearnC#</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+    <title>LearnC#</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section><h3>Online Test</h3></section>
-				<section>
-					<p>I. Which of the following keyword is used for including the namespaces in the program in C#?</p>
-					<ol>
-						<li>imports</li>
-						<li>using</li>
-						<li>exports</li>
-						<li>None of the above.</li>
-					</ol>
-				</section>
-				<section>
-					<p>II. How many Bytes are stored by ‘Long’ Data type in C# .net?</p>
-					<ol>
-						<li>8</li>
-						<li>4</li>
-						<li>2</li>
-						<li>1</li>
-					</ol>
-				</section>
-				<section>
-					<p>III. Correct Declaration of Values to variables ‘a’ and ‘b’?</p>
-					<ol>
-						<li>int a = 32, b = 40.6;</li>
-						<li>int a = 42; b = 40;</li>
-						<li>int a = 32; int b = 40;</li>
-						<li>int a = b = 42;</li>
-					</ol>
-				</section>
-				<section>
-					<data-auto-animate>
-						<p data-id="code-title">IV. What will be the error in the following C# code?</p>
-						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h3>Online Test</h3>
+            </section>
+            <section>
+                <h4>I. Which of the following keyword is used for including the namespaces in the program in C#?</h4>
+                <ol>
+                    <li>
+                        <p>imports</p>
+                    </li>
+                    <li>
+                        <p>using</p>
+                    </li>
+                    <li>
+                        <p>exports</p>
+                    </li>
+                    <li>
+                        <p>None of the above.</p>
+                    </li>
+                </ol>
+            </section>
+            <section>
+                <h4>II. How many Bytes are stored by ‘Long’ Data type in C# .net?</h4>
+                <ol>
+                    <li>8</li>
+                    <li>4</li>
+                    <li>2</li>
+                    <li>1</li>
+                </ol>
+            </section>
+            <section>
+                <h4>III. Correct Declaration of Values to variables ‘a’ and ‘b’?</h4>
+                <ol>
+                    <li>int a = 32, b = 40.6;</li>
+                    <li>int a = 42; b = 40;</li>
+                    <li>int a = 32; int b = 40;</li>
+                    <li>int a = b = 42;</li>
+                </ol>
+            </section>
+            <section>
+                <data-auto-animate>
+                    <h4>IV. What will be the error in the following C# code?</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
 							Static Void Main(String[] args)
 							{
 								const int m = 100;
@@ -57,45 +69,45 @@
 								Console.ReadLine();
 							}
 						</code></pre>
-					<ol>
-						<li>‘k’ should not be declared constant</li>
-						<li>Expression assigned to ‘k’ should be constant in nature</li>
-						<li>Expression (m * k) is invalid</li>
-						<li>‘m ‘ is declared in invalid format</li>
-					</ol>
-				</section>
+                    <ol>
+                        <li>‘k’ should not be declared constant</li>
+                        <li>Expression assigned to ‘k’ should be constant in nature</li>
+                        <li>Expression (m * k) is invalid</li>
+                        <li>‘m ‘ is declared in invalid format</li>
+                    </ol>
+            </section>
 
-				<section>
-					<p>V. Arrange the following data type in order of increasing magnitude sbyte, short, long, int.</p>
-					<ol>
-						<li>long < short < int < sbyte</li>
-						<li>sbyte < short < int < long</li>
-						<li>short < sbyte < int < long</li>
-						<li>short < int < sbyte < long</li>
-					</ol>
-				</section>
-				<section>
-					<p>VI. Which data type should be more preferred for storing a simple number like 35 to improve execution speed of a program?</p>
-					<ol>
-						<li>sbyte</li>
-						<li>short</li>
-						<li>int</li>
-						<li>long</li>
-					</ol>
-				</section>
-				<section>
-					<p>VII. Correct way to define a value 6.28 in a variable ‘pi’ where value cannot be modified?</p>
-					<ol>
-						<li>#define pi 6.28F</li>
-						<li>pi = 6.28F</li>
-						<li>const float pi = 6.28F</li>
-						<li>const float pi; pi = 6.28F</li>
-					</ol>
-				</section>
-				<section>
-					<data-auto-animate>
-						<p data-id="code-title">VIII. What will be the output of the following C# code?</p>
-						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            <section>
+                <h4>V. Arrange the following data type in order of increasing magnitude sbyte, short, long, int.</h4>
+                <ol>
+                    <li>long &lt; short &lt; int &lt; sbyte</li>
+                    <li>sbyte &lt; short &lt; int &lt; long</li>
+                    <li>short &lt; sbyte &lt; int &lt; long</li>
+                    <li>short &lt; int &lt; sbyte &lt; long</li>
+                </ol>
+            </section>
+            <section>
+                <h4>VI. Which data type should be more preferred for storing a simple number like 35 to improve execution speed of a program?</h4>
+                <ol>
+                    <li>sbyte</li>
+                    <li>short</li>
+                    <li>int</li>
+                    <li>long</li>
+                </ol>
+            </section>
+            <section>
+                <h4>VII. Correct way to define a value 6.28 in a variable ‘pi’ where value cannot be modified?</h4>
+                <ol>
+                    <li>#define pi 6.28F</li>
+                    <li>pi = 6.28F</li>
+                    <li>const float pi = 6.28F</li>
+                    <li>const float pi; pi = 6.28F</li>
+                </ol>
+            </section>
+            <section>
+                <data-auto-animate>
+                    <h4>VIII. What will be the output of the following C# code?</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
 							public static void Main(string[] args)
 							{							
 								double ZERO = 0;			   
@@ -104,17 +116,17 @@
 							}
 			   
 						</code></pre>
-					<ol>
-						<li>1</li>
-						<li>exception argument is thrown</li>
-						<li>NaN</li>
-						<li>0</li>
-					</ol>
-				</section>
-				<section>
-					<data-auto-animate>
-						<p data-id="code-title">IX. What will be the output of the following C# code?</p>
-						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    <ol>
+                        <li>1</li>
+                        <li>exception argument is thrown</li>
+                        <li>NaN</li>
+                        <li>0</li>
+                    </ol>
+            </section>
+            <section>
+                <data-auto-animate>
+                    <h4>IX. What will be the output of the following C# code?</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
 							static void Main(string[] args)
 							{							
 								string s1 = "Delhi";			   
@@ -124,100 +136,101 @@
 							}			   
 			   
 						</code></pre>
-					<ol>
-						<li>DelhJaipur</li>
-						<li>Delhi Jaipur</li>
-						<li>Delhi</li>
-						<li>DelhiJaipur</li>
-					</ol>
-				</section>
-				<section>
-					<data-auto-animate>
-						<p data-id="code-title">X. What will be the output of the following C# code?</p>
-						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    <ol>
+                        <li>DelhJaipur</li>
+                        <li>Delhi Jaipur</li>
+                        <li>Delhi</li>
+                        <li>DelhiJaipur</li>
+                    </ol>
+            </section>
+            <section>
+                <data-auto-animate>
+                    <h4 data-id="code-title">X. What will be the output of the following C# code?</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
 							string s1 = " I AM BEST ";
 							string s2;				
 							s2 = s1.substring (5, 4);				
 							Console.WriteLine (s2);				
 						</code></pre>
-					<ol>
-						<li>AM BEST</li>
-						<li>I AM BES</li>
-						<li>BEST</li>
-						<li>I AM</li>
-					</ol>
-				</section>
-				<section>
-					<p>XI. Correct statement about strings are?</p>
-					<ol>
-						<li>a string is created on the stack</li>
-						<li>a string is primitive in nature</li>
-						<li>a string created on heap</li>
-						<li>created of string on a stack or on a heap depends on the length of the string</li>
-					</ol>
-				</section>
-				<section>
-					<p>XII. Storage location used by computer memory to store data for usage by an application is?</p>
-					<ol>
-						<li>Pointers</li>
-						<li>Constants</li>
-						<li>Variable</li>
-						<li>none of above</li>
-					</ol>
-				</section>
-				<section>
-					<data-auto-animate>
-						<p data-id="code-title">XIII. What will be the output of the following C# code?</p>
-						<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    <ol>
+                        <li>AM BEST</li>
+                        <li>I AM BES</li>
+                        <li>BEST</li>
+                        <li>I AM</li>
+                    </ol>
+            </section>
+            <section>
+                <h4>XI. Correct statement about strings are?</h4>
+                <ol>
+                    <li>a string is created on the stack</li>
+                    <li>a string is primitive in nature</li>
+                    <li>a string created on heap</li>
+                    <li>created of string on a stack or on a heap depends on the length of the string</li>
+                </ol>
+            </section>
+            <section>
+                <h4>XII. Storage location used by computer memory to store data for usage by an application is?</h4>
+                <ol>
+                    <li>Pointers</li>
+                    <li>Constants</li>
+                    <li>Variable</li>
+                    <li>none of above</li>
+                </ol>
+            </section>
+            <section>
+                <data-auto-animate>
+                    <h4 data-id="code-title">XIII. What will be the output of the following C# code?</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
 							static void Main(string[] args)
 							{							
 								String name = "Dr.Strange";				
 								Console.WriteLine("Good Morning" + name);				
 							}							
 						</code></pre>
-					<ol>
-						<li>Dr.Strange</li>
-						<li>Good Morning</li>
-						<li>Good Morning Dr.Strange</li>
-						<li>Good Morning name</li>
-					</ol>
-				</section>
-				<section>
-					<p>XIV. Default Type of number without decimal is?</p>
-					<ol>
-						<li>Long Int</li>
-						<li>Unsigned Long</li>
-						<li>Int</li>
-						<li>Unsigned Int</li>
-					</ol>
-				</section>
-				<section>
-					<p>XV. What is the actual type of string in C#?</p>
-					<ol>
-						<li>System.Array</li>
-						<li>System.char</li>
-						<li>System.String</li>
-						<li>Unsigned Int</li>
-					</ol>
-				</section>
-	         
-			</div>
-		</div>
+                    <ol>
+                        <li>Dr.Strange</li>
+                        <li>Good Morning</li>
+                        <li>Good Morning Dr.Strange</li>
+                        <li>Good Morning name</li>
+                    </ol>
+            </section>
+            <section>
+                <h4>XIV. Default Type of number without decimal is?</h4>
+                <ol>
+                    <li>Long Int</li>
+                    <li>Unsigned Long</li>
+                    <li>Int</li>
+                    <li>Unsigned Int</li>
+                </ol>
+            </section>
+            <section>
+                <h4>XV. What is the actual type of string in C#?</h4>
+                <ol>
+                    <li>System.Array</li>
+                    <li>System.char</li>
+                    <li>System.String</li>
+                    <li>Unsigned Int</li>
+                </ol>
+            </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+        </div>
+    </div>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
 </html>
