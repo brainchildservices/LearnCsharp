@@ -1,0 +1,266 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>LearnC#</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h3>Csharp Statements</h3>
+                <p>The actions of a program are expressed using statements. C# supports several different kinds of statements, a number of which are defined in terms of embedded statements.</p>
+            </section>
+            <section>
+                <h3>End points and reachability</h3>
+                <p>Every statement has an end point. In intuitive terms, the end point of a statement is the location that immediately follows the statement. For example, when control reaches the end point of a statement in a block, control is transferred
+                    to the next statement in the block. Conversely, if there is no possibility that a statement will be executed, the statement is said to be unreachable. To determine whether a particular statement or end point is reachable, the compiler
+                    performs flow analysis according to the reachability rules defined for each statement. The flow analysis takes into account the values of constant <a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/expressions#constant-expressions">expressions</a>                    that control the behavior of statements, but the possible values of non-constant expressions are not considered.</p>
+            </section>
+            <section>
+                <section>
+                    <h3>C# Blocks</h3>
+                    <p>Blocks with statements</p>
+                    <p>A block is a combination of zero or more statements that is enclosed inside curly brackets { }.</p>
+
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					using System;
+
+					namespace Blocks
+					{
+						class BlockExample
+						{
+							public static void Main(string[] args)
+							{
+								double temperature = 42.05;
+								if (temperature > 32)
+								{	// Start of block
+									Console.WriteLine("Current temperature = {0}", temperature);
+									Console.WriteLine("It's hot");
+								}	// End of block
+							}
+						}
+					}
+   
+				</code></pre>
+                </section>
+                <section>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+    - Here, the two statements inside { }: 
+						Console.WriteLine("Current temperature = {0}", temperature); 
+						and Console.WriteLine("It's hot"); 
+					forms a block.
+				</code></pre>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h4>EMPTY STATEMENT</h4>
+                    <ul>
+                        <li>
+                            <p>An empty_statement does nothing.</p>
+                        </li>
+                        <li>
+                            <p>An empty statement is used when you no need to perform an operation where a statement is required.</p>
+                        </li>
+                        <li>
+                            <p>It simply transfers control to the end point of the statement.</p>
+                        </li>
+                        <li>
+                            <p>Execution of an empty statement simply transfers control to the end point of the statement. Thus, the end point of an empty statement is reachable if the empty statement is reachable.</p>
+                        </li>
+                        <li>
+                            <p>It is also very useful with a while loop with the blank body and label statements.</p>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <p>Example:</p>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						while(DoSomething())
+						{ 
+						  ;
+						} 
+			 
+						and 
+			 
+						void M() {
+						if(someCondition) goto exit;
+						// ...
+						exit: ;
+						}
+					</code></pre>
+                </section>
+            </section>
+            <section>
+                <h3>LABELED STATEMENT</h3>
+                <p>Labels are used to transfer program control directly to the specified statement.</p>
+                <p>The scope of a label is the entire function in which it is declared.</p>
+                <p>Generally, in c#, the defined labeled statement must always exist in the goto statement's scope.</p>
+                <p>A labeled_statement permits a statement to be prefixed by a label.</p>
+            </section>
+            <section>
+                <h3>DECLARATION STATEMENT</h3>
+                <p>A declaration_statement declares a local variable or constant.</p>
+                <p>Declaration statements are permitted in blocks, but are not permitted as embedded statements.</p>
+                <p>Example: <a href="https://dotnetfiddle.net/LVhGgx" target="_blank">dotnetfiddle</a></p>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					public static void Main()
+					{
+						int a = 1, b = 2, c = 5;     //Declaration statement
+						Console.WriteLine("{0} {1} {2}", a, b, c);      
+					}
+				</code></pre>
+            </section>
+            <section>
+                <h3>EXPRESSION STATEMENT</h3>
+                <p>An expression_statement evaluates a given expression.</p>
+                <p>The value computed by the expression, if any, is discarded.</p>
+                <p>Not all expressions are permitted as statements. In particular, expressions such as x + y and x == 1 that merely compute a value (which will be discarded), are not permitted as statements.</p>
+                <p>Execution of an expression_statement evaluates the contained expression and then transfers control to the end point of the expression_statement.</p>
+                <p>The end point of an expression_statement is reachable if that expression_statement is reachable.</p>
+            </section>
+            <section>
+                <section>
+                    <h3>Csharp STATEMENT CONTAINS</h3>
+                    <p>A block permits multiple statements to be written in contexts where a single statement is allowed. A block consists of a list of statements written between the delimiters { and }.</p>
+                    <p>Declaration statements are used to declare local variables and constants.</p>
+                    <p>Expression statements are used to evaluate expressions. Expressions that can be used as statements include method invocations, object allocations using the new operator, assignments using = and the compound assignment operators, increment
+                        and decrement operations using the ++ and -- operators and await expressions.</p>
+                    <p>Selection statements are used to select one of a number of possible statements for execution based on the value of some expression. This group contains the if and switch statements.</p>
+                    <p>Iteration statements are used to execute repeatedly an embedded statement. This group contains the while, do, for, and foreach statements.</p>
+                </section>
+                <section>
+                    <p>Jump statements are used to transfer control. This group contains the break, continue, goto, throw, return, and yield statements.</p>
+                    <p>The try...catch statement is used to catch exceptions that occur during execution of a block, and the try...finally statement is used to specify finalization code that is always executed, whether an exception occurred or not.</p>
+                    <p>The checked and unchecked statements are used to control the overflow-checking context for integral-type arithmetic operations and conversions.</p>
+                    <p>The lock statement is used to obtain the mutual-exclusion lock for a given object, execute a statement, and then release the lock.</p>
+                    <p>The using statement is used to obtain a resource, execute a statement, and then dispose of that resource.</p>
+                </section>
+            </section>
+            <section>
+                <h3>The following lists the kinds of statements that can be used:</h3>
+                <ul>
+                    <li>
+                        <p id="listing">Local variable declaration.</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p id="listing">Local constant declaration.</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p id="listing">Expression statement.</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p id="listing">if statement.</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p id="listing">switch statement.</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p id="listing">while statement.</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p id="listing">do statement.</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p id="listing">for statement.</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p id="listing">foreach statement.</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p id="listing">break statement.</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p id="listing">continue statement.</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p id="listing">goto statement.</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p id="listing">return statement.</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p id="listing">yield statement.</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p id="listing">throw statements and try statements.</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p id="listing">checked and unchecked statements.</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p id="listing">lock statement.</p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p id="listing">using statement.</p>
+                    </li>
+                </ul>
+
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
