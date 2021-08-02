@@ -1,0 +1,349 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>LearnC#</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>C# Operator</h1>
+            </section>
+            <section>
+                <section>
+                    <h3>What are Operators?</h3>
+                    <ul>
+                        <li>
+                            Operators are symbols that are used to perform operations on operands. Operands may be
+                            variables
+                            and/or constants. For example, in 2+3, + is an operator that is used to carry out addition
+                            operation, while 2 and 3 are operands.
+                        </li>
+                        <li>
+                            Operators are used to perform operations on variables and values.
+                        </li>
+                        <li>
+                            Example Below ->
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                using System;
+
+                public class Program
+                {
+                    public static void Main()
+                    {
+                        int x;  // Declaring a variable
+                        x=10; // Assigning value to variable x
+
+                        int y=20; // Declaring a variable y of type int and assigning value 20 to it
+                    }
+                }
+            </code></pre>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h3>What are Arithmetic operators?</h3>
+                    <p>
+                        Arithmetic operators are used to perform arithmetic operations such as addition, subtraction,
+                        multiplication, division, Modulo.
+                    <ul>
+                        <li>Addition : 6 + 3 evaluates to 9 </li>
+                        <li> subtraction : 10 - 6 evaluates to 4 </li>
+                        <li> multiplication : 4 * 2 evaluates to 8 </li>
+                        <li>division : 10 / 5 evaluates to 2 </li>
+                        <li>Modulo (Remainder) : 16 % 3 evaluates to 1</li>
+                    </ul>
+                    </p>
+                </section>
+                <section>
+                    <h3>Basic Arithmetic Operators</h3>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        using System;
+
+                        public class Program
+                        {
+                            public static void Main()
+                            {
+                                //Basic Arithematic Operators
+  
+                                int number1=20;  
+                                int number2=7;  
+  
+                                int sum= number1+number2;
+                                int difference =number1-number2;
+                                int product =number1*number2;
+                                int quotient =number1/number2;
+                                int remainder =number1%number2;   // % is called modulus operator
+  
+                                Console.WriteLine("Sum of number1+number2 is:"+sum);
+                                Console.WriteLine("Difference of number1-number2 is:"+difference);
+                                Console.WriteLine("Product of number1*number2 is:"+product);
+                                Console.WriteLine("Quotient of number1/number2 is:"+quotient);
+                                Console.WriteLine("Remainder of number1/number2 is:"+remainder);
+                            }
+                        }
+                    </code></pre>
+                </section>
+            </section>
+            <section>
+                <h3> Increment and Decrement operator</h3>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+
+                using System;
+
+                public class Program
+                {
+                    public static void Main()
+                    {
+                        //Increment and Decrement operator
+                        int a=2;
+                        a=a+1;
+                        Console.WriteLine("The value of a after adding 1 is:"+a);
+                        a++;  //Increment Operator
+                        Console.WriteLine("The value of a after increment operator is:"+a);
+
+                        int b=3;
+                        b=b-1;
+                        Console.WriteLine("The value of b after subtracting 1 is:"+b);
+                        b--;  //Decrement Operator
+
+                        Console.WriteLine("The value of b after decrement operator is:"+b);
+                    }
+                }
+
+            </code></pre>
+            </section>
+            <section>
+                <h3>Difference between Increment and Decrement Operator</h3>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            
+                using System;
+                      
+                public class Program
+                {
+                    public static void Main()
+                    {
+                        //Difference between Increment and Decrement Operator
+                        int a = 10;
+                        Console.WriteLine("The value of a++ is"+ a++);   	//Post Increment
+                        Console.WriteLine("The value of a is"+ a);  
+                        int b = 10;
+                        Console.WriteLine("The value of ++b is"+ ++b);		//Pre Increment
+                
+                
+                        //i++ means 'tell me the value of i, then increment'
+                        //++i means 'increment i, then tell me the value'
+                
+                        //You won't normally notice a differene in the usage until you use the increment/operator with assignment;
+                        //Post Increment
+                        int x1=20;
+                        x1++;
+                        int x2=x1;
+                        Console.WriteLine("The value of x2 is"+ x2);
+                
+                        int y1=20;
+                        int y2=y1++;
+                        Console.WriteLine("The value of y2 is"+ y2);
+                
+                        //Pre Increment
+                        int p1=20;
+                        ++p1;
+                        int p2=p1;
+                        Console.WriteLine("The value of p2 is"+ p2);
+                
+                        int q1=20;
+                        int q2=++q1;
+                        Console.WriteLine("The value of q2 is"+ q2);
+                    }
+                }
+            </code></pre>
+            </section>
+            <section>
+                <h3>Assignment Operators</h3>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    using System;
+
+                    public class Program
+                    {
+                        public static void Main()
+                        {
+                            //Assignment Operators
+                            int a=10;
+                            a+=1;   //a=a+1 or ++a
+                            Console.WriteLine("Using Addition assignment operator, Value of a is:"+a);
+
+                            int z=10;
+                            z+=2;   //z=z+2
+                            Console.WriteLine("Using Addition assignment operator, Value of z is:"+z);
+
+                            int b=10;
+                            b-=2;	//b=b-2;
+                            Console.WriteLine("Using Subtraction assignment operator, Value of b is:"+b);
+
+                            int c=20;
+                            c*=2;	//c=c*2;
+                            Console.WriteLine("Using Multiplication assignment operator, Value of c is:"+c);
+
+                            int d=20;
+                            d/=2;	//d=d/2;
+                            Console.WriteLine("Using Division assignment operator, Value of d is:"+d);
+
+                            int e=20;
+                            e%=3;	//e=e/2;
+                            Console.WriteLine("Using Modulus assignment operator, Value of e is:"+e);
+                        }
+                    }
+                </code></pre>
+            </section>
+            <section>
+                <h3>Comparison Operators</h3>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    using System;
+
+                    public class Program
+                    {
+                        public static void Main()
+                        {
+                            // Comparison Operators : The result is a boolean value
+                            int p=25;
+                            bool result=p>5;
+                            Console.WriteLine("The value of result is:"+result);
+
+                            int a=7; 
+                            Console.Write("Check if a is greated than 3:");
+                            Console.WriteLine(a>3);
+
+                            int b=30;
+                            Console.Write("Check if b is less than 20:");
+                            Console.WriteLine(b<20);
+
+                            int c=35;
+                            Console.Write("Check if c is less than or equal to 35:");
+                            Console.WriteLine(c<=35);
+
+                            int d=35;
+                            Console.Write("Check if d is equal to 50:");
+                            Console.WriteLine(d==35);
+                        }
+                    }
+                </code></pre>
+            </section>
+            <section>
+                <h3>What are Logical operators?</h3>
+                <p>Logical operators are used to perform logical operation such as and, or. Logical operators operates
+                    on boolean expressions (true and false) and returns boolean values. Logical operators are used in
+                    decision making and loops.</p>
+            </section>
+            <section>
+                <section>
+                    <h4>C# Logical operators</h4><br><br>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Operand 1</th>
+                                <th>Operand 2</th>
+                                <th>OR (||)</th>
+                                <th>AND (&&)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>True</td>
+                                <td>True</td>
+                                <td>True</td>
+                                <td>True</td>
+                            </tr>
+                            <tr>
+                                <td>True</td>
+                                <td>False</td>
+                                <td>True</td>
+                                <td>False</td>
+                            </tr>
+                            <tr>
+                                <td>False</td>
+                                <td>True</td>
+                                <td>True</td>
+                                <td>False</td>
+                            </tr>
+                            <tr>
+                                <td>False</td>
+                                <td>False</td>
+                                <td>False</td>
+                                <td>False</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <h3>Logical Operators</h3>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+
+                    using System;
+
+                    public class Program
+                    {
+                        public static void Main()
+                        {
+                            // Logical Operators
+                            // Logical operators are used to determine the logic between variables or values:
+ 
+                            int a=1;
+                            int b=10;
+                            bool resultAnd=a>0 && b<10;   // Will be true if both conditions are true - Logical AND Operator- &&
+                            Console.WriteLine("Checking if a is greater 1 and b is less than 10: "+resultAnd);
+ 
+                            int c=1;
+                            int d=10;
+                            bool resultOR=c>0 || d<10;   // Will be true if any of the one condition is true - Logical OR Operator-||
+                            Console.WriteLine("Checking if c is greater 1 or d is les than 10: "+resultOR);
+ 
+                            bool myValue= true;
+                            bool newValue=!myValue;		//The Not Operator will reverse the bool value
+                            Console.WriteLine("Reversed value of myValue is : "+newValue);
+ 
+                            int p=1;
+                            int q=10;
+                            Console.Write("Checking if p is greater 1 and q is less than 10:");
+                            Console.WriteLine(p>0 && q<10);
+                        }
+                    }
+                </code></pre>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
