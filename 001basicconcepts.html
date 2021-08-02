@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>LearnC#</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <section>
+                    <h3>Application Startup</h3> <br>
+                    <ul id="leftpara98">
+                        <li>Application startup occurs when the execution environment calls a designated method, which is referred to as the application's entry point.</li> <br>
+                        <li>This entry point method is always named Main, and can have one of the following signatures:</li> <br>
+                    </ul>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        static void Main() {...} 
+                        static void Main(string[] args) {...}
+                        static int Main() {...} 
+                        static int Main(string[] args) {...}
+                        </code></pre>
+                </section>
+                <section>
+                    <p id="leftpara99">As shown, the entry point may optionally return an int value. This return value is used in application termination</p> <br>
+                    <ul id="leftpara98">
+                        <li>An assembly that has an entry point is called an application.</li> <br>
+                        <li>When an application is run, a new application domain is created. Several different instantiations of an application may exist on the same machine at the same time, and each has its own application domain.</li> <br>
+                        <li>The entry point may optionally have one formal parameter. The parameter may have any name, but the type of the parameter must be string[ ].</li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <h3>Application termination</h3> <br>
+                <ul id="leftpara98">
+                    <li>Application termination returns control to the execution environment.</li> <br>
+                    <li>If the return type of the application's entry point method is int, the value returned serves as the application's termination status code. The purpose of this code is to allow communication of success or failure to the execution environment.</li>
+                    <br>
+                    <li>If the return type of the entry point method is void, reaching the right brace (}) which terminates that method, or executing a return statement that has no expression, results in a termination status code of 0.</li>
+                </ul>
+            </section>
+            <section>
+                <section>
+                    <h3>Declaration</h3> <br>
+                    <ul id="leftpara98">
+                        <li>Declarations in a C# program define the constituent elements of the program.</li> <br>
+                        <li>C# programs are organized using namespaces (Namespaces), which can contain type declarations and nested namespace declarations.</li> <br>
+                        <li>Type declarations (Type declarations) are used to define classes (Classes), structs (Structs), interfaces (Interfaces), enums (Enums), and delegates (Delegates). The kinds of members permitted in a type declaration depend on the
+                            form of the type declaration.</li>
+                    </ul>
+                </section>
+                <section>
+                    <p id="leftpara99">A declaration defines a name in the declaration space to which the declaration belongs.</p> <br>
+                    <ul id="leftpara98">
+                        <li>Within all source files of a program, namespace_member_declarations with no enclosing namespace_declaration are members of a single combined declaration space called the global declaration space.</li> <br>
+                        <li>Within all source files of a program, namespace_member_declarations within namespace_declarations that have the same fully qualified namespace name are members of a single combined declaration space.</li>
+                    </ul>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
