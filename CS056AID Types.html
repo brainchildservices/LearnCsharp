@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>LearnC#</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/sky.css" id="theme">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <section>
+                    <h3>DATATYPES</h3>
+                    <p>C# is a strongly-typed language. It means we must declare the type of a variable that indicates the kind of values it is going to store</p>
+                    <p>C# mainly categorized data types in two types:</p>
+                    <ul>
+                        <li>
+                            <p>Value types</p>
+                        </li>
+                        <li>
+                            <p>Reference types</p>
+                        </li>
+                    </ul>
+                    <p>Value types include simple types (such as int, float, bool, and char), enum types, struct types, and Nullable value types.</p>
+                    <p>Reference types include class types, interface types, delegate types, and array types.</p>
+                </section>
+                <section>
+                    <img src="/image/CSharpTypes.png">
+                </section>
+            </section>
+            <section>
+                <h3>Value Type</h3>
+                <p>A data type is a value type if it holds a data value within its own memory space. It means the variables of these data types directly contain values.</p>
+                <p>For example, consider integer variable, '<b>int i = 100;</b>'</p>
+                <p>The system stores 100 in the memory space allocated for the variable i. The following image illustrates how 100 is stored at some hypothetical location in the memory (0x239110) for 'i':</p>
+            </section>
+            <section>
+                <section>
+                    <h3>Passing Value Type Variables</h3>
+                    <p>When you pass a value-type variable from one method to another, the system creates a separate copy of a variable in another method.</p>
+                    <p>If value got changed in the one method, it wouldn't affect the variable in another method.</p>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    static void ChangeValue(int x)
+                    {
+                        x =  200;
+     
+                        Console.WriteLine(x);
+                    }
+     
+                    static void Main(string[] args)
+                    {
+                        int i = 100;
+     
+                        Console.WriteLine(i);
+     
+                        ChangeValue(i);
+     
+                        Console.WriteLine(i);
+                    }
+     
+     
+                    //Output: 
+                        100
+                        200
+                        100
+                </code></pre>
+                </section>
+                <section>
+                    <p>This is how the value type getting stored.</p>
+                    <img src="/image/Typevaluestore.png" alt="value type getting stored">
+
+                    <p>The following data types are all of value type:</p>
+                    <ul>
+                        <li>
+                            <p>bool</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p>byte</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p>char</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p>decimal</p>
+                        </li>
+                    </ul><br/>
+                    <ul>
+                        <li>
+                            <p>double</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p>enum</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p>float</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p>int</p>
+                        </li>
+                    </ul><br/>
+                    <ul>
+                        <li>
+                            <p>long</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p>sbyte</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p>short</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p>struct</p>
+                        </li>
+                    </ul><br/>
+                    <ul>
+                        <li>
+                            <p>uint</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p>ulong</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p>ushort</p>
+                        </li>
+                    </ul><br/>
+                </section>
+
+            </section>
+            <section>
+                <section>
+                    <h3>Reference Type</h3>
+                    <p>Unlike value types, a reference type doesn't store its value directly. Instead, it stores the address where the value is being stored.</p>
+                    <p>In other words, a reference type contains a pointer to another memory location that holds the data.</p>
+                    <p>For example, consider the following string variable:</p>
+
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    string s = "Hello World!!"; 
+                </code></pre>
+                </section>
+                <section>
+                    <p>The following image shows how the system allocates the memory for the above string variable.</p>
+                    <img src="/image/StringAllocation.png" alt="String Memmory Allocation">
+                    <p>As you can see in the above image, the system selects a random location in memory (0x803200) for the variable s. The value of a variable s is 0x600000, which is the memory address of the actual data value. Thus, reference type stores
+                        the address of the location where the actual value is stored instead of the value itself.</p>
+                </section>
+            </section>
+            <section>
+                <h3>Passing Reference Type Variables</h3>
+                <p>When you pass a reference type variable from one method to another, it doesn't create a new copy; instead, it passes the variable's address.</p>
+                <p>So, If we change the value of a variable in a method, it will also be reflected in the calling method.</p>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    static void ChangeReferenceType(Student std2)
+                    {
+                        std2.StudentName = "Steve";
+                    }
+     
+                    static void Main(string[] args)
+                    {
+                        Student std1 = new Student();
+                        std1.StudentName = "Bill";
+     
+                        ChangeReferenceType(std1);
+     
+                        Console.WriteLine(std1.StudentName);
+                    }
+     
+                    //Output: 
+                    Steve
+                </code></pre>
+
+            </section>
+            <section>
+                <p id="centerPara">The followings are reference type data types:</p>
+                <ul>
+                    <li>
+                        <p>String</p>
+                    </li>
+                    <li>
+                        <p>Arrays (even if their elements are value types)</p>
+                    </li>
+                    <li>
+                        <p>Class</p>
+                    </li>
+                    <li>
+                        <p>Delegate</p>
+                    </li>
+                </ul>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
