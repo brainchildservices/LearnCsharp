@@ -263,8 +263,9 @@ section.has-dark-background h6 {
     display: block;
     padding: 5px;
     overflow: auto;
-    max-height: 400px;
+    max-height: 300px;
     word-wrap: normal;
+    font-size: 18px;
 }
 
 .reveal table {
