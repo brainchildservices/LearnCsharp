@@ -415,3 +415,7 @@ section.has-dark-background h6 {
     text-align: center;
     font-size: 65%;
 }
+
+#listPara {
+    margin: 5px !important;
+}

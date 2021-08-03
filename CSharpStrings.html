@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>LearnC#</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <section>
+                <h2>C# Strings</h2>
+            </section>
+
+            <section>
+                <h3>What is C# String?</h3>
+                <p>In C#, a string is a series of characters that is used to represent text. It can be a character, a word or a long passage surrounded with the double quotes ". C# provides the String data type to store string literals.</p>
+            </section>
+
+            <section>
+                <h3>What is String Length?</h3>
+                <p id="centerpara">Returns the number of characters in a string. <a href="(https://dotnetfiddle.net/yfdtQ6)">Example:</a></p>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    using System;
+
+                    public class Program
+                    {
+                        public static void Main()
+                        {
+                            string name = "Tiago";
+                    int nameLength = name.Length;
+                    Console.WriteLine("The name " + name + " contains " + nameLength + " letters.");
+                        }
+                    }
+
+                    //Output: will show the stringname and stringlength.
+                </code></pre>
+            </section>
+            <section>
+                <h3>What do you mean by String Concatenation?</h3>
+                <p>The + operator can be used between strings to combine them. This is called concatenation.</p>
+                <h6>Example</h6>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    string firstName = "Brain";
+                    string lastName = "Child";
+                    string name = firstName + lastName;
+                    Console.WriteLine(name);
+
+                    //Output: BrainChild
+                </code></pre>
+            </section>
+
+            <section>
+                <h3>What is String Interpolation?</h3>
+                <p>Another option of string concatenation, is string interpolation, which substitutes values of variables into placeholders in a string. Note that you do not have to worry about spaces, like with concatenation:</p>
+                <h6>Example</h6>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    string firstName = "Brain";
+                    string lastName = "Child";
+                    string name = $"My full name is: {firstName}{lastName}";
+                    Console.WriteLine(name);
+
+                    //Output: BrainChild
+                </code></pre>
+            </section>
+            <section>
+                <h3>How to access each character of a string?</h3>
+                <p>You can access the characters in a string by referring to its index number inside square brackets [ ].</p>
+                <p>Example:</p>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    string myString = "Hello";
+                    Console.WriteLine(myString[0]);
+
+                    //Output: H
+                </code></pre>
+            </section>
+
+            <section>
+                <h3>What is String.Format?</h3>
+                <p>String.Format( ) method formats strings in a desired format by inserting objects and variables with specified space and alignments into another strings and literals. It is also often used to format strings into specific formats.</p>
+                <h3><a href="https://dotnetfiddle.net/2dBw4w" target="_blank">Example:</a></h3>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    using System;
+
+                    public class Program
+                    {
+                        public static void Main()
+                        {
+                            string name = "Kevin";
+                            int age = 20;
+                            double percentage = 90.25;
+
+                            Console.WriteLine();
+                            Console.WriteLine("----------------------------String Format-------------------------");
+                            Console.WriteLine();
+
+                            string myString=String.Format("My student {0}, who is aged {1} has scored {2} % of marks in his entrance exam",name,age,percentage);
+                            Console.WriteLine(myString);
+                            Console.WriteLine("My student {0}, who is aged {1} has scored {2} % of marks in his entrance exam",name,age,percentage);
+
+                        }
+                    }
+                </code></pre>
+            </section>
+
+            <section>
+                <h3>Assignment Questions:</h3>
+                <p><b>Q1. Write a program to store the following sentence to a string</b></p>
+                <p><em>Honor of Nurses Week, show gratitude to those who take time to make sure we, and the people we love, are comfortable. They spend countless hours caring for us.</em></p>
+                <ul>
+                    <li>
+                        <p id="listPara">Print the length of the string.</p>
+                    </li>
+                    <li>
+                        <p id="listPara">Print the 5th character of the string.</p>
+                    </li>
+                    <li>
+                        <p id="listPara">Print the 6th character from last.</p>
+                    </li>
+                    <li>
+                        <p id="listPara">Print the index of the letter g </p>
+                    </li>
+                    <li>
+                        <p id="listPara">Print the sentence in UpperCase</p>
+                    </li>
+                    <li>
+                        <p id="listPara">Print the sentence in LowerCase</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <p><b>Q2. Write a program to store the name of a book(string), author of the book(string), price of the book(decimal), Number of copies sold(int), Year of release(int). Get these values input by the user.</b></p>
+                <p>Print the string: The book, NameOfBook was released in the year, ReleaseYear. The book was written by Author .</p>
+                <p>Number_Of_Copies copies of the book was sold at Rs. Price per book.</p>
+                <p>Eg: The book, My Life was released in the year, 1998. The book was written by John Peters. 1990333 copies of the book was sold at Rs. 185 per book</p>
+                <p>Print the above string using:</p>
+                <ul>
+                    <li>
+                        <p>String concatenation + operator</p>
+                    </li>
+                    <li>
+                        <p>String interpolation $</p>
+                    </li>
+                    <li>
+                        <p>String Format</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <p><b>Q3. Write a program to print the following paragraph using single Console.WriteLine() statement:</b></p>
+                <p>The dog, "Kevin" was sitting on a bench. As the wind picked up, John/James heard a rumbling sound from a distance. "It was the minister/King", Peter exclaimed.</p>
+                <p>They saw the sun set in the ocean and it was getting "darker" and "darker".</p>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
