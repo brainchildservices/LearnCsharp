@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>LearnC#</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h3>Boxing and unboxing</h3>
+                <p>Boxing and unboxing in C# allows developers to convert .NET data types from value type to reference type and vice versa.</p>
+            </section>
+            <section>
+                <p>Converting a value type to a reference type is called boxing in C#.</p>
+                <p>Example:</p>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					public static void Main()
+					{
+						int i = 2;  
+						object o = i; // boxing  							       
+						Console.WriteLine(i);
+					} 
+				</code></pre>
+            </section>
+            <section>
+                <p>Converting a reference type to a value type is called unboxing in C#.</p>
+                <p>Example:</p>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					public static void Main()
+   					{
+   				        int a = 10;  
+   				        object objectOne = a; // boxing  
+   				        int b = (int)objectOne; // unboxing  
+   				        Console.WriteLine(b);
+   					} 
+				</code></pre>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
