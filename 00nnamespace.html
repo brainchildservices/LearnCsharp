@@ -78,21 +78,112 @@
 				</code></pre>
 			</section>
 			</section>
+			<section id="nsslidetwoul">
 			<section>
-				<h2>Uses of C# ?</h2>
-				<p>
+				<h3>THE USING KEYWORD</h3>
 				<ul>
-					<li>Mobile applications</li>
-					<li>Desktop applications</li>
-					<li>Web applications</li>
-					<li>Web services</li>
-					<li>Web sites</li>
-					<li>Games & VR</li>
-					<li>Database applications</li>
-					<li>And much, much more!</li>
+					<li>The using keyword states that the program is using the names in the given namespace.</li>
+					<li>For example, we are using the System namespace in our programs. The class Console is defined there.</li>
+					<li>We just write:</li>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					Console.WriteLine ("Hello there");
+				</code></pre>
+					<li>This could have been written as:</li>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						System.Console.WriteLine("Hello there");
+					</code></pre>
+					<li>You can also avoid prepending of namespaces with the using namespace directive.</li>
+					<li>This directive tells the compiler that the subsequent code is making use of names in the specified namespace.</li>
 				</ul>
-				</p>
 			</section>
+			<section>
+				<p>Let us rewrite our preceding example, with using directive:</p>
+				<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+				using System;
+				using first_space;
+				using second_space;
+				
+				namespace first_space {
+				   class abc {
+					  public void func() {
+						 Console.WriteLine("Inside first_space");
+					  }
+				   }
+				}
+				namespace second_space {
+				   class efg {
+					  public void func() {
+						 Console.WriteLine("Inside second_space");
+					  }
+				   }
+				}   
+				class TestClass {
+				   static void Main(string[] args) {
+					  abc fc = new abc();
+					  efg sc = new efg();
+					  fc.func();
+					  sc.func();
+				   }
+				}
+
+				Output is same:
+				Inside first_space
+				Inside second_space
+			</code></pre>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h3>NESTED NAMESPACE</h3>
+				<p>You can define one namespace inside another namespace as follows:</p>
+				<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+				namespace namespace_name1 {
+                   
+					// code declarations
+					namespace namespace_name2 {
+					   // code declarations
+					}
+				 }
+				</code></pre>
+			</section>
+			<section>
+				<p>You can access members of nested namespace by using the dot (.) operator as follows:</p>
+				<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					using System;
+					using first_space;
+					using first_space.second_space;
+ 
+					namespace first_space {
+					   class abc {
+						  public void func() {
+							 Console.WriteLine("Inside first_space");
+						  }
+					   }
+					   namespace second_space {
+						  class efg {
+							 public void func() {
+								Console.WriteLine("Inside second_space");
+							 }
+						  }
+					   }   
+					}
+					class TestClass {
+					   static void Main(string[] args) {
+						  abc fc = new abc();
+						  efg sc = new efg();
+						  fc.func();
+						  sc.func();
+						  Console.ReadKey();
+					   }
+					}
+ 
+					Output:
+					Inside first_space
+					Inside second_space
+					</code></pre>
+			</section>
+
+		</section>
 		</div>
 	</div>
 
