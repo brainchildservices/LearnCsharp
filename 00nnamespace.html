@@ -22,6 +22,7 @@
 				<h2>C# NAMESPACE</h2>
 			</section>
 			<section id="nsslidetwoul">
+			<section>
 				<p>A namespace is designed for providing a way to keep one set of names separate from another.</p>
 				<ul>
 					<li>
@@ -40,7 +41,42 @@
 					</li>
 
 				</ul>
-				
+			</section>
+			<section>
+				<p>The following program demonstrates use of namespaces:</p>
+				<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+				using System;
+
+				namespace first_space {
+				   class namespace_cl {
+					  public void func() {
+						 Console.WriteLine("Inside first_space");
+					  }
+				   }
+				}
+				namespace second_space {
+				   class namespace_cl {
+					  public void func() {
+						 Console.WriteLine("Inside second_space");
+					  }
+				   }
+				}
+				class TestClass {
+				   static void Main(string[] args) {
+					  first_space.namespace_cl fc = new first_space.namespace_cl();
+					  second_space.namespace_cl sc = new second_space.namespace_cl();
+					  fc.func();
+					  sc.func();
+				   }
+				}
+
+				after code is compiled and executed, output:
+
+							Inside first_space
+							Inside second_space
+
+				</code></pre>
+			</section>
 			</section>
 			<section>
 				<h2>Uses of C# ?</h2>
