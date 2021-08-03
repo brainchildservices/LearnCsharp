@@ -2101,6 +2101,9 @@ html.print-pdf .aria-status {
         font-size: inherit!important;
         color: inherit!important
     }
+
+    
+
 }
 
 #leftpara99 {
@@ -2116,4 +2119,12 @@ html.print-pdf .aria-status {
 #leftpara97 {
     text-align: left;
     font-size: 65%;
+}
+
+#nsslidetwoul li {
+    font-size: 30px;
+} 
+
+#nsslidetwoul p {
+    font-size: 35px;
 }
