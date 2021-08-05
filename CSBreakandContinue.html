@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>LearnC#</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h2>C# Break and Continue</h2>
+            </section>
+            <section>
+                <h3>Break Statement</h3>
+                <p>A Break statement breaks out of the loop at the current point or we can say that it terminates the loop condition.</p>
+                <img src="/image/BreakStatement.png" alt="C# Break Statement">
+            </section>
+            <section>
+                <h3>C# Continue</h3>
+                <p>The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.</p>
+                <img src="/image/ContinueStatement.png" alt="C# Continue Statement">
+            </section>
+
+            <section>
+                <h4>Example</h4>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					using System;
+
+					public class Program
+					{
+						public static void Main()
+						{
+							for(int i=1;i&lt;=10;i++)
+							{
+								if(i==4)
+									continue;			// The iteration stops at line 10 and goes to i++ where i gets incremented to 5 and checks the condition
+								if(i==7)
+									break;				// The loop stops and exits out of the loop when i=7 and goes to line 15
+								Console.Write(i+"\t");
+							}
+						}
+					}
+				</code></pre>
+            </section>
+
+            <section>
+                <h4>Exercise:</h4>
+                <p><em><b>Q1. Write a program to print numbers from 1 to 100. It should skip if the number is a multiple of 7 and terminate the printing when the number 67 is encountered.</b></em></p>
+                <p><em>Hint: Use continue and break statements.</em></p>
+                <p><em><b>Q2. Write a program to calculate the sum of 10 numbers. If the user enters a negative number, the loop terminates.</b></em></p>
+                <p>Test Data :</p>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					Enter 10 numbers : 1
+					2
+					4
+					-17
+					Expected Output : You have entered a negative number. Loop terminated
+					Sum=7
+				</code></pre>
+            </section>
+
+            <section>
+                <p><em><b>Q3. Write a program to calculate the sum of 5 numbers. If the user enters a negative number, it's not added to the result</b></em></p>
+                <p>Test Data :</p>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					Enter 5 numbers : 1
+					2
+					4
+					-25
+					4 Expected Output :
+					Sum=11
+				</code></pre>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
