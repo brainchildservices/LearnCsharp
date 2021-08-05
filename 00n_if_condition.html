@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>LearnC#</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h3>C# Conditions and If Statements</h3>
+                <p><b> If-else Statement </b> execute a given code path if some boolean expression is true and
+                    optionally execute a different code path if it is false. <b>Use else</b> if to specify a new
+                    condition to
+                    test,<b> if the previous if condition or else if condition is false.</b></p>
+                <p>A boolean expression evaluates to true or false.</p>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        Eg: a>b, c==10, d!=20 etc
+                    </code></pre>
+            </section>
+            <section>
+                <h6>EXAMPLE-1</h6>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    using System;
+
+                        public class Program
+                        {
+                        	public static void Main()
+                        	{
+                        		bool booleanExpression=false;
+                        		if(booleanExpression)
+                        		{
+                        			Console.WriteLine("The condition is true");
+                        		}
+                        		else
+                        		{
+                        			Console.WriteLine("The condition is false");
+                        		}
+                        	}
+                        }
+                </code></pre>
+
+            </section>
+            <section>
+                <h6>EXAMPLE-2</h6>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    using System;
+
+                    public class Program
+                    {
+                        public static void Main()
+                        {
+                            // Checking if number is 0, postive or negative
+                            int number = 0;
+                            if (number > 0)
+                            {
+                                Console.WriteLine("{0} is a positive integer", number);
+                            }
+                            else if (number == 0)
+                            {
+                                Console.WriteLine("{0} is zero", number);
+                            }
+                            else
+                            {
+                                Console.WriteLine("{0} is a negative integer", number);
+                            }
+                        }
+                    }
+                </code></pre>
+            </section>
+            <section>
+                <img src="/image/ifcondition01.png" alt="ifconditionimage">
+            </section>
+            <section>
+                <img src="/image/ifcondition02.png" alt="ifconditionimage">
+            </section>
+            <section>
+                <h3>C# Exercises on : if...else & if...else if...else </h3>
+                <p><b> Q1 </b> . Write a C# Sharp program to accept two integers and check whether they are equal or
+                    not. <br><br>
+                    Test Data : <br>
+                    Input 1st number: 5 <br>
+                    Input 2nd number: 5 <br><br>
+                    Expected Output : <br>
+                    5 and 5 are equal</p>
+            </section>
+            <section>
+                <p> <b>Q2 </b> . Write a C# Sharp program to check whether a given number is even or odd. <br><br>
+                    Test Data : 15 <br><br>
+                    Expected Output :
+                    15 is an odd integer
+                </p>
+            
+               <p><b> Q3</b>. Write a C# Sharp program to find whether a given year is a leap year or not. <br><br>
+                    Test Data : 2016 <br><br>
+                    Expected Output :
+                    2016 is a leap year.
+                </p>
+            </section>
+            <section>
+              <p> <b> Q4 </b> . Write a C# Sharp program to find the largest of three numbers. <br><br>
+                    Test Data : <br>
+                    Input the 1st number :25 <br>
+                    Input the 2nd number :63 <br>
+                    Input the 3rd number :10 <br><br>
+                    Expected Output : <br>
+                    The 2nd Number is the greatest among three
+                </p>
+            </section>
+            <section>
+
+            </section>
+            <section>
+
+            </section>
+            <section>
+
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
