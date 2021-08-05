@@ -1,0 +1,272 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>LearnC#</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h2>C# For Loop</h2>
+            </section>
+            <section>
+                <h3>C# For Loop</h3>
+                <p>A for loop is a repetition control structure that allows you to efficiently write a loop that needs to execute a specific number of times.</p>
+                <p>When you exactly don't know how many times you want to loop through a block of code, use the for loop instead of a while loop:</p>
+                <h4>Syntax:</h4>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+						for(statement 1; stement 2; stetement 3)
+						{
+							// code block to be executed
+						}
+					</code></pre>
+            </section>
+
+            <section>
+                <section>
+                    <p><b>Statement 1 </b> is executed (one time) before the execution of the code block.</p>
+                    <p><b>Statement 2 </b>defines the condition for executing the code block.</p>
+                    <p><b>Statement 3</b> is executed (every time) after the code block has been executed.</p>
+                    <img src="/image/forLoop.png" alt="For Loop Image">
+                </section>
+                <section>
+                    <h4><a href="https://dotnetfiddle.net/9ZGqdB" target="_blank">Example</a></h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        using System;
+
+                        public class Program
+                        {
+                        	public static void Main()
+                        	{
+                        		 for(int i=1;i&lt;=10;i++){    
+                                    Console.WriteLine(i);    
+                                  }  
+                        	}
+                        }
+
+                        Expected Output: 1
+                        2
+                        3
+                        4
+                        5
+                        6
+                        7
+                        8
+                        9
+                        10
+                    </code></pre>
+                </section>
+            </section>
+
+            <section>
+                <h3>Exercise:</h3>
+                <p><em><b>Q1. Write a C# program to print all odd number between 1 to 100.</b></em></p>
+                <p><em><b>Q2. Write a C# program Fibonacci Numbers to print numbers upto N, where N is a number input by the user.</b></em></p>
+                <p>Test Data:</p>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                Enter a number : 8
+                Expected Output : First 8 Fibonacci Numbers are : 0 1 1 2 3 5 8 13 21
+            </code></pre>
+                <p><em>Hint: The formula to form the Fibonacci sequence is:</em></p>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    F0 = 1
+                    F1 = 1
+                    Fn = Fn-1 + Fn-2
+                </code></pre>
+            </section>
+
+            <section>
+                <section>
+                    <p><em><b>Q3. Write a C# program to check if a number input by the user is prime or not</b></em></p>
+                    <p><b>Test Data :</b></p>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    Enter a number : 7
+                    
+                    Expected Output : 7 is prime
+                </code></pre>
+
+                    <p><em><b>Q4. Write a C# program to print the cube of a number entered by the user(Without using Math methods)</b></em></p>
+                    <p><b>Test Data :</b></p>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    Enter a number : 2
+
+                    Expected Output : cube of 2 is 8
+                </code></pre>
+                </section>
+                <section>
+                    <p><em><b>Q5. Two numbers are entered by the user. Write a program to find the value of one number raised to the power of another</b></em></p>
+                    <p><b>Test Data :</b></p>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    Enter first number : 4
+                    Enter first number : 3
+
+                    Expected Output : 4 raise to 3 is 64
+                </code></pre>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <p><em><b>Q6. Write a C# program to swap first and last digits of a number entered by the user.</b></em></p>
+                    <p>Test Data :</p>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        Enter a number : 1432
+                        
+                        Expected Output : Number after swapping first and last digit is 2431
+                    </code></pre>
+
+                    <p><em><b>Q7. Write a C# program to calculate sum of digits of a number?</b></em></p>
+                    <p>Test Data :</p>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                            Enter a number : 1432
+                            
+                            Expected Output : Sum of digits of the number is 10
+                        </code></pre>
+                </section>
+                <section>
+                    <p><em><b>Q8. Write a C# program to check whether a number is palindrome or not.</b></em></p>
+                    <p>Test Data :</p>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        Enter a number : 13231
+                            
+                            Expected Output : 13231 is palindrome.
+                        </code></pre>
+                    <p>Hint: A palindrome is a word, phrase, number or sequence of words that reads the same backward as forward.</p>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <p><em><b>Q9. Write a C# program to print all prime numbers between 1 to N. Where N is a number input by the user.</b></em></p>
+                    <p>Test Data :</p>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        Enter a number : 20
+                            
+                        Expected Output : The prime number from 1 to 20 are 2 3 5 7 11 13 17 19
+                        </code></pre>
+                    <p><em><b>Q10. Write a C# program to find all prime factors of a number.</b></em></p>
+                    <p>Test Data :</p>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        Enter a number : 10
+                                
+                        Expected Output : The prime factors of 10 are 2, 5
+                    </code></pre>
+                </section>
+                <section>
+                    <p><em><b>Q11. Write a C# program to check if the number entered by the user is an Armstrong number.</b></em></p>
+                    <p>Hint: If sum of cubes of each digit of the number is equal to the number itself, then the number is called an Armstrong number.</p>
+                    <p>Test Data :</p>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        Enter a number : 370
+                                
+                        Expected Output : 370 is an Armstrong Number.
+                    </code></pre>
+
+                    <p><em><b>Q12. Write a C# program to print out all Armstrong numbers between 1 and 500.</b></em></p>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <p><em><b>Q13. Write a C# program to input number from user and check whether number is Strong number or not.</b></em></p>
+                    <p>Hint: Strong number is a special number whose sum of factorial of digits is equal to the original number. For example: 145 is strong number. Since, 1! + 4! + 5! = 145</p>
+                    <p>Test Data :</p>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    Enter a number : 145
+                            
+                    Expected Output : 145 is an Strong Number.
+                </code></pre>
+                </section>
+                <section>
+                    <p><em><b>Q14: You are given a cubic dice with 6 faces. All the individual faces have a number printed on them. The numbers are in the range of 1 to 6, like any ordinary dice. The user needs to enter number for one face and then guess the number on the opposite face of the cube. Check if the user makes the correct guess or not</b></em></p>
+                    <p>Hint: Sum of opposite sides of a dice is 7 Test Data :</p>
+                    <p>Eg1:</p>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                            Enter a number of a face(1=6): 6
+                            Guess the opposite face : 1 
+
+                            Expected Output : Your guess is correct.
+                </code></pre>
+                    <p>Eg2:</p>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                            Enter a number of a face(1=6): 5
+                            uess the opposite face : 3 
+
+                            Expected Output : Your guess is not correct.
+        </code></pre>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <p><em><b>Q15: Given a number N, find if it is Disarium or not. A number is called Disarium if sum of its digits powered with their respective positions is equal to the number itself. Eg:"89 because 8^1+9^2=89</b></em></p>
+                    <p>Test Data :</p>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        Enter a number: 89
+        
+                        Expected Output : 89 is Disarium
+                </code></pre>
+
+                    <p><em><b>Q16: Given an integer N which has odd number of digits, find whether the given number is a balanced or not.</b></em></p>
+                    <p>Hint: An odd digit number is called a balanced number if the sum of all digits to the left of the middle digit and the sum of all digits to the right of the middle digit is equal.</p>
+                    <p>Test Data :</p>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        Enter a number: 1234006
+
+                        Expected Output : 1234006 is balanced
+            </code></pre>
+                </section>
+                <section>
+                    <p><em><b>Q17: Given a number N, write a program to find the largest and smallest digit in the number.</b></em></p>
+                    <p>Test Data :</p>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                Enter a number: 1234006
+
+                Expected Output : 
+                Largest digit is: 6
+                Smallest digit is: 0
+            </code></pre>
+                    <p><em><b>Q18: Given two integers L, R, and digit X.Find the number of occurrences of X in all the numbers in the range (L, R) Excluding L and R.</b></em></p>
+                    <p>Test Data :</p>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        Enter the value of L=18
+                        Enter the value of R=81
+                        Enter the value of X=9
+
+                        Expected Output : There are 7 occurrences of the digit 9 in the numbers in the range (18,81).
+            </code></pre>
+                </section>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
