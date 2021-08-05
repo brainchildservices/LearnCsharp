@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>LearnC#</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h3>C# Switch Statements</h3>
+                <p>In C#, Switch statement is a multiway branch statement.
+                    It provides an efficient way to transfer the execution to different parts of a code based on the
+                    value of the expression.
+                    The switch expression is of integer type such as int, char, byte, or short, or of an enumeration
+                    type, or of string type.
+                    The expression is checked for different cases and the one match is executed.</p>
+            </section>
+            <section id="cs_switch_section2">
+                <h4>Why do we use Switch Statements instead of if-else statements?</h4> <br>
+                <ul>
+                    <li>
+                        We use a switch statement instead of if-else statements because if-else statement only works for
+                        a small number of logical evaluations of a value.
+                        If you use if-else statement for a larger number of possible conditions then, it takes more time
+                        to write and also become difficult to read.
+                    </li>
+                    <li>
+                        <b>break</b> statement is used to exit from the switch statement.
+                    </li>
+                    <li>
+                        <b>go to</b> statement can be used to go to a different case of the switch statement.
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <img src="/image/cs_switch_one.png" alt="cs switch first image">
+            </section>
+            <section>
+                <h4>Example 1: Expression with integer</h4>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        using System;
+
+                        public class Program
+                        {
+                        	public static void Main()
+                        	{
+                        		int expression = 5;
+                        		switch (expression)
+                        		{
+                        			case 1:							//checks if value of expression variable is 1
+                        				Console.WriteLine("1");
+                        				break;						//Break and go to end of line 25
+                        			case 2:							//checks if value of expression variable is 2
+                        				Console.WriteLine("2");
+                        				break;
+                        			case 3:							//checks if value of expression variable is 3
+                        				Console.WriteLine("3");
+                        				break;
+                        			case 4:
+                        				Console.WriteLine("4");
+                        				break;
+                        			default:
+                        				Console.WriteLine("Not Found");
+                        				break;
+                        		}
+                        	}
+                        }
+
+                    </code></pre>
+                <a href="https://dotnetfiddle.net/LbJpOA" target="_blank">check fiddle</a>
+            </section>
+            <section>
+                <h4>Example 2: Expression with string</h4>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    using System;
+
+                    public class Program
+                    {
+                        public static void Main()
+                        {
+                            string letter = "E";
+                            switch (letter)
+                            {
+                                case "A":							//checks if value of expression variable is A
+                                    Console.WriteLine("A");
+                                    break;							//Break and go to end of line 25
+                                case "B":							//checks if value of expression variable is B
+                                    Console.WriteLine("B");
+                                    break;
+                                case "C":							//checks if value of expression variable is C
+                                    Console.WriteLine("C");
+                                    break;
+                                case "D":
+                                    Console.WriteLine("D");
+                                    break;
+                                default:
+                                    Console.WriteLine("Not Found");
+                                    break;
+                            }
+                        }
+                    }
+
+
+                </code></pre>
+                <a href="https://dotnetfiddle.net/on5aZp" target="_blank">check fiddle</a>
+            </section>
+            <section>
+                <h4>Example 3: Switch statement with grouped cases</h4>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    using System;
+
+                    public class Program
+                    {
+                        public static void Main()
+                        {
+                            string letter = "C";
+                            switch (letter)
+                            {
+                                case "A":							//checks if value of expression variable is A
+                                case "B":							//checks if value of expression variable is B
+                                case "C":							//checks if value of expression variable is C
+                                    Console.WriteLine("A/B/C");
+                                    break;
+                                case "D":
+                                    Console.WriteLine("D");
+                                    break;
+                                default:
+                                    Console.WriteLine("Not Found");
+                                    break;
+                            }
+                        }
+                    }
+                </code></pre>
+                <a href="https://dotnetfiddle.net/8yLXIw" target="_blank">check fiddle</a>
+            </section>
+            <section>
+                <section>
+                    <h4>Exercise To Do:</h4>
+                    <p><b>Q></b> Redo Q8 to Q12 from section(Except Q11) C# Conditions and If Statements using switch
+                        statement</p>
+                    <p><b> Q8: Write a program to take a weekday number from the user and accordingly print the day of
+                            the week. <br>
+                            Test Data : <br>
+                            Enter a weekday number: 5 <br>
+                            Expected Output : <br>
+                            Its Thursday.</b></p>
+                    <p><b>Q9: Write a program to take a month number from the user and accordingly print the month of
+                            the year. <br>
+                            Test Data : <br>
+                            Enter a month number: 3 <br>
+                            Expected Output : <br>
+                            Its March.</b></p>
+                </section>
+                <section>
+                    <p><b> Q10:</b> Write a program that takes 2 numbers from the user. Next the user is asked to enter
+                        any of the
+                        arithmetic operator(+,-,*,/). Based on the arithmetic operator entered the user should be
+                        displayed
+                        the result of number1 and number 2 <br><br>
+                        <b> Test Data:</b> <br>
+                        Enter number 1: 10 <br>
+                        Enter number 2: 5 <br>
+                        Enter arithmetic operator: / <br><br>
+                        <b> Expected Output :</b>
+                        The quotient of 10 divided by 5 is 2
+                    </p>
+                </section>
+                <section>
+                    <p> <b>Q12.</b> Write a program to enter month number and print number of days in month. <br><br>
+                        <b> Test Data: </b><br>
+                        Enter a number: 1 <br><br>
+                        <b> Expected Output : </b><br>
+                        31 days
+                    </p>
+                </section>
+            </section>
+            <section>
+                <p>
+                   <b> Q1: </b> Write a program to take a weekday number from the user and accordingly print the day of the
+                    week. <br><br>
+                   <b> Test Data : </b><br>
+                    Enter a weekday number: 5 <br><br>
+                  <b> Expected Output :</b><br>
+                    Its Thursday. <br><br>
+
+                   <b> Q2:</b> Write a program to take a month number from the user and accordingly print the month of the
+                    year. <br><br>
+                   <b>Test Data : </b> <br>
+                    Enter a month number: 3 <br><br>
+                  <b> Expected Output :</b> <br>
+                    Its March.
+                </p>
+            </section>
+            <section>
+                
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
