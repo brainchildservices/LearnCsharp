@@ -2129,6 +2129,12 @@ html.print-pdf .aria-status {
     font-size: 35px;
 }
 
+#cs_switch_section1 ul {
+    font-size: 35px;
+}
+#cs_switch_section1 p {
+    font-size: 35px;
+}
 #cs_switch_section2 ul {
     font-size: 35px;
 }
