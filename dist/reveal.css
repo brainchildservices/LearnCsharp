@@ -2135,6 +2135,11 @@ html.print-pdf .aria-status {
 #cs_switch_section1 p {
     font-size: 35px;
 }
+
 #cs_switch_section2 ul {
     font-size: 35px;
+
+#ifelse9para p {
+    font-size: 20px;
+
 }
