@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>LearnC#</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h2><b>C# Object Oriented Programming</b></h2>
+            </section>
+            <section>
+                <section>
+                    <h4>C# Object Oriented Programming</h4>
+                    <p>Object-Oriented Programming is a programming methodology that uses objects as the foundational concept</p>
+                    <p>We use OOP to better organize our code and manage relationships between the different pieces of code. Object-Oriented Programming allows us to be more efficient with designing complex concepts, more organized in the code maintenance
+                        and changes, and makes the code versatile so that components of our code can be used in multiple places.</p>
+                </section>
+                <section>
+                    <p>So there is a lot of benefit to using OOP. C# is an Object-Oriented Programming and several C# syntaxes allow us to use OOP</p>
+                    <img src="/image/Oops Introduction.png" alt="OOPs Introduction">
+                </section>
+            </section>
+            <section>
+                <h4>There are 4 pillars of OOPS</h4>
+                <img src="/image/OopsPillars.png" alt="">
+            </section>
+            <section>
+                <section>
+                    <p>We will be using the example of a class Mobile phone to explain the OOP concepts. A Mobile has properties like its size, color, etc, and functions(methods) like calling, messaging, power ON, power-off, etc. Objects of class Mobile
+                        Phone will be Samsung, Apple, Motorola, etc.</p>
+                    <p><b>Encapsulation: </b>Helps to bind together pieces of code and keep it obscure to prevent outside changes. Encapsulation provides data hiding. In the case of our Mobile Phone class, The mobile phone body encapsulates the inner circuits,
+                        battery, and other components of the mobile phone.</p>
+                    <p><b>Abstraction: </b>To represent the essential feature without representing the background details. Abstraction lets you focus on what the object does instead of how it does it. In the case of our Mobile Phone, All the types of mobile
+                        phone have the ability to make calls, click pictures, etc. We are only interested in making the call and taking pictures and not how the call is made or what is the function inside the phone that helps us take the picture. </p>
+                </section>
+                <section>
+                    <p><b>Polymorphism: </b>Polymorphism means one name, many forms. That is the ability of a function to operate in different ways under different situations. In the case of our Mobile Phone, the same power button does two functions: Power
+                        ON and Power OFF. When the phone is off the Power button helps to turn it ON. When the phone is ON, the same button helps to turn it off.</p>
+                    <p><b>Inheritance: </b>Inheritance is the process by which one class acquires the properties of another class. We have two classes: Child class (derived class) and parent class(base class). Inheritance gives the concept of reusability.
+                        In the case of our Mobile Phone example, the Mobile phone is the parent, and Samsung and Apple can be the child classes. Samsung phone and Apple phone have inherited the Calling and Messaging functions from their parent Mobile
+                        Phone. In addition to that Samsung phone child class has its own Samsung pay feature which is not there in the Apple phone. And Apple Phone child class has Siri which is not there in the Samsung phone child class.</p>
+                </section>
+            </section>
+            <section>
+                <h4>Exercise</h4>
+                <p>Find two real-world examples of classes and objects around you and what are their OOP properties.</p>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
