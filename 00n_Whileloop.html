@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>LearnC#</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h3>C# While Loop</h3>
+                <p>The while statement executes a statement or a block of statements while a specified Boolean
+                    expression evaluates to true</p>
+                <img src="/image/cswhileloopone.png" alt="cs while loop image">
+            </section>
+            <section id="cswhile2">
+                <img src="/image/cswhilelooptwo.png" alt="cs while loop image">
+                <ul>
+                    <li>When using the while loop, initialization should be done before the loop starts, and increment
+                        or decrement steps should be inside the loop.</li>
+                    <li> The condition should be made such that it never goes into an infinite loop.</li>
+                </ul>
+            </section>
+            <section>
+                <section>
+                    <h5>Example-1</h5>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    using System;
+
+                    public class Program
+                    {
+                        public static void Main()
+                        {
+                            int i = 0;  					//Initialization
+                            while (i < 10) 					//(i<10) is the condition
+                            {
+                                Console.WriteLine(i);
+                                i++; 						//Incrementing the i value
+                            }
+                        }
+                    }
+                </code></pre>
+                    <a href="https://dotnetfiddle.net/zQzzyd">Check Fiddle</a>
+                </section>
+                <section>
+                    <h5>Example-2</h5>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        using System;
+
+                        public class Program
+                        {
+                        	public static void Main()
+                        	{
+                        		int i=1;
+                        		int sum=0;
+                        		while(i<=10)
+                        		{
+                        			Console.WriteLine(i);
+                        			sum=sum+i;
+                        			i++;
+                        		}
+                        		Console.WriteLine(sum);
+                        	}
+                        }
+
+
+                    </code></pre>
+                    <a href="https://dotnetfiddle.net/ITB0As">Check Fiddle</a>
+                </section>
+            </section>
+            <section>
+                <h4>C# - do while Loop</h4>
+                <p>The do while loop is the same as while loop except that it executes the code block at least once.</p>
+                <img src="/image/cswhileloopthree.png" alt="cs while loop image">
+            </section>
+            <section>
+                <img src="/image/cswhileloopfour.png" alt="cs while loop image">
+            </section>
+            <section>
+                <h6>Example-1</h6>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    using System;
+
+                    public class Program
+                    {
+                        public static void Main()
+                        {
+                            int i = 0;  					//Initialization
+                            do
+                            {
+                                Console.WriteLine(i);
+                                i++; 						//Incrementing the i value
+                            }
+                            while (i < 0); 					//(i<0) is the condition
+                        }
+                    }
+
+                </code></pre>
+                <a href="https://dotnetfiddle.net/6SiXfu">Check Fiddle</a>
+            </section>
+            <section id="cswhile7">
+                <section>
+                    <h6><b> Simple Exercises</b> :</h6>
+                    <ul>
+                        <li> Q1. Write a program in C# Sharp to display the first 100 natural numbers.
+                            Expected Output : 1 2 3 4 5 6 7 8 9 10 . .. . . 99 100</li> <br>
+                        <li> Q2. Write a program in C# Sharp to display the even numbers in the first 100 natural
+                            numbers.
+                            Expected Output : 2 4 6 8 10 ... ..... 98 100</li> <br>
+                        <li>Q3. Write a program in C# Sharp to display the even numbers in the first 100 natural
+                            numbers.
+                            Expected Output : 1 3 4 6 7 ........97 99</li> <br>
+
+                        <li>Q4. Write a program in C# Sharp to display Hello World 25 times.</li> <br>
+                        <li>Q5. Write a program in C# Sharp to display numbers from 100 to 1
+                            Expected Output : 100 99 98 .. .......2 1</li> <br>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li>Q6. Write a program in C# Sharp to display even numbers from 100 to 1
+                            Expected Output : 100 98 .. .......4 2</li> <br>
+                        <li>Q7. Write a program in C# Sharp to display odd numbers from 100 to 1
+                            Expected Output : 99 97 95 .. .......3 1</li> <br>
+                        <li>Q8. Write a program in C# Sharp to display numbers from 25 to 50
+                            Expected Output : 25 26 27 ....... 49 50</li> <br>
+                        <li>Q9. Write a program in C# Sharp to display numbers multiples of 3 between 25 and 50
+                            Expected Output : 27 30 33 .... 45 48</li> <br>
+                        <li>Q10. Write a program in C# Sharp to display numbers multiples of 5 from 200 to 120
+                            Expected Output : 200 195 190 ....... 125 120</li>
+                    </ul>
+                </section>
+            </section>
+            <section id="cswhile8">
+                <h6>Exercises:</h6>
+                <ul>
+                    <li>
+                        <b>Q1</b>. Write a program in C# Sharp to display the first 10 natural numbers. <br>
+                        Expected Output : 1 2 3 4 5 6 7 8 9 10
+                    </li>
+                    <li>
+                        <b>Q2</b>. Write a C# Sharp program to find the product of 10 natural numbers starting from 20.
+                        <br>
+                        Expected Output : The product is : 1168737792
+                    </li>
+                    <li>
+                        <b>Q3</b>: Write a program to read 5 numbers from keyboard (use while loop) and find their sum
+                        and
+                        average. <br>
+                        Test Data : <br>
+                        Input the 10 numbers : <br>
+                        Number-1 :2 <br>
+                        Number-2 :2 <br>
+                        Number-3 :2 <br>
+                        Number-4 :2 <br>
+                        Number-5 :2 <br>
+                        Sum of numbers entered is 10 <br>
+                        Average of numbers entered is 2
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <section>
+                    <p><b> Q4 </b>: Write a program to show the multiplication table of a given integer. <br>
+                        Test Data : <br>
+                        Input the number (Table to be calculated) : 12 <br>
+                        Expected Output : <br>
+                        12 X 1 = 12 <br>
+                        12 X 2 = 24 <br>
+                        12 X 3 = 36
+                        ...
+                        ...
+                        12 X 10 = 120
+                    </p>
+                    <p> <b>Q5.1</b>: Write a program to print a pattern like one below using asterisk * <br>
+                        Expected output: </p>
+                    <img src="/image/cswhileloop5.png" alt="">
+                </section>
+                <section>
+                    <p>
+                        <b>Q5</b>.2 Write a program to print a right angled triangle like one below using asterisk *
+                    </p>
+                    <img src="/image/cswhileloop6.png" alt="">
+                </section>
+            </section>
+            <section>
+                <p><b>Q6</b>: Write a program to print a right angled triangle like one below using asterisk *</p>
+                <img src="/image/cswhileloop7.png" alt="">
+                <p>
+                    <b>Q7</b>. Write a program to print following pattern. <br>
+                    1 <br>
+                    22 <br>
+                    333 <br>
+                    4444 <br>
+                </p>
+            </section>
+            <section>
+
+            </section>
+
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
