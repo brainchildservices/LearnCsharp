@@ -2129,8 +2129,21 @@ html.print-pdf .aria-status {
     font-size: 35px;
 }
 
+#cs_switch_section1 ul {
+    font-size: 35px;
+}
+#cs_switch_section1 p {
+    font-size: 35px;
+}
+
+#cs_switch_section2 ul {
+    font-size: 35px;
+
 #ifelse9para p {
     font-size: 20px;
+
+
+
 }
 
 #cswhile2 ul {
@@ -2143,4 +2156,5 @@ html.print-pdf .aria-status {
 #cswhile8 ul 
 {
     font-size: 26px;
+
 }
