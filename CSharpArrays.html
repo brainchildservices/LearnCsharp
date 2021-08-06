@@ -1,0 +1,341 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>LearnC#</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h2><b>C# Arrays</b></h2>
+            </section>
+            <section>
+                <h3>What is C# Arrays?</h3>
+                <p>An array is a group of like-typed variables that are referred to by a common name. And each data item is called an element of the array. The data types of the elements may be any valid data type like char, int, float, etc.</p>
+            </section>
+            <section>
+                <h3>Declaring different types of arrays.</h3>
+                <p>Example (<a href="https://dotnetfiddle.net/dDMok8" target="_blank">dotnetfiddle</a>)</p>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					// An integer array
+					int[] intArraty = new int[]{1, 2, 3, 4, 5};
+
+					// A string array
+					string[] strArraty = new string[]{"James", "John", "David", "Peter", "Jose"};
+
+					// A char array
+					char[] charArraty = new char[]{'J', '4', '#', 'Y', 'q'};
+
+					// A double array
+					double[] doubleArray = new double[]{1.22, 3.45, 4.55, 56, 5.67};
+				</code></pre>
+            </section>
+            <section>
+                <h3>3 Different ways to declare and initialize an array.</h3>
+                <p>Example (<a href="https://dotnetfiddle.net/N0RLC1" target="_blank">dotnetfiddle</a>)</p>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					//Different ways to declare and initilize an array
+
+					//Method 1:
+					int[] array1 = new int[3]; 	//Declaring an integer array of size 3
+
+					array1[0] = 10;		//Initializing elements with data
+					array1[1] = 20;
+					array1[2] = 30;
+
+					//Method 2:
+					int[] array2 = new int[] { 10, 20, 30 };  	//Declaring and initializing elements of the array
+
+					//Method 3:
+					int[] array3 = { 10, 20, 30 };  //Declaring and initializing elements of the array
+				</code></pre>
+            </section>
+            <section>
+                <h3>Access the Elements of an Array</h3>
+                <ul>
+                    <li>
+                        <p>You access an array element by referring to the index number.</p>
+                    </li>
+                    <li>
+                        <p>Index number of the array start from 0.</p>
+                    </li>
+                </ul>
+
+                <p>Example: (
+                    <a href="https://dotnetfiddle.net/3C5biN">dotnetfiddle</a>)
+                </p>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					using System;
+
+					public class Program
+					{
+						public static void Main()
+						{
+							// An integer array
+							int[] intArray = new int[]{1, 2, 30, 4, 5};
+
+							int number=intArray[2];		//30 is stored from the intArray index 2 to integer variable number
+
+							// A string array
+							string[] strArray = new string[]{"James", "John", "David", "Peter", "Jose"};
+
+							string name=strArray[0];	//James is stored from the strArray index 0 to string variable name
+
+						}
+					}
+				</code></pre>
+            </section>
+
+            <section>
+                <h3>Array Length</h3>
+                <p>To find out how many elements an array has, use the Length property</p>
+                <p>Example: (
+                    <a href="https://dotnetfiddle.net/tCn6EM" target="_blank">dotnetfiddle</a>)</p>
+                <p><code>First element of the array is at index 0 and the last element of the array is at index (array.Length-1)</code></p>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					public static void Main()
+					{
+						// An integer array
+						int[] intArray = new int[]{1, 2, 30, 4, 5};
+
+						int length=	intArray.Length;	//Lenghth of intArray, 5 is stored to integer variable length
+
+						// A string array
+						string[] strArray = new string[]{"James", "John", "David", "Peter", "Jose", "Kevin", "Joseph", "Chris"};
+
+						int length2=strArray.Length;	//Lenghth of strArray, 8 is stored to integer variable length2
+
+					}
+				</code></pre>
+            </section>
+            <section>
+                <h3>Loop Through an Array</h3>
+                <p>You can loop through the array elements with the for loop, and use the Length property to specify how many times the loop should run.</p>
+                <p>Example: (<a href="https://dotnetfiddle.net/3MWLDZ">dotnetfiddle</a>)</p>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					using System;
+
+					public class Program
+					{
+						public static void Main()
+						{
+							// An integer array
+							int[] intArray = new int[]{1, 2, 30, 4, 5};
+
+							int length=	intArray.Length;	//Lenghth of intArray, 5 is stored to integer variable length
+
+							for(int i=0; i&lt;intArray.Length-1; i++)
+							{
+								Console.Write(intArray[i]+" ");
+							}
+
+							Console.WriteLine();
+							// A string array
+							string[] strArray = new string[]{"James", "John", "David", "Peter", "Jose", "Kevin", "Joseph", "Chris"};
+
+							int length2=strArray.Length;	//Lenghth of strArray, 8 is stored to integer variable length2
+
+							for(int i=0; i&lt;strArray.Length-1; i++)
+							{
+								Console.Write(strArray[i]+" ");
+							}
+						}
+					}
+				</code></pre>
+            </section>
+            <section>
+                <h3>Simple Exercise:</h3>
+                <ul>
+                    <li>
+                        <p>Declare an integer array of size 7. Save values to each index, one by one. Print values at index 2, 4, 6 one by one.</p>
+                    </li>
+                    <li>
+                        <p>Declare a string array of size 10. Save values to each index, one by one. Print values at index 0, 1, 9 one by one.</p>
+                    </li>
+                    <li>
+                        <p>Declare an integer array of size 10. Save values to each index, one by one. Check if the value at index 4 is even.</p>
+                    </li>
+                    <li>
+                        <p>Declare an integer array of size 8. Save values to each index, one by one. Check if the value at index 6 is odd.</p>
+                    </li>
+                    <li>
+                        <p>Declare an integer array of size 10. Save values to each index, one by one. Check if the value at index 7 is prime.</p>
+                    </li>
+                    <li>
+                        <p>Declare an integer array of size 10. Save values to each index, one by one. Find the factorial of value at index 9.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Exercise:</h3>
+                    <ul>
+                        <li>
+                            <p>Q1. Write a program that stores first 50 odd numbers to an array. Print the elements of the array using a different loop.</p>
+                        </li>
+                        <li>
+                            <p>Q2. Write a program that stores even numbers from 200 to 300 in an array. Print the elements of the array using a different loop.</p>
+                        </li>
+                        <li>
+                            <p>Q3. Write a program that stores prime numbers from 1 to 100 in an array. Print the elements of the array using a different loop.</p>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li>
+                            <p>Q4. Declare an int array of size 10. Take the input from the user and store it to the array.</p>
+                            <ul>
+                                <li>
+                                    <p>A. Print all the elements of the array.</p>
+                                </li>
+                                <li>
+                                    <p>B. Print first 4 elements of the array.</p>
+                                </li>
+                                <li>
+                                    <p>C. Print last 4 elements of the array.</p>
+                                </li>
+                                <li>
+                                    <p>D. Print elements from index 2 to 8 of the array.</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>Q5: Write a program to accept 10 numbers from the user and store it to an array. Print the largest number in the array</p>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <ul>
+                        <li>
+                            <p>Q6: Write a program that first takes the size of the array as an input from the user. Create an array with with the specified size. In another for loop add all the elements of the array. Print the sum of elements of the array</p>
+                        </li>
+
+                        <p>Test Data: </p>
+                        <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					Enter the size of Array:  4  
+					Enter elements of array: 1  
+					2  
+					4  
+					6  
+
+					Expected: Sum of elements of array is: 13  
+				</code></pre>
+                        <li>
+                            <p>Q7: Write a program that takes 10 elements from the user and saves it to array1. Declare another array array2. Copy the contents of array1 to array 2. Print elements of array2</p>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li>
+                            <p>Q8: Write a program that takes 10 elements from the user and saves it to array1. Declare another array array2. Copy the contents of array1 to array 2 in reverse order. Print elements of array2</p>
+                        </li>
+                        <li>
+                            <p>Q9. A: Write a program that takes 13 elements from the user and saves it to array1. Declare another array array2. Copy the contents of array1 to array 2 in reverse order. Print elements of array2</p>
+                        </li>
+                        <li>
+                            <p>Q9. B: Write a program that takes size of the array from the user. Create a1 array with the size and store the elements input by the user. Declare another array array2. Copy the contents of array1 to array 2 in reverse order.
+                                Print elements of array2</p>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <ul>
+                        <li>
+                            <p>Q10: Write a program that first takes the size of the array as an input from the user. Create an array with with the specified size. Allow the user to input the array values. Count the number of even and odd elements in the
+                                array.
+                            </p>
+                        </li>
+                        <li>
+                            <p>Q11: Write a program that first takes the size of the array as an input from the user. Create an array with with the specified size. Create two different arrays, arrayEven and arrayOdd that stores even and odd numbers respectively
+                                from the original array.</p>
+                        </li>
+                        <li>
+                            <p>Q12: There are two arrays: array1 and array2. The user gets the option to select the size of the array. Get the values of array 1 and arraay2 from the user. Combine both arrays to make a single array, array 3. Print array3</p>
+                        </li>
+                        <li>
+                            <p>Q13.A Write a program to take size of array as input from the user, store elements to array 1. Check the prime numbers in array1 and print them.</p>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li>
+                            <p>Q13.B Write a program to take size of array as input from the user, store elements to array 1. Check the prime numbers in array1 and store it to array2. Print array2</p>
+                        </li>
+                        <li>
+                            <p>Q13.C Write a program to take size of array as input from the user, store elements to array 1. Check the prime numbers in array1 and store it to array2. Reverse array2 and store it to array3. Print array3</p>
+                        </li>
+                        <li>
+                            <p>Q14. Write a program to take size of array as input from the user, store elements to array 1. Find prime numbers from 100 to 200 in array 2. Copy array1 and array2 to array3. Print array3.</p>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <ul>
+                        <li>
+                            <p>Q15. Write a program to find even numbers from 100 to 200 in array1. Find odd numbers from 200 to 300, store in array2. Reverse array 2 and store to array3. Copy array1 and array3 to array4. Print array4.</p>
+                        </li>
+                        <li>
+                            <p>Q16. Write a program to find even numbers between n1 and n2(excluding n1 and n2), store to an array and print the array, where are n1 and n2 are two numbers input by the user. If the user gives n1 as 10 and n2 as 20. You need
+                                to find the even numbers between 10 and 20 and store to array</p>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <ul>
+                        <li>
+                            <p>Q17. Write a program to find prime numbers between n1 and n2(excluding n1 and n2), store to an array and print the array, where are n1 and n2 are two numbers input by the user. If the user gives n1 as 10 and n2 as 20. You need
+                                to find the prime numbers between 10 and 20 and store to array</p>
+                        </li>
+                        <li>
+                            <p>Q18. Write a program to find prime numbers between n1 and n2(excluding n1 and n2), store to an array1; find the even numbers between n3 and n4(excluding n3 and n4) store to an array2, where are n1, n2,n3,n4 are four numbers
+                                input by the user. Reverse array1 and array2 and store to array3 and array4 respectively. Combine array3 and array4 to array5. Print array5</p>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
