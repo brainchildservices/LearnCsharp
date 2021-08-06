@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>LearnC#</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h2><b>C# Class Members</b></h2>
+            </section>
+            <section>
+                <h4><b>C# Class Members</b></h4>
+                <p>Class members are members declared in the class and all those (excluding constructors and destructors) declared in all classes in its inheritance hierarchy.</p>
+                <p>Some of the class members are:</p>
+                <ol>
+                    <li>
+                        <p>Constants representing constant values</p>
+                        <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                            class Calendar  
+                                { 
+                                    public const int Months = 12;  
+                                } 
+                        </code></pre>
+                        <p>Here Month is an integer constant which is assigned value 12. Since its declared as const. The value of the Months never changes.</p>
+                    </li>
+                </ol>
+            </section>
+            <section>
+                <ol start="2">
+                    <li>
+                        <p>Fields representing variables: Any variable that is declared directly inside a class is called a field.</p>
+
+                        <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        class Students  
+                        {  
+                            public string name;  
+                            public int rollNo; 
+                        } 
+                    </code></pre>
+                    </li>
+                    <li>
+                        <p>Methods providing services like calculation or other actions on its members: <a href="https://github.com/brainchildservices/curriculum/wiki/methods.md" target="_blank">Methods</a></p>
+                    </li>
+                    <li>
+                        <p>Properties that define the class features and include actions to fetch and modify them. <a href="https://github.com/brainchildservices/curriculum/wiki/properties.md" target="_blank">Properties</a></p>
+                    </li>
+                </ol>
+            </section>
+            <section>
+                <h3><b>Exercise:</b></h3>
+                <p><b>Q1. </b>Create a class Human. Inside class Human declare a string field name & ethnicity, declare a constant legs of type integer.Assign values after creating the object.</p>
+                <p><b>Q2. </b>Create a class Mountains. Inside class Mountains, declare fields string location, integer height.Assign values after creating the object.</p>
+                <p><b>Q3. </b>Create a class Fruits. Inside class Fruits declare fields name, price, color.Assign values after creating the object.</p>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
