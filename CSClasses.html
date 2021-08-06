@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>LearnC#</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h2><b>C# Classes And Objects</b></h2>
+            </section>
+            <section>
+                <h3>C# Classes And Objects</h3>
+                <img src="/image/Clasess&Object.png" alt="Classes & Object">
+                <p>A class is a template for objects, and an object is an instance of a class.</p>
+            </section>
+            <section>
+                <h4><b>Example</b></h4>
+                <p>An animal is a class. The different types of animals like cat, dog, etc are the objects of the class animal.</p>
+                <img src="/image/ClassessExample.png" alt="Animal Class">
+            </section>
+            <section>
+                <p>A class declaration consists of a class header and body. The class header includes attributes, modifiers, and the class keyword. The class body encapsulates the members of the class, which are the data members and member functions. These
+                    class members can be fields, properties, or methods.</p>
+                <p id="centerpara"><b>The syntax of a class declaration is as follows:</b></p>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					Accessibility Modifiers class NameofClass
+						{
+							body of class containing data members and member functions
+						}
+				</code></pre>
+                <p id="centerpara"><code>Accessibility can be public, private, etc</code></p>
+                <p id="centerpara"><code>Modifiers can be static, abstract, sealed, etc</code></p>
+            </section>
+            <section>
+                <h4>Example 1:</h4>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					public static class Animal  
+					{  
+					body of the class  
+					}  
+				</code></pre>
+                <h4>Example 2:</h4>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					public class Car  
+					{  
+					body of the class  
+					}  
+				</code></pre>
+            </section>
+            <section>
+                <p>A class will not occupy any memory space. Hence to work with the data represented by the class you must create a variable for the class, that is called an object.</p>
+                <p>An object can be created using the new keyword. This process is called instantiation or object creation.</p>
+                <h4>Syntax</h4>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					ClassName objectName = new ClassName();
+				</code></pre>
+                <h4>Example</h4>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					Car Audi=new Car();
+				</code></pre>
+            </section>
+            <section>
+                <p>An object cannot be created when the class is static. Members of the static classes are accessed using the classname.</p>
+                <p><code>Q. What do you have to do if you are asked to create an instance of a class or object of a class or instantiate the class?</code></p>
+                <p><code>Ans: We need to create an object of the class using the new keyword if we are asked to create instance of a class or object of a class or instantiate the class</code></p>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					Classname objectName=new ClassName();
+				</code></pre>
+            </section>
+            <section>
+                <h4>Exercise:</h4>
+                <p>Q1. Create a public class Furniture. In Main method create an object chair of class Furniture.</p>
+                <p>Q2. Create a public class Vehicle. In Main method create an object bike of class Vehicle.</p>
+                <p>Q3. Create a public class Grocery. In Main method create an object vegetable of class Grocery.</p>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
