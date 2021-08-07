@@ -1,48 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>LearnC#</title>
 
-	<title>LearnC#</title>
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
 
-	<link rel="stylesheet" href="dist/reset.css">
-	<link rel="stylesheet" href="dist/reveal.css">
-	<link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+  </head>
 
-	<!-- Theme used for syntax highlighted code -->
-	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
-</head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h3>C# Properties</h3>
+        </section>
+        <section>
+          <section id="cspropertiessld2">
+            <p>
+              The meaning of <b> Encapsulation</b> is to make sure that
+              <b>"sensitive"</b> data is hidden from users. To achieve this, We
+              have two options:
+            </p>
+            <ul>
+              <li>1. Declare <b> fields/variables</b> as private</li>
+              <li>
+                2. Provide public <b> get</b> and <b> set</b> methods, through
+                properties, to access and update the value of a private field
+              </li>
+            </ul>
+            <p>
+              A <b> property </b>is like a combination of a variable and a
+              method, and it has two methods: <b> a get and a set method </b>:
+            </p>
+          </section>
+          <section>
+            <h6>The syntax for Defining Properties:</h6>
 
-<body>
-	<div class="reveal">
-		<div class="slides">
-			<section>
-				<h3>C# Properties</h3>
-			</section>
-			<section>
-
-				<section id="cspropertiessld2">
-					<p>The meaning of <b> Encapsulation</b> is to make sure that <b>"sensitive"</b> data is hidden from
-						users. To achieve this, We have two options:</p>
-					<ul>
-						<li>
-							1. Declare <b> fields/variables</b> as private
-						</li>
-						<li>
-							2. Provide public <b> get</b> and <b> set</b> methods, through properties, to access and
-							update the value of a private field
-						</li>
-					</ul>
-					<p>A <b> property </b>is like a combination of a variable and a method, and it has two methods: <b>
-							a get and a set method </b>:</p>
-				</section>
-				<section>
-					<h6>The syntax for Defining Properties:</h6>
-
-					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+            <pre
+              data-id="code-animation"
+            ><code class="hljs" data-trim data-line-numbers>
 
                             access_modifier   return_type   property_name  {  
                                         get { // body }  
@@ -50,20 +60,23 @@
                                 }  
                                
                         </code></pre>
+          </section>
+        </section>
+        <section id="cspropertiessld3">
+          <h6>Steps to create a general property</h6>
 
-				</section>
-			</section>
-			<section id="cspropertiessld3">
-				<h6>Steps to create a general property</h6>
-
-				<ul>
-					<li>1. Declare the field as private</li>
-					<li>2. Copy the private field. Change private to public</li>
-					<li>3. Change the first letter of the variable to Capital and then put curlybraces {}. This will be
-						the property name.</li>
-					<li>4. Write get method or get accessor</li>
-				</ul>
-				<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+          <ul>
+            <li>1. Declare the field as private</li>
+            <li>2. Copy the private field. Change private to public</li>
+            <li>
+              3. Change the first letter of the variable to Capital and then put
+              curlybraces {}. This will be the property name.
+            </li>
+            <li>4. Write get method or get accessor</li>
+          </ul>
+          <pre
+            data-id="code-animation"
+          ><code class="hljs" data-trim data-line-numbers>
 					    get  
 							  {  
     			return variablename;  
@@ -71,25 +84,314 @@
 
 
 				</code></pre>
-			</section>
-		</div>
-	</div>
+        </section>
+        <section>
+          <ul>
+            <li>5. Write set method or set accessor</li>
+            <pre
+              data-id="code-animation"
+            ><code class="hljs" data-trim data-line-numbers>
+						set  
+							{  
+						variablename=value;  
+							}  
 
-	<script src="dist/reveal.js"></script>
-	<script src="plugin/notes/notes.js"></script>
-	<script src="plugin/markdown/markdown.js"></script>
-	<script src="plugin/highlight/highlight.js"></script>
-	<script>
-		// More info about initialization & config:
-		// - https://revealjs.com/initialization/
-		// - https://revealjs.com/config/
-		Reveal.initialize({
-			hash: true,
+					</code></pre>
+            <li>6. If no set -->Its a read only property</li>
+            <li>7. If no get -->Its a write only property</li>
+          </ul>
+        </section>
+        <section id="cspropertiessld5">
+          <ul>
+            <li>
+              As you move on, you would be using the simplest way to declare a
+              property which is like below:
+            </li>
+            <pre
+              data-id="code-animation"
+            ><code class="hljs" data-trim data-line-numbers>
+						public string Name{get;set;}
+					</code></pre>
+            <li>How to assign value to a property?</li>
+            <pre
+              data-id="code-animation"
+            ><code class="hljs" data-trim data-line-numbers>
+						ObjectName.PropertyName=somevalue;  
+					</code></pre>
+            <li>How to get the value of a property?</li>
+            <pre
+              data-id="code-animation"
+            ><code class="hljs" data-trim data-line-numbers>
+						ObjectName.PropertyName  
+					</code></pre>
+          </ul>
+          <a href="https://dotnetfiddle.net/RRejuP">Check Fiddle</a>
+        </section>
+        <section id="cspropertiessld6">
+          <p>
+            <b>1.</b> What is a property? <br />
+            Property in C# is a member of a class that provides a flexible
+            mechanism for classes to expose private fields.
+          </p>
+          <p>
+            <b>2.</b> What is the use of property? <br />
+            Marking the class field public & exposing is a risky, as you will
+            not have control what gets assigned & returned.
+          </p>
+        </section>
+        <section id="cspropertiessld7">
+          <h6>Program to explain the use of Property:</h6>
+          <p>
+            <b> Program 1 </b>: Any number is allowed to enter as the Student ID
+          </p>
+          <pre
+            data-id="code-animation"
+          ><code class="hljs" data-trim data-line-numbers>
+			using System;
+				public class Student
+				{
+					public int stdID;
+				}
+					
+				public class Program
+				{
+				public static void Main()
+					{
+					Student Aneesh=new Student();
+					Aneesh.stdID=-25;
+					Console.WriteLine(Aneesh.stdID);
+					}
+				}
+				</code></pre>
+          <a href="https://dotnetfiddle.net/v2ZJuY">Check Fiddle</a>
+        </section>
+        <section>
+          <section id="cspropertiessld8">
+            <p>
+              <b>Program 2</b>:
+              <em>
+                We are using property and making sure that only numbers above 1
+                are allowed.</em
+              >
+            </p>
+            <a href="https://dotnetfiddle.net/0PpqEc">Check Fiddle</a>
+            <br /><br />
+            <p>
+              <b>Program 3</b>:
+              <em> Here the address is allowed to be set to null.</em>
+            </p>
+            <a href="https://dotnetfiddle.net/1BVojB">Check Fiddle</a>
+            <br /><br />
+            <p>
+              <b>Program 4</b>:
+              <em>
+                We are using property to make sure that we get a meaningful
+                exception error if the address is set to null
+              </em>
+            </p>
+            <a href="https://dotnetfiddle.net/6MrbGv">Check Fiddle</a>
+          </section>
+          <section id="cspropertiessld8">
+            <p>
+              <b>Program 5</b>:
+              <em>
+                We are setting a password field as public. So we are able to
+                read it.</em
+              >
+            </p>
+            <a href="https://dotnetfiddle.net/1KHnnm">Check Fiddle</a>
+            <br /><br />
+            <p>
+              <b>Program 6</b>:
+              <em>
+                Passwords are sensitive details that shouldn't e visible to
+                everyone. So we are hiding it making it a write-only
+                property</em
+              >
+            </p>
+            <a href="https://dotnetfiddle.net/0tpD7b">Check Fiddle</a>
+          </section>
+        </section>
+        <section>
+          <section id="cspropertiessld9">
+            <p>
+              3. <b>What is encapsulation?</b> <br />
+              The meaning of Encapsulation is to make sure that "sensitive" data
+              is hidden from users.
+            </p>
+            <br />
+            <p>
+              4. <b>What is a read only property?</b> <br />
+              Read-only means that we can access the value of a property but we
+              can't assign a value to it. When a property does not have a set
+              accessor then it is a read-only property. ObjectName.PropertyName
+              is allowed(reading the value) ObjectName.PropertyName=somevalue;
+              is not allowed(Assignining a value)
+            </p>
+            <a href="https://dotnetfiddle.net/0tpD7b">Example Fiddle</a>
+          </section>
+          <section id="cspropertiessld9">
+            <p>
+              5. <b>What is a write only property?</b> <br />
+              A write only property is a property that we can assign a value to
+              but can't get that value because that property doesn't have a get
+              accessor. ObjectName.PropertyName=somevalue; is allowed
+              ObjectName.PropertyName is not allowed
+            </p>
+            <a href="https://dotnetfiddle.net/8KqMvB">Example Fiddle</a>
+            <br /><br />
+            <p>
+              6. <b>What is read and write property?</b> <br />
+              Read and write property mean we can both assign value to it as
+              well as access the value of a property. It has both get and set
+              accessor.
+            </p>
+            <br />
+          </section>
+        </section>
+        <section>
+          <p>
+            <b>7.</b>In what situation can you get this error?
+            <b
+              >"The property or indexer 'Student.Password' cannot be used in
+              this context because it lacks the get accessor"</b
+            >
+            <br /><br />
+            Ans: When we try to assign value of a write-only property. That is
+            the property doesn't have a get accessor.
+          </p>
+          <br />
+          <p>
+            <b>8.</b>In what situation can you get this error?
+            <b
+              >"Property or indexer 'Student.PassMark' cannot be assigned to --
+              it is read only"</b
+            >
+            <br /><br />
+            Ans: When we are trying to assign value to read-only property. That
+            is the property doesn't have a set accessor.
+          </p>
+        </section>
+        <section>
+          <h6>Exercise:</h6>
+          <p>
+            <b>Q1:</b> Write a class School <br />
+            Write property PrincipalName <br />
+            Write a readonly Property ManagerName <br />
+            Write a writeonly Property NumberOfStudents <br />
+            Write a method PrintDetails that prints the NumberOfStudents <br />
+            In Main Method, <br />
+            Assign value to PrincipalName property <br />
+            Print the content of PrincipalName property <br />
+            Print the content of ManagerName property <br />
+            Assign value to NumberofStudents property <br />
+            Call the method PrintDetails method
+          </p>
+        </section>
+        <section>
+          <p>
+            <b>Q2</b>: Write a class Cricket <br />
+            Write string property Batsman <br />
+            Write a method Batting <br />
+            return type int <br />
+            parameters string batsmanName, int runs <br />
+            In Main Method, <br />
+            Assign value to property Batsman <br />
+            Print property Batsman <br />
+            Call method Batting
+          </p>
+        </section>
+        <section>
+          <p>
+		<b>Q3</b>: Write a call Bedroom <br />
+          Write property TvBrand <br />
+          Write a readonly Property LightBrand <br />
+          Write a void method AssignBrand with 1 string parameter. The value of
+          the parameter string is passed to the field lightBrand inside the
+          method <br />
+          Write a write only Property NoOfLights <br />
+          Write a method LightDetails that returns NoOfLights <br />
+          In MainMethod, <br />
+          Assign the value to TvBrand <br />
+          Print the value of TvBrand <br />
+          Call method AssignBrand ; <br />
+          Print property LightBrand <br />
+          Assign value to NoOfLights property <br />
+          Call method LightDetails and print the returned result
+		</p>
+        </section>
+        <section id="cspropertiessldend">
+			<p>
+				<b>Q4</b>: Classname : Shop <br>
+				Field : Room : string field <br>
+				Property1 : Vegetable is a string property <br>
+				Property2 : Meats is a write only property <br>
+				Method1 : Washing : Washing has string return type that has one string parameter <br>
+				Method2 : Cutting : Cutting has int return type, Has two parameters string and int <br>
+				In Main method, <br>
+			<ul>
+				<li>1. Assign value to room field. Print room field </li>
+				<li>2. Assign value and print value of vegetable</li>
+				<li>3. Assign value to Meats</li>	
+				<li>4. Print the result of method washing</li>	
+				<li>5. Print the result of method cutting</li>	
+			</ul>
+			</p>
+		</section>
+        <section id="cspropertiessldend">
+			<p>
+				<b>Q5</b>: ClassName: Company <br>
+			Field: Owner: Owner is string field. Declare and assign value <br>
+			Property1: Client : Client is string property <br>
+			Property2: Buyer : Buyer is an int read only property <br>
+			Method1: Designing : Designing has string return type, two parameters 2 strings. The return includes the name of Owner and Client <br>
+			Method2: Development: Development has int return type has two parameters int and string <br>
+			In Main method, <br>
+			<ul>
+				<li>1. Print field Owner</li>
+				<li>2. Assign value and print value of Client</li>
+				<li>3. Assign value to Buyer</li>
+				<li>4. Print the result of method Designing</li>
+				<li>5. Print the result of method Development</li>
+			</ul>
+			</p>
+		</section>
+        <section id="cspropertiessldend">
+			<p>
+				<b>Q6</b>: ClassName: Mobile <br>
+				Field : Body <br>
+				Property: (1) Camera , (2) Speaker <br>
+				Method: (1) Calling, (2) Messaging <br>
+				Body is string Field <br>
+				Camera is a string write only property <br>
+				Speaker is a string Property <br>
+				Calling has no return value, has one int parameter and it prints the parameter number as "The call is being made to number- XXXXXXXXX" <br>
+				Messaging has int return type and two input parameters string and int. The string parameter assigns its value to Camera. It then prints the name of the Speaker and Camera. The method then returns triple of the integer parameter. In Main method: <br>
+				<ul>
+					<li>1. Assign value to Camera</li>
+					<li>2. Read value of Speaker</li>
+					<li>3. Call the method calling</li>
+					<li>4. Call the method Messaging</li>
+				</ul>
+			</p>
+		</section>
+      </div>
+    </div>
 
-			// Learn about plugins: https://revealjs.com/plugins/
-			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
-		});
-	</script>
-</body>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
 
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
 </html>

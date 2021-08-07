@@ -2163,3 +2163,32 @@ html.print-pdf .aria-status {
 #cspropertiessld3 ul{
     font-size: 28px;
 }
+#cspropertiessld5 a {
+    font-style:italic;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:darkgreen;
+}
+#cspropertiessld6 p {
+    font-size: 35px;
+}
+#cspropertiessld7 a {
+    font-style:italic;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:darkgreen;
+}
+#cspropertiessld8 a {
+    font-style:italic;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:darkgreen;
+}
+#cspropertiessld9 p {
+    font-size: 27px;
+}
+#cspropertiessld9 a {
+    font-style:italic;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:darkgreen;
+}
+#cspropertiessldend ul {
+    font-size: 28px;
+}
