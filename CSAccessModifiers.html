@@ -1,0 +1,533 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>LearnC#</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h2><b>C# Access Modifiers</b></h2>
+            </section>
+            <section>
+                <section>
+                    <h3>Visibility and Accessibility Modifiers</h3>
+                    <p>These modifiers are used to control what levels of access you want to apply to your types, and type members such as methods and properties.</p>
+                </section>
+                <section>
+                    <h4><b>Why Access Modifiers?</b></h4>
+                    <p>To control the visibility of class members (the security level of each individual class and class member). To achieve <code><b>"Encapsulation"</b></code> - which is the process of making sure that "sensitive" data is hidden from users.
+                        This is done by declaring fields as private.</p>
+
+                    <h4><b>Different Types of Access Modifiers</b></h4>
+                    <ul>
+                        <li>
+                            <p>public</p>
+                        </li>
+                        <li>
+                            <p>private</p>
+                        </li>
+                        <li>
+                            <p>protected</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p>internal</p>
+                        </li>
+                        <li>
+                            <p>protected internal</p>
+                        </li>
+                        <li>
+                            <p>private protected</p>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h4><b>public: </b>The code is accessible for all classes</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        using System;
+
+                        public class Person
+                        {
+                            public string address = "Kochi";	//address is a public field of class Person
+                            public void Paint()
+                            {
+                                address = "Goa";	//public field is accessible inside the same class
+                            }
+                        }
+                        
+                        public class Employee : Person
+                        {
+                            public void Print()
+                            {
+                                address = "Kollam";     //public field is accessible inside derived class
+                                Console.WriteLine(address);
+                            }
+                        }
+                        
+                        public class Animal
+                        {
+                            Person Satheesh = new Person();
+                            public string species;
+                            public void Safari()
+                            {
+                                Satheesh.address = "Trivandrum"; 	//public field is accessible inside another class
+                                Console.WriteLine(Satheesh.address);
+                            }
+                        }
+                        
+                        public class Program : Person
+                        {
+                            public static void Main()
+                            {
+                                Employee Aneesh = new Employee();
+                                Aneesh.Print();
+                                Animal Zebra = new Animal();
+                                Zebra.Safari();
+                            }
+                        }
+                </code></pre>
+                    <h4>Visit <a href="https://dotnetfiddle.net/lPpysl" target="_blank">dotnetfiddle</a> to see the Output</h4>
+                </section>
+                <section>
+                    <h4><b>private:</b> The code is only accessible within the same class</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        using System;
+
+                        public class Person
+                        {
+                            private string address = "Kochi";	//address is a private field of class Person
+                            public void Paint()
+                            {
+                                address = "Goa";	//private field is accessible inside the same class
+                            }
+                        }
+                        
+                        public class Employee : Person
+                        {
+                            public void Print()
+                            {
+                                address = "Kollam"; 	//private field is not accessible inside derived class
+                                Console.WriteLine(address);
+                            }
+                        }
+                        
+                        public class Animal
+                        {
+                            Person Satheesh = new Person();
+                            public string species;
+                            public void Safari()
+                            {
+                                Satheesh.address = "Trivandrum"; 	//private field is not accessible inside another class
+                                Console.WriteLine(Satheesh.address);
+                            }
+                        }
+                        
+                        public class Program : Person
+                        {
+                            public static void Main()
+                            {
+                                Employee Aneesh = new Employee();
+                                Aneesh.Print();
+                                Animal Zebra = new Animal();
+                                Zebra.Safari();
+                            }
+                        }
+            </code></pre>
+                    <h4>Visit <a href="https://dotnetfiddle.net/Qgi6om" target="_blank">dotnetfiddle</a> to see the Output</h4>
+                </section>
+                <section>
+                    <h4><b>protected:</b> The code is accessible within the same class, or in a class that is inherited from that class.</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        using System;
+
+                        public class Person
+                        {
+                            protected string address = "Kochi";		//address is a protected field of class Person
+                            public void Paint()
+                            {
+                                address = "Goa";	//protected field is accessible inside the same class
+                            }
+                        }
+                        
+                        public class Employee : Person
+                        {
+                            public void Print()
+                            {
+                                address = "Kollam"; 	//protected field is accessible inside derived class
+                                Console.WriteLine(address);
+                            }
+                        }
+                        
+                        public class Animal
+                        {
+                            Person Satheesh = new Person();
+                            public string species;
+                            public void Safari()
+                            {
+                                Satheesh.address = "Trivandrum"; 	//protected field is not accessible inside another class
+                                Console.WriteLine(Satheesh.address);
+                            }
+                        }
+                        
+                        public class Program : Person
+                        {
+                            public static void Main()
+                            {
+                                Employee Aneesh = new Employee();
+                                Aneesh.Print();
+                                Animal Zebra = new Animal();
+                                Zebra.Safari();
+                            }
+                        }
+                    </code></pre>
+                    <h4>Visit <a href="https://dotnetfiddle.net/caGRTP" target="_blank">dotnetfiddle</a> to see the Output</h4>
+                </section>
+                <section>
+                    <h4><b>internal:</b> The code is only accessible within its own assembly, but not from another assembly.</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        using System;
+
+                        public class Person
+                        {
+                            internal string address = "Kochi";	//address is a internal field of class Person
+                            public void Paint()
+                            {
+                                address = "Goa";	//internal field is accessible inside the same class
+                            }
+                        }
+                        
+                        public class Employee : Person
+                        {
+                            public void Print()
+                            {
+                                address = "Kollam"; 	//internal field is accessible inside derived class
+                                Console.WriteLine(address);
+                            }
+                        }
+                        
+                        public class Animal
+                        {
+                            Person Satheesh = new Person();
+                            public string species;
+                            public void Safari()
+                            {
+                                Satheesh.address = "Trivandrum"; 	//internal field is accessible inside another class
+                                Console.WriteLine(Satheesh.address);
+                            }
+                        }
+                        
+                        public class Program : Person
+                        {
+                            public static void Main()
+                            {
+                                Employee Aneesh = new Employee();
+                                Aneesh.Print();
+                                Animal Zebra = new Animal();
+                                Zebra.Safari();
+                            }
+                        }
+                    </code></pre>
+                    <h4>Visit <a href="https://dotnetfiddle.net/HexZgm" target="_blank">dotnetfiddle</a> to see the Output</h4>
+                </section>
+                <section>
+                    <h4><b>protected internal: </b>The type or member can be accessed by any code in the assembly in which it's declared, or from within a derived class in another assembly.</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                            using System;
+
+                            public class Person
+                            {
+                                protected internal string address = "Kochi"; 	//address is a protected internal field of class Person
+                                public void Paint()
+                                {
+                                    address = "Goa"; 	//protected internal field is accessible inside the same class
+                                }
+                            }
+                            
+                            public class Employee : Person
+                            {
+                                public void Print()
+                                {
+                                    address = "Kollam"; 	//protected internal field is accessible inside derived class
+                                    Console.WriteLine(address);
+                                }
+                            }
+                            
+                            public class Animal
+                            {
+                                Person Satheesh = new Person();
+                                public string species;
+                                public void Safari()
+                                {
+                                    Satheesh.address = "Trivandrum"; 	//protected internal field is accessible inside another class
+                                    Console.WriteLine(Satheesh.address);
+                                }
+                            }
+                            
+                            public class Program : Person
+                            {
+                                public static void Main()
+                                {
+                                    Employee Aneesh = new Employee();
+                                    Aneesh.Print();
+                                    Animal Zebra = new Animal();
+                                    Zebra.Safari();
+                                }
+                            }
+                        </code></pre>
+                    <h4>Visit <a href="https://dotnetfiddle.net/z5R5gm" target="_blank">dotnetfiddle</a> to see the Output</h4>
+                </section>
+                <section>
+                    <h4><b>private protected: </b>The type or member can be accessed only within its declaring assembly, by code in the same class or in a type that is derived from that class.</h4>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        using System;
+
+                        public class Person
+                        {
+                            private protected string address = "Kochi";     //address is a private protected field of class Person
+                            public void Paint()
+                            {
+                                address = "Goa";    //private protected field is accessible inside the same class
+                            }
+                        }
+                        
+                        public class Employee : Person
+                        {
+                            public void Print()
+                            {
+                                address = "Kollam";     //private protected field is accessible inside derived class
+                                Console.WriteLine(address);
+                            }
+                        }
+                        
+                        public class Animal
+                        {
+                            Person Satheesh = new Person();
+                            public string species;
+                            public void Safari()
+                            {
+                                Satheesh.address = "Trivandrum"; 	//private protected field is not accessible inside another class
+                                Console.WriteLine(Satheesh.address);
+                            }
+                        }
+                        
+                        public class Program : Person
+                        {
+                            public static void Main()
+                            {
+                                Employee Aneesh = new Employee();
+                                Aneesh.Print();
+                                Animal Zebra = new Animal();
+                                Zebra.Safari();
+                            }
+                        }
+                    </code></pre>
+                    <h4>Visit <a href="https://dotnetfiddle.net/9tsrXy" target="_blank">dotnetfiddle</a> to see the Output</h4>
+                </section>
+            </section>
+            <section>
+                <p>When do you get the following error? Person.address' is inaccessible due to its protection level?</p>
+                <p><b>Ans:</b> If we try to access a private field outside the class where it is declared, we would get this error.</p>
+                <h4><b>Exercise:</b></h4>
+                <p><b>Q1.</b> Modify the example class, Make the class public. Add a public method named 'GetAge' that returns an int.</p>
+                <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    using System;
+					
+                    class Program
+                    {
+                        public static void Main()
+                        {
+                            
+                        }
+                    }
+                </code></pre>
+                <p id="centerpara">Link For <a href="https://dotnetfiddle.net/CaV4mw" target="_blank">DOTNETFIDDLE</a></p>
+            </section>
+            <section>
+                <section>
+                    <p><b>Q2.</b> Modify the example class Person. <b>Make the class internal</b> and <b>Add a private method to the example class that contains the method body "return age.ToString()".</b></p>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    using System;
+
+                    class Person
+                    {
+                        public int age;
+                    }
+                    
+                    public class Program
+                    {
+                        public static void Main()
+                        {
+                        }
+                    }
+                </code></pre>
+                    <p id="centerpara">Link For <a href="https://dotnetfiddle.net/1U9vrl" target="_blank">DOTNETFIDDLE</a></p>
+                </section>
+                <section>
+                    <p><b>Q3.</b> Modify the example classes. <b>Add a protected field to the class 'Student' named 'graduationYear' of type int.</b></p>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        using System;
+
+                        public class Student
+                        {
+                            public Student(int year)
+                            {
+                                graduationYear = year;
+                            }
+                            
+                            //Write your code here
+                            
+                            public int GetYearsSinceGraduation()
+                            {
+                                return DateTime.Now.Year - graduationYear;
+                            }
+                        }
+                        
+                        public class Graduate : Student
+                        {
+                            public Graduate(int graduationYear) : base(graduationYear)
+                            {
+                        
+                            }
+                        
+                            public void GraduateToday()
+                            {
+                                graduationYear = DateTime.Now.Year;
+                            }
+                        }
+                        
+                        public class Program
+                        {
+                            public static void Main()
+                            {
+                                var student = new Student(2006);
+                                Console.WriteLine("Years since gradation: {0}", student.GetYearsSinceGraduation());
+                            }
+                        }
+                    </code></pre>
+                    <p id="centerpara">Link For <a href="https://dotnetfiddle.net/e8n15v" target="_blank">DOTNETFIDDLE</a></p>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <p><b>Q4.</b> Modify the example class <b>Add an internal field to the example class called 'order' of type 'int'"</b>.</p>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    using System;
+					
+                    public class Candidate
+                    {
+                        //Your code here
+                    }
+                    
+                    public class Program
+                    {
+                        public static void Main()
+                        {
+                            var candidate = new Candidate();
+                            candidate.order = 1;
+                        }
+                    }
+                </code></pre>
+                    <p id="centerpara">Link For <a href="https://dotnetfiddle.net/zpgTXO" target="_blank">DOTNETFIDDLE</a></p>
+                </section>
+                <section>
+                    <h4><b>Static Modifier</b></h4>
+                    <p><b>Static class</b>: If a class is defined as static, then the class cannot be instantiated. Meaning an object of the class cannot be created using the new keyword or an instance of the class cannot be created.</p>
+                    <ul>
+                        <li>
+                            <p>All the members of a static class have to be static.</p>
+                        </li>
+                        <li>
+                            <p>Members of the static class are accessed using the class name</p>
+                        </li>
+                    </ul>
+                    <p id="centerpara">The wrong way to do it: <a href="https://dotnetfiddle.net/Sc0pdg" target="_blank">Progam 1</a></p>
+                    <p id="centerpara">The right way to do it: <a href="https://dotnetfiddle.net/xUQJOO" target="_blank">Progam 2</a></p>
+                </section>
+            </section>
+            <section>
+                <p><b>Static Members</b>: Non-static class can have static members. Static members are also accessed using class name instead of object name since there is only one instance of static members. Only one copy of a static member exists, regardless
+                    of how many instances of the class are created.</p>
+                <h4><b>Example</b></h4>
+                <p>The Main method in Console Application. It is defined as static because it is the starting point of the application. If there are more instances of the Main method, the program won't be able to know to where to start the execution.</p>
+                <p id="centerpara">The wrong way to do it:
+                    <a href="https://dotnetfiddle.net/MIWGFn" target="_blank">Progam 1</a></p>
+                <p id="centerpara">The right way to do it:
+                    <a href="https://dotnetfiddle.net/2Cecax" target="_blank">Progam 2</a></p>
+                <hr>
+                <p>Q1. When do you get the following error?</p>
+                <p><code>"'Person.address': cannot declare instance members in a static class"</code></p>
+                <p><code><b>Ans: If we try to define a non-static member inside a static class.</b></code></p>
+            </section>
+            <section>
+                <section>
+                    <p>Q2. When do you get the following error?</p>
+                    <p><code>"Cannot create an instance of the static class 'Person'"</code></p>
+                    <p><code><b>Ans: If we try to create an instance(object) of a static class.</b></code></p>
+                </section>
+                <section>
+                    <h4><b>Exercise:</b></h4>
+                    <p>
+                        <ol>
+                            <li>Modify the example class</li>
+                            <p><code>Modify the 'newLine' field to make it static</code> and <code>Add a new static method called Version to the class Environment, of return type 'int' which returns the number 4.</code></p>
+                            <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                            using System;
+					
+                            public static class Environment
+                            {
+                                public string newLine;
+                            }
+                            
+                            public static class Program
+                            {
+                                public static void Main()
+                                {
+                                    Environment.NewLine = "\r\n";
+                                    
+                                    int version = Environment.Version();
+                                }
+                            }
+                        </code></pre>
+
+                        </ol>
+                        <p id="centerpara">Link For <a href="https://dotnetfiddle.net/llLfgS" target="_blank">DOTNETFIDDLE</a></p>
+                    </p>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
