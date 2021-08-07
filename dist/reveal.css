@@ -2138,12 +2138,9 @@ html.print-pdf .aria-status {
 
 #cs_switch_section2 ul {
     font-size: 35px;
-
+}
 #ifelse9para p {
     font-size: 20px;
-
-
-
 }
 
 #cswhile2 ul {
@@ -2156,5 +2153,42 @@ html.print-pdf .aria-status {
 #cswhile8 ul 
 {
     font-size: 26px;
-
+}
+#cspropertiessld2 ul{
+    font-size: 25px;
+}
+#cspropertiessld2 p {
+    font-size: 30px;
+}
+#cspropertiessld3 ul{
+    font-size: 28px;
+}
+#cspropertiessld5 a {
+    font-style:italic;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:darkgreen;
+}
+#cspropertiessld6 p {
+    font-size: 35px;
+}
+#cspropertiessld7 a {
+    font-style:italic;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:darkgreen;
+}
+#cspropertiessld8 a {
+    font-style:italic;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:darkgreen;
+}
+#cspropertiessld9 p {
+    font-size: 27px;
+}
+#cspropertiessld9 a {
+    font-style:italic;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:darkgreen;
+}
+#cspropertiessldend ul {
+    font-size: 28px;
 }
