@@ -2138,12 +2138,9 @@ html.print-pdf .aria-status {
 
 #cs_switch_section2 ul {
     font-size: 35px;
-
+}
 #ifelse9para p {
     font-size: 20px;
-
-
-
 }
 
 #cswhile2 ul {
@@ -2156,5 +2153,13 @@ html.print-pdf .aria-status {
 #cswhile8 ul 
 {
     font-size: 26px;
-
+}
+#cspropertiessld2 ul{
+    font-size: 25px;
+}
+#cspropertiessld2 p {
+    font-size: 30px;
+}
+#cspropertiessld3 ul{
+    font-size: 28px;
 }

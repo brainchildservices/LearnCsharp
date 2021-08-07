@@ -1,87 +1,95 @@
 <!doctype html>
 
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>LearnC#</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+	<title>LearnC#</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/sky.css" id="theme" />
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h3>C# Properties</h3>
+			</section>
+			<section>
+
+				<section id="cspropertiessld2">
+					<p>The meaning of <b> Encapsulation</b> is to make sure that <b>"sensitive"</b> data is hidden from
+						users. To achieve this, We have two options:</p>
+					<ul>
+						<li>
+							1. Declare <b> fields/variables</b> as private
+						</li>
+						<li>
+							2. Provide public <b> get</b> and <b> set</b> methods, through properties, to access and
+							update the value of a private field
+						</li>
+					</ul>
+					<p>A <b> property </b>is like a combination of a variable and a method, and it has two methods: <b>
+							a get and a set method </b>:</p>
+				</section>
 				<section>
-                    <h3>C# Properties</h3>
-                </section>
-				<section id="">
-					
-                    <section>
-                        <p>The meaning of Encapsulation is to make sure that "sensitive" data is hidden from users. To achieve this, We have two options:</p>
-                    <ul>
-                        <li>
-                           1. Declare fields/variables as private
-                        </li>
-                        <li>
-                           2. Provide public get and set methods, through properties, to access and update the value of a private field
-                        </li>
-                    </ul>
-                    <p>A <b> property </b>is like a combination of a variable and a method, and it has two methods: a get and a set method:</p>
-                    </section>
-                    <section>
-                        <h6>The syntax for Defining Properties:</h6>
+					<h6>The syntax for Defining Properties:</h6>
 
-                        <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
 
-                            <access_modifier> <return_type> <property_name>  
-
-                                {  
+                            access_modifier   return_type   property_name  {  
                                         get { // body }  
                                         set { // body } 
                                 }  
                                
                         </code></pre>
 
-                    </section>
-                </section>
-				<section>
-					<h2>Uses of C# ?</h2>
-					<p>
-						<ul>
-							<li>Mobile applications</li>
-							<li>Desktop applications</li>
-							<li>Web applications</li>
-							<li>Web services</li>
-							<li>Web sites</li>
-							<li>Games & VR</li>
-							<li>Database applications</li>
-							<li>And much, much more!</li>
-						</ul>
-					</p>
 				</section>
-			</div>
+			</section>
+			<section id="cspropertiessld3">
+				<h6>Steps to create a general property</h6>
+
+				<ul>
+					<li>1. Declare the field as private</li>
+					<li>2. Copy the private field. Change private to public</li>
+					<li>3. Change the first letter of the variable to Capital and then put curlybraces {}. This will be
+						the property name.</li>
+					<li>4. Write get method or get accessor</li>
+				</ul>
+				<pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+					    get  
+							  {  
+    			return variablename;  
+						    }
+
+
+				</code></pre>
+			</section>
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
 </html>
